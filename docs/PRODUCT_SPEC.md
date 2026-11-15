@@ -1,3 +1,5 @@
+> **ИСТОРИЧЕСКАЯ КРАТКАЯ СПЕЦИФИКАЦИЯ.** Актуальный полный SSOT: [UTRO7_PRODUCT_TZ_FULL.md](UTRO7_PRODUCT_TZ_FULL.md). Этот файл оставлен для понимания решений v0.4–v0.5.
+
 # «Утро 7» — Product Specification
 
 **Status:** ACTIVE · **Date:** 2026-11-15 · **Owner:** project `Dmitriy-Bondarev/utro7` · **Public preview:** https://dmitriy-bondarev.github.io/utro7/

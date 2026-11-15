@@ -1,0 +1,19 @@
+{
+  "version": "motion-v1-prototype",
+  "status": "experimental",
+  "description": "Original silent Blender-rendered H.264 loops; not anatomy-reviewed.",
+  "render": {"width": 560, "height": 560, "fps": 20, "durationSeconds": 2, "codec": "H.264", "audio": false},
+  "avatars": ["woman", "man"],
+  "exercises": ["march", "squat", "pushup"],
+  "techniqueReview": "NOT_REVIEWED",
+  "fallback": "SVG",
+  "source": "tools/blender/render_motion.py",
+  "files": {
+    "woman/march": "woman-march.mp4",
+    "woman/squat": "woman-squat.mp4",
+    "woman/pushup": "woman-pushup.mp4",
+    "man/march": "man-march.mp4",
+    "man/squat": "man-squat.mp4",
+    "man/pushup": "man-pushup.mp4"
+  }
+}

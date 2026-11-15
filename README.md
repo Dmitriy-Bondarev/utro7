@@ -47,3 +47,13 @@ https://dmitriy-bondarev.github.io/utro7/
 - Автоматизированная проверка: \`PUPPETEER_PATH=/path/to/puppeteer node tests/smoke.cjs\` (либо \`npm install --no-save puppeteer\` и \`node tests/smoke.cjs\`).
 
 **Ограничение:** анимации пока учебно-условные SVG, не уровень 3D-визуализации Seven и не профессиональная проверка техники. На реальном iPhone ещё нужна приёмка.
+
+## Motion Engine — Option B, 3D pilot (2026-11-15)
+
+Selected implementation: offline-rendered **original Blender 3D models** in **silent H.264 MP4 loops**. Experimental media is enabled for the first three exercise IDs (`march`, `squat`, `pushup`), for female and male instructor styles (6 clips). For the other nine exercises, and whenever a video fails, the previous SVG demonstration is retained. Music continues independently in WebAudio; videos are always muted and play inline.
+
+Files: `assets/motion/v1/{man,woman}-{march,squat,pushup}.{mp4,jpg,blend}`, `tools/blender/render_motion.py`, `tools/blender/build_media.sh`, `assets/motion/v1/manifest.json`.
+
+Build: `bash tools/blender/build_media.sh` (Blender 5.3 + FFmpeg/libx264), verify: `python3 tools/blender/verify_media.py`. Browser QA: `PUPPETEER_PATH=/path/to/puppeteer node tests/motion-smoke.cjs`. See [ADR-001](docs/ADR-001-MOTION-RENDERING.md), [Issue #2](https://github.com/Dmitriy-Bondarev/utro7/issues/2).
+
+**Important:** these are *initial stylized 3D test models*, not realistic Seven-quality avatars and not anatomically reviewed. The 3D pipeline is operational; replacing the placeholder models with professional skinned humanoids and reviewing motion is the next quality milestone. Videos are not pre-cached offline, so SVG remains the offline fallback.

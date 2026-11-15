@@ -1,4 +1,4 @@
-const CACHE = 'utro7-static-v6';
+const CACHE = 'utro7-static-v7';
 const PRECACHE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));
@@ -8,6 +8,8 @@ self.addEventListener('activate', event => {
 });
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
+  // Let the browser handle byte-range video requests; do not corrupt Safari MP4 seeking.
+  if (event.request.destination === 'video' || event.request.headers.has('range') || new URL(event.request.url).pathname.endsWith('.mp4')) return;
   if (event.request.mode === 'navigate') {
     event.respondWith(fetch(event.request).then(response => {
       if (response.ok) {

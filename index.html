@@ -16,6 +16,32 @@
     :root { color-scheme:dark; --bg:#0a1220; --surface:#121e2e; --surface2:#1a2a3d; --stroke:#26394b; --text:#f2f8fc; --muted:#91a6b4; --mint:#79eed4; --blue:#69b7ff; --cyan:#40cbd6; --accent:#8ff6d8; --shadow:0 18px 55px rgba(0,0,0,.22); }
     *{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 82% 2%,rgba(40,128,148,.16),transparent 43%),radial-gradient(circle at 4% 36%,rgba(47,71,135,.1),transparent 36%),var(--bg);min-height:100dvh;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--mint);outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.35}.app{max-width:520px;margin:0 auto;min-height:100dvh;padding:0 23px calc(114px + env(safe-area-inset-bottom));position:relative}.top{display:flex;align-items:center;justify-content:space-between;padding-top:max(24px,env(safe-area-inset-top));margin-bottom:38px}.brand{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:850;letter-spacing:.13em}.logo{height:38px;width:38px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(150deg,#70f6d5,#4baaf4);color:#09354b;box-shadow:0 8px 24px rgba(54,214,203,.16)}.logo svg{width:23px;height:23px}.date{font-size:12px;color:#9eb4c2;text-align:right}.kicker{color:var(--mint);text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:800;margin-bottom:10px}.hero h1{font-size:clamp(37px,9.3vw,52px);line-height:1.08;letter-spacing:-.045em;max-width:450px;margin:0 0 12px;font-weight:810}.hero h1 em{font-style:normal;color:var(--mint)}.sub{color:#a8b9c4;font-size:15px;line-height:1.55;margin:0 0 30px}.feature{position:relative;border-radius:29px;min-height:290px;overflow:hidden;background:linear-gradient(136deg,#b0f7d9 0%,#78e8d4 43%,#6cbbed 100%);color:#07314b;padding:27px 26px 26px;box-shadow:0 20px 55px rgba(66,203,195,.17);margin-bottom:28px}.feature::before{content:"";position:absolute;right:-55px;top:-77px;width:290px;height:290px;border:1px solid rgba(255,255,255,.35);border-radius:50%;pointer-events:none}.feature::after{content:"";position:absolute;right:3px;top:-15px;width:204px;height:204px;border:1px solid rgba(255,255,255,.4);border-radius:50%;pointer-events:none}.feature .eyebrow{position:relative;z-index:1;font-weight:740;font-size:12px;letter-spacing:.045em;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.32);padding:8px 11px;border-radius:99px}.feature .seven{font-size:104px;font-weight:900;line-height:1;letter-spacing:-.09em;margin:12px 0 -4px -6px;position:relative;z-index:1}.feature .seven small{font-size:30px;font-weight:850;letter-spacing:-.06em}.feature .feature-caption{position:relative;z-index:1;font-size:14px;font-weight:570;margin:5px 0 22px}.start{width:100%;height:56px;background:#0a263c;color:#f2fff9;border:0;border-radius:17px;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:11px;position:relative;z-index:1;box-shadow:0 8px 18px rgba(14,67,83,.2)}.start svg{width:19px;height:19px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 1px 15px}.section-head h2{font-size:18px;letter-spacing:-.015em;margin:0}.smallnote{font-size:12px;color:var(--muted)}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-bottom:26px}.day{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--muted);font-size:11px}.bubble{width:100%;aspect-ratio:1;max-width:52px;border:1px solid #28394a;border-radius:16px;display:grid;place-items:center;font-size:16px;font-weight:690;color:#d4e4eb;background:#152334}.day.done .bubble{background:#79eed4;color:#083346;border-color:#79eed4}.day.today .bubble{border:2px solid #79eed4}.day.done.today .bubble{border-color:#bdfce8}.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-stat{background:linear-gradient(150deg,#162639,#111e2d);border:1px solid #26394b;border-radius:22px;padding:19px 18px 16px}.mini-stat .num{font-size:34px;font-weight:850;letter-spacing:-.045em;line-height:1.1}.mini-stat .unit{font-size:14px;font-weight:600;color:#c5d7df}.mini-stat p{font-size:12px;color:var(--muted);margin:10px 0 0}.mini-stat .spark{color:var(--mint)}.bottom{position:fixed;z-index:20;bottom:0;left:0;right:0;background:linear-gradient(0deg,#0b1422 65%,rgba(11,20,34,.98));border-top:1px solid #253647;padding:12px max(20px,calc((100vw - 476px)/2)) calc(12px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:12px}.tab{border:0;background:transparent;color:#8198a9;padding:9px 4px;display:flex;justify-content:center;align-items:center;gap:9px;font-weight:700;font-size:13px;border-radius:15px}.tab.on{color:#8ff6d8;background:rgba(110,245,211,.08)}.tab svg{width:19px;height:19px}.habit-title{font-size:37px;margin:0 0 9px;letter-spacing:-.04em}.habit-intro{font-size:14px;color:#a7bdc9;line-height:1.5;margin:0 0 27px}.large-stats{background:linear-gradient(130deg,#16313d,#172239);border:1px solid #315261;border-radius:27px;padding:23px 20px;margin-bottom:28px;display:flex;gap:20px;align-items:center}.streak-number{font-size:64px;line-height:.95;font-weight:890;letter-spacing:-.08em;color:#8ff6d8}.large-stats .caption{font-size:13px;color:#bad1db;line-height:1.55}.large-stats h2{font-size:16px;margin:0 0 7px}.calendar{background:#142234;border:1px solid #26394b;border-radius:24px;padding:19px 13px 18px}.monthhead{display:flex;align-items:center;justify-content:space-between;margin:0 7px 19px}.monthhead h2{font-size:18px;margin:0;text-transform:capitalize}.arrow{width:37px;height:37px;border:1px solid #2b4053;border-radius:12px;background:#1b2d40;color:#e3f5fa;display:grid;place-items:center}.arrow svg{width:17px;height:17px}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}.cal-label{font-size:11px;color:#8da7b8;margin-bottom:11px}.cal-day{aspect-ratio:1;display:grid;place-items:center;font-size:13px;color:#b5cad4;border-radius:12px;position:relative;max-width:50px;width:100%;margin:auto}.cal-day.done{background:#79eed4;color:#08354d;font-weight:850}.cal-day.today{outline:1.5px solid #79eed4;outline-offset:-2px}.cal-day.future{color:#4f6574}.cal-day.empty{visibility:hidden}.callegend{display:flex;align-items:center;gap:8px;margin:16px 4px 0;color:var(--muted);font-size:11px}.legend-dot{height:12px;width:12px;border-radius:4px;background:#79eed4}.history-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:22px 0}.muted-footer{font-size:12px;color:#839aab;line-height:1.6;text-align:center;margin:27px 8px 0}.muted-footer button{border:0;padding:0;color:#a8e8da;background:none;text-decoration:underline;text-underline-offset:4px}.workout{max-width:520px;margin:0 auto;min-height:100dvh;padding:max(25px,env(safe-area-inset-top)) 23px calc(28px + env(safe-area-inset-bottom));display:flex;flex-direction:column}.work-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.round-btn{height:45px;width:45px;flex-shrink:0;border-radius:15px;border:1px solid #2b4053;background:#172739;color:white;display:grid;place-items:center}.round-btn svg{width:21px;height:21px}.round-btn.on{background:#244b55;color:var(--mint);border-color:#3e7b77}.work-progress{font-size:12px;text-align:center;color:#a2b8c6;letter-spacing:.04em;font-weight:750}.progress-track{height:5px;border-radius:99px;background:#27394c;overflow:hidden;margin-top:10px;width:min(210px,46vw)}.progress-bar{background:#83efd6;height:100%;border-radius:99px;transition:width .4s linear}.work-label{text-align:center;color:var(--mint);font-size:12px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;margin-top:37px}.work-title{text-align:center;font-size:clamp(29px,7vw,39px);line-height:1.17;letter-spacing:-.035em;margin:11px auto 10px;font-weight:850;max-width:460px;min-height:44px}.work-desc{text-align:center;color:#a8bdc8;font-size:14px;line-height:1.5;min-height:43px;max-width:410px;margin:0 auto}.figure-panel{margin:26px auto 15px;position:relative;width:min(100%,340px);height:min(36dvh,265px);min-height:195px;border-radius:31px;background:radial-gradient(circle at 50% 42%,#234c57,#152a3a 58%,#132536 100%);border:1px solid #28505a;display:flex;align-items:center;justify-content:center;overflow:hidden}.figure-panel::before,.figure-panel::after{content:"";position:absolute;border:1px solid #375d62;border-radius:50%;width:200px;height:200px;opacity:.6}.figure-panel::after{width:275px;height:275px;opacity:.2}.figure{position:relative;z-index:1;width:90%;height:90%;max-height:215px;filter:drop-shadow(0 5px 10px rgba(46,242,203,.05))}.figure .floor{stroke:#4c7382;stroke-width:2.2;stroke-linecap:round;opacity:.5}.figure .limb{stroke-linecap:round;stroke-linejoin:round;fill:none}.figure .leg{stroke:#4bbac8;stroke-width:14}.figure .torso{stroke:#74e6c6;stroke-width:25}.figure .arm{stroke:#ffd6b5;stroke-width:11}.figure .figure-head{fill:#ffcf9e;stroke:#e7ac81;stroke-width:1.2}.figure .figure-hair{fill:#20485b}.motion-badge{position:absolute;z-index:2;bottom:12px;left:12px;right:12px;text-align:center;color:#c7fff1;font-weight:750;font-size:11px;background:#102a3cdd;border:1px solid #3b7580;border-radius:16px;padding:7px 8px;pointer-events:none}.clock{display:flex;justify-content:center;align-items:center;flex-direction:column;margin:7px 0 18px}.big-time{font-size:clamp(75px,18vw,99px);font-variant-numeric:tabular-nums;line-height:1;font-weight:800;letter-spacing:-.065em}.count-caption{font-size:12px;margin-top:6px;letter-spacing:.05em;color:#9aafbb;text-transform:uppercase}.next{border:1px solid #294253;border-radius:16px;background:#132334;color:#bcd2dc;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;margin-top:auto;margin-bottom:20px}.next strong{color:#f0f9fb;font-weight:750}.work-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.act{border:none;min-height:58px;border-radius:19px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:800}.act svg{width:20px;height:20px}.act.primary{background:#8cf4da;color:#092e41}.act.secondary{background:#1d3042;color:#eff8fc;border:1px solid #30495b}.prep-tip{font-size:12px;color:#7896a6;text-align:center;margin-top:17px}.complete{padding:max(54px,env(safe-area-inset-top)) 23px calc(35px + env(safe-area-inset-bottom));min-height:100dvh;max-width:520px;margin:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.complete-mark{height:132px;width:132px;border-radius:48px;background:linear-gradient(140deg,#b4fae1,#56cfd5);display:grid;place-items:center;color:#06445a;box-shadow:0 25px 75px #2fc0b841;margin-bottom:36px}.complete-mark svg{width:78px;height:78px;stroke-width:3}.complete h1{font-size:47px;letter-spacing:-.045em;margin:0 0 10px}.complete .sub{max-width:300px;margin-bottom:33px}.complete-stats{display:flex;gap:36px;margin:0 0 45px}.complete-stats .big{font-weight:850;font-size:32px}.complete-stats p{font-size:12px;color:#93abba;margin:7px 0 0}.complete .start{background:#8cf4da;color:#093048;max-width:400px}.privacy{display:flex;align-items:center;justify-content:center;gap:7px}.privacy svg{height:13px;width:13px}.workout.paused .figure-panel{filter:saturate(.5)}.workout.paused .motion-badge{color:#d6e5ef}.preview-link{display:flex;gap:7px;align-items:center;justify-content:center;width:100%;margin-top:12px;background:none;border:1px solid #ffffff55;border-radius:14px;padding:12px 14px;color:inherit;font-weight:730;font-size:14px}.guide .figure-panel{height:min(38dvh,300px);min-height:220px}.guide-hint{color:#9fc2ce;font-size:13px;text-align:center;line-height:1.5;margin:0 auto auto;padding:12px 12px 28px;max-width:270px}.guide-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}.guide-actions+.act{width:100%}
     @media(min-height:830px){.work-label{margin-top:48px}.figure-panel{margin-top:36px;margin-bottom:26px}.work-top{margin-bottom:12px}}@media(max-height:670px){.work-label{margin-top:15px}.work-title{font-size:29px}.work-desc{font-size:12px;min-height:30px}.figure-panel{height:25dvh;min-height:145px;margin:14px auto 6px}.figure{max-height:140px}.big-time{font-size:64px}.clock{margin:3px 0 8px}.next{padding:9px 13px;margin-bottom:12px}.act{min-height:49px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+    .mode-tile{min-height:110px;text-align:left;border:1px solid #3c6774;background:#163044;color:#f1fff8;border-radius:16px;padding:13px;display:flex;flex-direction:column;gap:5px}
+    .mode-tile b{font-size:22px;color:#91f4da}.mode-tile strong{font-size:13px}.mode-tile small{font-size:11px;color:#a5bfcc}
+    .content-app .top{margin-bottom:20px}.content-app .section-intro h1{font-size:33px;line-height:1.15;margin:5px 0}.section-intro p{color:#a9bfcc;font-size:13px;line-height:1.5;margin:5px 0 20px}
+    .recipe-list{display:grid;gap:12px;margin-bottom:18px}.recipe-card{border:1px solid #315062;background:#14283a;border-radius:18px;padding:16px}
+    .recipe-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.recipe-top strong{font-size:17px}.recipe-top span{color:#a2f4db;font-weight:800}
+    .recipe-card p{font-size:13px;color:#adbfcb;margin:9px 0}.recipe-meta{font-size:12px;color:#9cebd8}
+    .recipe-steps{font-size:12px;line-height:1.5;color:#8fa8b7;margin:12px 0}
+    .recipe-actions{display:flex;gap:8px}.recipe-actions button{border:1px solid #3e6671;border-radius:10px;background:#1d3c4d;color:#d8fff2;font-weight:750;padding:10px 12px}
+    .recipe-actions .recipe-start{background:#92f0d7;color:#0a3040}
+    .catalog-tools{display:grid;grid-template-columns:1fr minmax(115px,38%);gap:8px;margin-bottom:14px}
+    .catalog-tools input,.catalog-tools select,.builder-input,.timing select,.builder-add select{width:100%;background:#132c3e;color:#edfffa;border:1px solid #406173;border-radius:12px;padding:12px;font:inherit;font-size:14px}
+    .exercise-row{display:grid;grid-template-columns:42px 1fr 36px;align-items:center;gap:10px;background:#14283a;border:1px solid #315062;border-radius:15px;padding:12px;margin-bottom:10px}
+    .exercise-icon{width:42px;height:42px;border-radius:12px;background:#214858;display:grid;place-items:center;color:#9af5db;font-size:23px}
+    .exercise-info h3{font-size:15px;margin:0}.exercise-info p{font-size:12px;line-height:1.4;color:#9db3c2;margin:6px 0 0}
+    .exercise-tags{color:#94edce;font-size:11px;margin-top:4px}.exercise-see{border:1px solid #467b80;border-radius:10px;background:#25505b;color:#d8fff6;height:36px;font-size:15px}
+    #catalog-create{margin:20px 0}.empty-note{padding:20px;background:#14283a;border:1px dashed #477284;border-radius:14px;color:#a8beca;text-align:center;font-size:13px}
+    .form-label{display:block;font-size:13px;font-weight:750;margin:15px 0 8px;color:#ccece5}
+    .timing{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.timing label{font-size:12px;color:#b2cad2}.timing select{margin-top:8px}
+    .builder-items{display:grid;gap:8px}.builder-row{display:flex;align-items:center;gap:9px;background:#172e40;border:1px solid #305162;border-radius:13px;padding:8px}
+    .builder-order{width:22px;color:#93ecd3;font-size:12px;text-align:center}.builder-name{flex:1;font-size:13px;min-width:0}
+    .builder-actions{display:flex;gap:4px}.builder-actions button{width:30px;height:30px;border:1px solid #47727e;border-radius:8px;background:#234b57;color:#d6fff1;font-weight:800}
+    .builder-actions button:disabled{opacity:.27}.builder-add{display:grid;grid-template-columns:1fr auto;gap:9px;margin-bottom:23px}
+    .builder-add button{border:0;border-radius:11px;background:#305a62;color:#edfff7;padding:0 12px;font-size:13px;font-weight:780}
+    .builder-app #builder-save{margin:14px 0 10px}.builder-app .preview-link{width:100%}
+    @media(max-width:370px){.catalog-tools{grid-template-columns:1fr}.recipe-actions button{padding:8px}.mode-tile{padding:10px}}
   </style>
 </head>
 <body>
@@ -58,6 +84,45 @@
       {name:'Птица — собака',tip:'На четвереньках вытягивай противоположные руку и ногу.',pose:'bird'},
       {name:'Потягивание',tip:'Встань, потянись вверх и спокойно дыши.',pose:'stretch'}
     ];
+    const exerciseMeta={
+      march:['Разминка','Лёгкая','Всё тело'],
+      shoulder:['Мобильность','Лёгкая','Плечи'],
+      pushup:['Сила','Средняя','Грудь и руки'],
+      squat:['Сила','Средняя','Ноги'],
+      knee:['Кардио','Средняя','Всё тело'],
+      lunge:['Сила','Средняя','Ноги'],
+      twist:['Мобильность','Лёгкая','Корпус'],
+      step:['Кардио','Лёгкая','Всё тело'],
+      plank:['Кор','Средняя','Корпус'],
+      bridge:['Кор','Лёгкая','Ягодицы'],
+      bird:['Мобильность','Лёгкая','Спина'],
+      stretch:['Растяжка','Лёгкая','Всё тело']
+    };
+    const exerciseCatalog=moves.map(m=>({id:m.pose,name:m.name,tip:m.tip,pose:m.pose,category:exerciseMeta[m.pose][0],level:exerciseMeta[m.pose][1],target:exerciseMeta[m.pose][2],equipment:'Без оборудования'}));
+    const byExerciseId=new Map(exerciseCatalog.map(e=>[e.id,e]));
+    const presets=[
+      {id:'morning7',name:'Утро 7',description:'Полный комплекс на всё тело',ids:exerciseCatalog.map(e=>e.id),work:30,rest:5,kind:'preset'},
+      {id:'soft',name:'Мягкий старт',description:'Спокойные упражнения без интенсивной нагрузки',ids:['march','shoulder','twist','step','bird','stretch'],work:30,rest:5,kind:'preset'},
+      {id:'strength',name:'Сила и корпус',description:'Силовая зарядка с собственным весом',ids:['squat','pushup','lunge','plank','bridge','bird'],work:30,rest:5,kind:'preset'},
+      {id:'mobility',name:'Разминка и гибкость',description:'Мягкая подвижность и растяжка',ids:['march','shoulder','twist','bird','stretch'],work:30,rest:5,kind:'preset'}
+    ];
+    function workoutSeconds(w){if(!w||!w.ids||!w.ids.length)return 0;return 5+w.ids.length*(w.work||30)+(w.ids.length-1)*(w.rest===undefined?5:w.rest);}
+    function formatDuration(seconds){const m=Math.floor(seconds/60),sec=Math.floor(seconds%60);return m+':'+String(sec).padStart(2,'0');}
+    function escapeHtml(s){return String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+    const CUSTOM_KEY='utro7-custom-v1';
+    function normalizeCustom(c){
+      if(!c||typeof c!=='object')return null;
+      const ids=Array.isArray(c.ids)?c.ids.filter(id=>typeof id==='string'&&byExerciseId.has(id)).slice(0,30):[];
+      if(!ids.length)return null;
+      return {id:String(c.id||'').slice(0,80),name:String(c.name||'Моя тренировка').trim().slice(0,60),description:'Своя тренировка',
+        ids,work:[15,20,30,40,45,60].includes(c.work)?c.work:30,rest:[0,5,10,15].includes(c.rest)?c.rest:5,kind:'custom'};
+    }
+    function loadCustom(){try{const c=JSON.parse(localStorage.getItem(CUSTOM_KEY)||'[]');return Array.isArray(c)?c.map(normalizeCustom).filter(Boolean).slice(0,25):[];}catch(e){return [];}}
+    let customWorkouts=loadCustom();
+    function saveCustom(){try{localStorage.setItem(CUSTOM_KEY,JSON.stringify(customWorkouts));}catch(e){showToast('Не удалось сохранить комплексы.');}}
+    let activeWorkout=presets[0],catalogCategory='Все',catalogQuery='',builderIds=[],builderName='Моя тренировка',
+      builderWork=30,builderRest=5,builderEditingId=null,guideReturn='home',lastCompletedWorkout=presets[0];
+    function resolvedWorkout(w){const ids=(w&&w.ids||[]).map(id=>byExerciseId.get(id)).filter(Boolean);return ids.length?Object.assign({},w,{sequence:ids}):null;}
     // The work interval is precisely 7:00: 5s preparation + 12×30s + 11×5s rests.
     const PREP=5000, EXERCISE=30000, REST=5000, TOTAL=420000;
     const weekday=['пн','вт','ср','чт','пт','сб','вс'];
@@ -76,11 +141,11 @@
     function week(){const d=new Date();const offset=(d.getDay()+6)%7;let html='';for(let i=0;i<7;i++){const x=addDays(d,i-offset),key=dayKey(x),done=data.completed.includes(key),isToday=key===today();html+=`<div class="day ${done?'done':''} ${isToday?'today':''}"><span>${weekday[i]}</span><div class="bubble" aria-label="${shortDate(x)}${done?', выполнено':''}">${done?ic('check',18):x.getDate()}</div></div>`;}return html;}
     function nav(which){return `<nav class="bottom" aria-label="Навигация"><button class="tab ${which==='home'?'on':''}" id="go-home" aria-current="${which==='home'?'page':'false'}">${ic('sun')} Сегодня</button><button class="tab ${which==='history'?'on':''}" id="go-history" aria-current="${which==='history'?'page':'false'}">${ic('calendar')} Привычка</button></nav>`;}
     function header(){const d=new Date();return `<header class="top"><div class="brand"><div class="logo">${ic('sun')}</div>УТРО 7</div><div class="date">${d.toLocaleDateString('ru-RU',{weekday:'long'})}<br>${d.toLocaleDateString('ru-RU',{day:'numeric',month:'long'})}</div></header>`;}
-    function renderHome(){const done=data.completed.includes(today());$root.innerHTML=`<main class="app">${header()}<section class="hero"><div class="kicker">Семь минут для себя</div><h1>Начни день<br><em>с движения.</em></h1><p class="sub">Лёгкая утренняя тренировка под музыку.<br>Без оборудования и лишних настроек.</p></section><section class="feature" aria-label="Тренировка на семь минут"><div class="eyebrow">${ic('sun',15)} ${done?'Уже выполнено сегодня':'Твоя утренняя практика'}</div><div class="seven">7<small> мин</small></div><p class="feature-caption">12 упражнений · 30 секунд каждое</p><button class="start" id="start">${ic('play',19)} ${done?'Повторить тренировку':'Начать тренировку'}</button><button class="preview-link" id="preview-moves">${ic('play',15)} Посмотреть упражнения</button></section><section class="section-head"><h2>Твоя неделя</h2><span class="smallnote">${thisWeekCount()} из 7 дней</span></section><div class="week">${week()}</div><section class="stats-row"><div class="mini-stat"><div class="num spark">${currentStreak()} <span class="unit">дн.</span></div><p>Серия тренировок подряд</p></div><div class="mini-stat"><div class="num">${thisMonthCount()} <span class="unit">дн.</span></div><p>В этом месяце</p></div></section></main>${nav('home')}`;bindNavigation();document.getElementById('start').addEventListener('click',startWorkout);document.getElementById('preview-moves').addEventListener('click',()=>{guideIndex=0;view='guide';render();});}
+    function renderHome(){const done=data.completed.includes(today());$root.innerHTML=`<main class="app">${header()}<section class="hero"><div class="kicker">Семь минут для себя</div><h1>Начни день<br><em>с движения.</em></h1><p class="sub">Лёгкая утренняя тренировка под музыку.<br>Без оборудования и лишних настроек.</p></section><section class="feature" aria-label="Тренировка на семь минут"><div class="eyebrow">${ic('sun',15)} ${done?'Уже выполнено сегодня':'Твоя утренняя практика'}</div><div class="seven">7<small> мин</small></div><p class="feature-caption">12 упражнений · 30 секунд каждое</p><button class="start" id="start">${ic('play',19)} ${done?'Повторить тренировку':'Начать тренировку'}</button><div class="mode-grid"><button class="mode-tile" id="open-presets"><b>▶</b><strong>Готовые комплексы</strong><small>Выбрать тренировку</small></button><button class="mode-tile" id="open-builder"><b>＋</b><strong>Своя тренировка</strong><small>Собрать и сохранить</small></button></div><button class="preview-link" id="open-catalog">Каталог упражнений</button><button class="preview-link" id="preview-moves">${ic('play',15)} Посмотреть упражнения</button></section><section class="section-head"><h2>Твоя неделя</h2><span class="smallnote">${thisWeekCount()} из 7 дней</span></section><div class="week">${week()}</div><section class="stats-row"><div class="mini-stat"><div class="num spark">${currentStreak()} <span class="unit">дн.</span></div><p>Серия тренировок подряд</p></div><div class="mini-stat"><div class="num">${thisMonthCount()} <span class="unit">дн.</span></div><p>В этом месяце</p></div></section></main>${nav('home')}`;bindNavigation();document.getElementById('start').addEventListener('click',()=>startWorkout(presets[0]));document.getElementById('preview-moves').addEventListener('click',()=>{guideIndex=0;guideReturn='home';view='guide';render();});document.getElementById('open-presets').addEventListener('click',()=>{view='presets';render();});document.getElementById('open-builder').addEventListener('click',()=>{newBuilder();view='builder';render();});document.getElementById('open-catalog').addEventListener('click',()=>{view='catalog';render();});}
     function renderCalendar(){const d=new Date();const first=new Date(d.getFullYear(),d.getMonth()+monthOffset,1);const year=first.getFullYear(),month=first.getMonth();const days=new Date(year,month+1,0).getDate();const offset=(first.getDay()+6)%7;let cells=weekday.map(x=>`<div class="cal-label">${x}</div>`).join('');for(let i=0;i<offset;i++)cells+='<div class="cal-day empty"></div>';for(let i=1;i<=days;i++){const key=dayKey(new Date(year,month,i)),done=data.completed.includes(key),isToday=key===today(),future=key>today();cells+=`<div class="cal-day ${done?'done':''} ${isToday?'today':''} ${future?'future':''}" aria-label="${i} ${first.toLocaleDateString('ru-RU',{month:'long'})}${done?' — выполнено':''}">${done?ic('check',17):i}</div>`;}return `<section class="calendar"><div class="monthhead"><button class="arrow" id="prev-month" aria-label="Предыдущий месяц">${ic('chevronLeft')}</button><h2>${first.toLocaleDateString('ru-RU',{month:'long',year:'numeric'})}</h2><button class="arrow" id="next-month" aria-label="Следующий месяц" ${monthOffset>=0?'disabled':''}>${ic('chevronRight')}</button></div><div class="cal-grid">${cells}</div><div class="callegend"><span class="legend-dot"></span>День с выполненной тренировкой</div></section>`;}
     function renderHistory(){$root.innerHTML=`<main class="app">${header()}<div class="kicker">Маленькие шаги каждый день</div><h1 class="habit-title">Моя привычка</h1><p class="habit-intro">Каждая завершённая тренировка отмечается в календаре автоматически.</p><section class="large-stats"><div class="streak-number">${currentStreak()}</div><div><h2>${plural(currentStreak(),'день','дня','дней')} подряд</h2><div class="caption">Текущая серия.<br>Продолжай в удобном ритме.</div></div></section>${renderCalendar()}<div class="history-stats"><div class="mini-stat"><div class="num">${data.completed.length}</div><p>Дней с тренировкой</p></div><div class="mini-stat"><div class="num">${longestStreak()}</div><p>Лучшая серия, дней</p></div></div><p class="muted-footer privacy">${ic('shield')} История хранится только в этом браузере.</p><p class="muted-footer"><button id="export-history">Сохранить историю</button> · <button id="import-history">Восстановить историю</button><input id="import-file" type="file" accept=".json,application/json" hidden></p></main>${nav('history')}`;bindNavigation();document.getElementById('prev-month').addEventListener('click',()=>{monthOffset--;renderHistory();});document.getElementById('next-month').addEventListener('click',()=>{if(monthOffset<0){monthOffset++;renderHistory();}});document.getElementById('export-history').addEventListener('click',exportHistory);document.getElementById('import-history').addEventListener('click',()=>document.getElementById('import-file').click());document.getElementById('import-file').addEventListener('change',importHistory);}
-    function exportHistory(){const payload=JSON.stringify({app:'Утро 7',version:1,exportedAt:new Date().toISOString(),completed:data.completed},null,2);const blob=new Blob([payload],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`utro7-history-${today()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
-    async function importHistory(event){const file=event.target.files?.[0];if(!file)return;try{if(file.size>200000)throw Error('Файл слишком большой');const obj=JSON.parse(await file.text());if(obj.app!=='Утро 7'||!Array.isArray(obj.completed))throw Error('Неподходящий формат');const valid=obj.completed.filter(x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&x<=today());const keys=[...new Set([...data.completed,...valid])].sort();data.completed=keys;save();renderHistory();showToast('История тренировок восстановлена.');}catch(e){showToast('Не удалось прочитать историю. Выбери копию из «Утро 7».');}}
+    function exportHistory(){const payload=JSON.stringify({app:'Утро 7',version:1,exportedAt:new Date().toISOString(),completed:data.completed,customWorkouts:customWorkouts},null,2);const blob=new Blob([payload],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`utro7-history-${today()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
+    async function importHistory(event){const file=event.target.files?.[0];if(!file)return;try{if(file.size>200000)throw Error('Файл слишком большой');const obj=JSON.parse(await file.text());if(obj.app!=='Утро 7'||!Array.isArray(obj.completed))throw Error('Неподходящий формат');const valid=obj.completed.filter(x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&x<=today());const keys=[...new Set([...data.completed,...valid])].sort();data.completed=keys;save();if(Array.isArray(obj.customWorkouts)){const added=obj.customWorkouts.map(normalizeCustom).filter(Boolean);for(const w of added){if(!customWorkouts.some(x=>x.id===w.id)&&customWorkouts.length<25)customWorkouts.push(w);}saveCustom();}renderHistory();showToast('Данные восстановлены.');}catch(e){showToast('Не удалось прочитать историю. Выбери копию из «Утро 7».');}}
     function bindNavigation(){document.getElementById('go-home').addEventListener('click',()=>{view='home';render();});document.getElementById('go-history').addEventListener('click',()=>{view='history';render();});}
     function plural(n,a,b,c){const x=Math.abs(n)%100,z=x%10;return x>10&&x<20?c:z===1?a:z>=2&&z<=4?b:c;}
     function coords(head,shoulder,hip,le,lh,re,rh,lk,lf,rk,rf){return {head,shoulder,hip,le,lh,re,rh,lk,lf,rk,rf};}
@@ -206,27 +271,175 @@
         </div>
         <button class="act primary" id="guide-start">${ic('play')} Начать 7 минут</button>
       </main>`;
-      document.getElementById('guide-home').addEventListener('click',()=>{view='home';render();});
+      document.getElementById('guide-home').addEventListener('click',()=>{view=guideReturn;render();});
       document.getElementById('guide-prev').addEventListener('click',()=>{if(guideIndex>0){guideIndex--;renderGuide();}});
       document.getElementById('guide-next').addEventListener('click',()=>{if(guideIndex<moves.length-1){guideIndex++;renderGuide();}});
-      document.getElementById('guide-start').addEventListener('click',startWorkout);
+      document.getElementById('guide-start').addEventListener('click',()=>startWorkout(presets[0]));
       startFigureAnimation(m.pose,false);
     }
-    function renderWorkout(){if(!session)return;const s=session,idx=s.index,m=moves[idx],isExercise=s.phase==='exercise',isRest=s.phase==='rest',isPrep=s.phase==='prep';const label=isPrep?'ПОДГОТОВКА':isRest?'ПЕРЕДЫШКА':'УПРАЖНЕНИЕ';const title=isPrep?moves[0].name:isRest?(moves[idx+1]?.name||m.name):m.name;const tip=isPrep?'Смотри на движение и приготовься. '+moves[0].tip:isRest?'Следующее движение: '+(moves[idx+1]?.tip||m.tip):m.tip;const time=isPrep?PREP:isRest?REST:EXERCISE;const next=isPrep?moves[0].name:isRest?moves[idx+1]?.name:moves[idx+1]?.name||'Финиш!';$root.innerHTML=`<main class="workout ${s.paused?'paused':''}"><header class="work-top"><button class="round-btn" id="quit" aria-label="Закрыть тренировку">${ic('x')}</button><div class="work-progress"><span id="progress-label">${isPrep?'Начало':`${Math.min(idx+1,12)} из 12 упражнений`}</span><div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:${((s.totalElapsed||0)/TOTAL)*100}%"></div></div></div><button class="round-btn ${data.music?'on':''}" id="music-toggle" aria-label="${data.music?'Выключить':'Включить'} музыку">${ic(data.music?'music':'musicOff')}</button></header><div class="work-label" id="phase-label">${label}</div><h1 class="work-title" id="exercise-name">${title}</h1><p class="work-desc" id="exercise-tip">${tip}</p><div class="figure-panel">${figure(isRest?moves[idx+1]?.pose||m.pose:isPrep?moves[0].pose:m.pose)}<div class="motion-badge">${s.paused?'Пауза · демонстрация остановлена':'▶ Демонстрация движения'}</div></div><div class="clock" role="timer" aria-live="off"><span class="big-time" id="clock-value">${Math.ceil((s.remainingMs??time)/1000).toString().padStart(2,'0')}</span><span class="count-caption" id="count-caption">${s.paused?'Пауза':isExercise?'секунд движения':'секунд до начала'}</span></div><div class="next"><span>Дальше</span><strong id="next-name">${next}</strong></div><div class="work-actions"><button class="act secondary" id="stop-play">${ic(s.paused?'play':'pause')} ${s.paused?'Продолжить':'Пауза'}</button><button class="act primary" id="quit-secondary">${ic('x')} Завершить</button></div><div class="prep-tip">${data.music?'♪ Оригинальная фоновая мелодия':'Музыка выключена'} · Без прыжков</div></main>`;document.getElementById('quit').addEventListener('click',quitWorkout);document.getElementById('music-toggle').addEventListener('click',toggleMusic);document.getElementById('stop-play').addEventListener('click',togglePause);document.getElementById('quit-secondary').addEventListener('click',quitWorkout);updateTimerUI();startFigureAnimation(isRest?moves[idx+1]?.pose||m.pose:isPrep?moves[0].pose:m.pose,s.paused);}
-    function updateTimerUI(){if(!session||!['prep','exercise','rest'].includes(session.phase))return;const s=session;const n=document.getElementById('clock-value'),bar=document.getElementById('progress-bar');if(n)n.textContent=String(Math.max(0,Math.ceil(s.remainingMs/1000))).padStart(2,'0');if(bar)bar.style.width=`${Math.min(100,Math.max(0,(s.totalElapsed||0)/TOTAL*100))}%`;}
-    function startWorkout(){session={phase:'prep',index:0,remainingMs:PREP,endAt:Date.now()+PREP,paused:false,totalElapsed:0};view='workout';render();if(data.music)startMusic();if(interval)clearInterval(interval);interval=setInterval(tick,110);requestWake();}
+    // Shared exercise library, built-in routines, and a persistent workout composer.
+    function newBuilder(w){
+      builderIds=w? [...w.ids]:[];
+      builderName=w?w.name:'Моя тренировка';
+      builderWork=w?w.work:30;
+      builderRest=w?w.rest:5;
+      builderEditingId=w?w.id:null;
+    }
+    function getRecipe(id){return presets.concat(customWorkouts).find(w=>w.id===id);}
+    function renderPresets(){
+      const recipes=presets.concat(customWorkouts);
+      let html='<main class="app content-app">'+header()+
+        '<div class="section-intro"><div class="kicker">Готовые и собственные</div><h1>Мои тренировки</h1>'+
+        '<p>Выбирай готовый комплекс или собери свой из каталога упражнений.</p></div>'+
+        '<button class="start" id="new-custom">＋ Создать тренировку</button>'+
+        '<div class="section-head"><h2>Готовые комплексы</h2></div><div class="recipe-list">';
+      for(const w of recipes){
+        const custom=w.kind==='custom';
+        const names=w.ids.map(id=>byExerciseId.get(id)?.name||'').filter(Boolean);
+        html+='<article class="recipe-card"><div class="recipe-top"><strong>'+escapeHtml(w.name)+'</strong>'+
+          '<span>'+formatDuration(workoutSeconds(w))+'</span></div>'+
+          '<p>'+escapeHtml(w.description)+'</p>'+
+          '<div class="recipe-meta">'+w.ids.length+' упражнений · '+w.work+' с работа · '+w.rest+' с отдых</div>'+
+          '<div class="recipe-steps">'+names.map(escapeHtml).join(' · ')+'</div>'+
+          '<div class="recipe-actions"><button class="recipe-start" data-run="'+w.id+'">▶ Начать</button>'+
+          (custom?'<button data-edit="'+w.id+'">Изменить</button><button data-remove="'+w.id+'" aria-label="Удалить комплекс">×</button>':'')+
+          '</div></article>';
+      }
+      html+='</div><button class="preview-link" id="presets-catalog">Открыть каталог упражнений</button></main>'+nav('home');
+      $root.innerHTML=html;bindNavigation();
+      document.getElementById('new-custom').addEventListener('click',()=>{newBuilder();view='builder';render();});
+      document.getElementById('presets-catalog').addEventListener('click',()=>{view='catalog';render();});
+      document.querySelectorAll('[data-run]').forEach(b=>b.addEventListener('click',()=>startWorkout(getRecipe(b.dataset.run))));
+      document.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>{newBuilder(getRecipe(b.dataset.edit));view='builder';render();}));
+      document.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{
+        const w=getRecipe(b.dataset.remove);
+        if(w&&window.confirm('Удалить тренировку «'+w.name+'»?')){
+          customWorkouts=customWorkouts.filter(x=>x.id!==w.id);saveCustom();renderPresets();
+        }
+      }));
+    }
+    function renderCatalogCards(){
+      const q=catalogQuery.toLocaleLowerCase('ru-RU').trim();
+      const filtered=exerciseCatalog.filter(x=>(catalogCategory==='Все'||x.category===catalogCategory)
+        &&(!q||[x.name,x.tip,x.category,x.target].join(' ').toLocaleLowerCase('ru-RU').includes(q)));
+      const container=document.getElementById('catalog-results');
+      if(!container)return;
+      container.innerHTML=filtered.length?filtered.map(e=>
+        '<article class="exercise-row"><div class="exercise-icon">'+(e.category==='Сила'?'◆':e.category==='Кардио'?'✦':e.category==='Кор'?'◎':'◌')+'</div>'+
+        '<div class="exercise-info"><h3>'+escapeHtml(e.name)+'</h3>'+
+        '<div class="exercise-tags">'+escapeHtml(e.category)+' · '+escapeHtml(e.level)+' · '+escapeHtml(e.target)+'</div>'+
+        '<p>'+escapeHtml(e.tip)+'</p></div><button data-see="'+e.id+'" class="exercise-see">▶</button></article>'
+      ).join(''):'<p class="empty-note">Нет упражнений по этому запросу.</p>';
+      container.querySelectorAll('[data-see]').forEach(b=>b.addEventListener('click',()=>{
+        guideIndex=moves.findIndex(x=>x.pose===b.dataset.see);
+        guideReturn='catalog';view='guide';render();
+      }));
+    }
+    function renderCatalog(){
+      const cats=['Все'].concat([...new Set(exerciseCatalog.map(e=>e.category))]);
+      const html='<main class="app content-app">'+header()+
+        '<div class="section-intro"><div class="kicker">Библиотека движений</div><h1>Упражнения</h1>'+
+        '<p>Пока '+exerciseCatalog.length+' оригинальных анимированных схем. К каждому движению есть инструкция.</p></div>'+
+        '<div class="catalog-tools"><input id="exercise-search" type="search" placeholder="Найти упражнение" aria-label="Поиск упражнений" value="'+escapeHtml(catalogQuery)+'">'+
+        '<select id="exercise-category" aria-label="Категория">'+
+          cats.map(c=>'<option value="'+escapeHtml(c)+'" '+(c===catalogCategory?'selected':'')+'>'+escapeHtml(c)+'</option>').join('')+
+        '</select></div><div id="catalog-results"></div>'+
+        '<button class="start" id="catalog-create">＋ Собрать тренировку</button></main>'+nav('home');
+      $root.innerHTML=html;bindNavigation();
+      document.getElementById('exercise-search').addEventListener('input',e=>{catalogQuery=e.target.value;renderCatalogCards();});
+      document.getElementById('exercise-category').addEventListener('change',e=>{catalogCategory=e.target.value;renderCatalogCards();});
+      document.getElementById('catalog-create').addEventListener('click',()=>{newBuilder();view='builder';render();});
+      renderCatalogCards();
+    }
+    function buildOptionList(values,selected,suffix){
+      return values.map(n=>'<option value="'+n+'"'+(n===selected?' selected':'')+'>'+n+suffix+'</option>').join('');
+    }
+    function builderSummary(){
+      const d=document.getElementById('builder-summary');
+      if(!d)return;
+      const w={ids:builderIds,work:builderWork,rest:builderRest};
+      d.textContent=builderIds.length+' '+plural(builderIds.length,'упражнение','упражнения','упражнений')+' · '+formatDuration(workoutSeconds(w));
+    }
+    function renderBuilder(){
+      const chosen=builderIds.map((id,i)=>({e:byExerciseId.get(id),i})).filter(x=>x.e);
+      let html='<main class="app content-app builder-app">'+header()+
+        '<div class="section-intro"><div class="kicker">Свой комплекс</div><h1>Конструктор</h1><p>Добавляй упражнения, меняй порядок и сохраняй.</p></div>'+
+        '<label class="form-label" for="builder-name">Название</label><input id="builder-name" class="builder-input" type="text" maxlength="60" value="'+escapeHtml(builderName)+'">'+
+        '<div class="timing"><label>Движение, секунд <select id="builder-work">'+buildOptionList([15,20,30,40,45,60],builderWork,' с')+'</select></label>'+
+        '<label>Отдых, секунд <select id="builder-rest">'+buildOptionList([0,5,10,15],builderRest,' с')+'</select></label></div>'+
+        '<div class="section-head"><h2>Последовательность</h2><span class="smallnote" id="builder-summary"></span></div>'+
+        '<div class="builder-items">'+(chosen.length?chosen.map(({e,i})=>
+          '<div class="builder-row"><span class="builder-order">'+(i+1)+'</span><span class="builder-name">'+escapeHtml(e.name)+'</span>'+
+          '<div class="builder-actions"><button data-up="'+i+'" '+(i===0?'disabled':'')+' aria-label="Выше">↑</button>'+
+          '<button data-down="'+i+'" '+(i===chosen.length-1?'disabled':'')+' aria-label="Ниже">↓</button>'+
+          '<button data-del="'+i+'" aria-label="Убрать">×</button></div></div>').join(''):
+          '<div class="empty-note">Пока упражнений нет. Добавь первое из каталога ниже.</div>')+'</div>'+
+        '<label class="form-label" for="builder-pick">Добавить упражнение</label><div class="builder-add"><select id="builder-pick">'+
+        exerciseCatalog.map(e=>'<option value="'+e.id+'">'+escapeHtml(e.name)+' · '+escapeHtml(e.category)+'</option>').join('')+
+        '</select><button id="builder-add">＋ Добавить</button></div>'+
+        '<button id="builder-save" class="start">✓ Сохранить тренировку</button>'+
+        '<button id="builder-run" class="preview-link">▶ Запустить без сохранения</button>'+
+        '<button id="builder-back" class="preview-link">Назад к тренировкам</button></main>'+nav('home');
+      $root.innerHTML=html;bindNavigation();builderSummary();
+      document.getElementById('builder-name').addEventListener('input',e=>builderName=e.target.value);
+      document.getElementById('builder-work').addEventListener('change',e=>{builderWork=Number(e.target.value);builderSummary();});
+      document.getElementById('builder-rest').addEventListener('change',e=>{builderRest=Number(e.target.value);builderSummary();});
+      document.getElementById('builder-add').addEventListener('click',()=>{
+        if(builderIds.length>=30){showToast('Максимум 30 упражнений.');return;}
+        builderIds.push(document.getElementById('builder-pick').value);renderBuilder();
+      });
+      document.querySelectorAll('[data-up]').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.up);if(i>0){[builderIds[i-1],builderIds[i]]=[builderIds[i],builderIds[i-1]];renderBuilder();}}));
+      document.querySelectorAll('[data-down]').forEach(b=>b.addEventListener('click',()=>{const i=Number(b.dataset.down);if(i<builderIds.length-1){[builderIds[i+1],builderIds[i]]=[builderIds[i],builderIds[i+1]];renderBuilder();}}));
+      document.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>{builderIds.splice(Number(b.dataset.del),1);renderBuilder();}));
+      document.getElementById('builder-save').addEventListener('click',()=>{
+        if(!builderIds.length){showToast('Добавь хотя бы одно упражнение.');return;}
+        const w=normalizeCustom({id:builderEditingId||'custom-'+Date.now(),name:builderName.trim()||'Моя тренировка',
+          ids:builderIds,work:builderWork,rest:builderRest});
+        if(builderEditingId)customWorkouts=customWorkouts.filter(x=>x.id!==builderEditingId);
+        else if(customWorkouts.length>=25){showToast('Сохранено максимально 25 тренировок.');return;}
+        customWorkouts.push(w);saveCustom();view='presets';render();showToast('Тренировка сохранена.');
+      });
+      document.getElementById('builder-run').addEventListener('click',()=>{
+        if(!builderIds.length){showToast('Добавь упражнения.');return;}
+        startWorkout({name:builderName.trim()||'Моя тренировка',ids:[...builderIds],work:builderWork,rest:builderRest,kind:'temporary'});
+      });
+      document.getElementById('builder-back').addEventListener('click',()=>{view='presets';render();});
+    }
+
+    function renderWorkout(){if(!session)return;const s=session,idx=s.index,m=s.sequence[idx],isExercise=s.phase==='exercise',isRest=s.phase==='rest',isPrep=s.phase==='prep';const label=isPrep?'ПОДГОТОВКА':isRest?'ПЕРЕДЫШКА':'УПРАЖНЕНИЕ';const title=isPrep?s.sequence[0].name:isRest?(s.sequence[idx+1]?.name||m.name):m.name;const tip=isPrep?'Смотри на движение и приготовься. '+s.sequence[0].tip:isRest?'Следующее движение: '+(s.sequence[idx+1]?.tip||m.tip):m.tip;const time=isPrep?PREP:isRest?s.restMs:s.workMs;const next=isPrep?s.sequence[0].name:isRest?s.sequence[idx+1]?.name:s.sequence[idx+1]?.name||'Финиш!';$root.innerHTML=`<main class="workout ${s.paused?'paused':''}"><header class="work-top"><button class="round-btn" id="quit" aria-label="Закрыть тренировку">${ic('x')}</button><div class="work-progress"><span id="progress-label">${isPrep?'Начало':`${Math.min(idx+1,s.sequence.length)} из ${s.sequence.length} упражнений`}</span><div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:${((s.totalElapsed||0)/s.totalDuration)*100}%"></div></div></div><button class="round-btn ${data.music?'on':''}" id="music-toggle" aria-label="${data.music?'Выключить':'Включить'} музыку">${ic(data.music?'music':'musicOff')}</button></header><div class="work-label" id="phase-label">${label}</div><h1 class="work-title" id="exercise-name">${title}</h1><p class="work-desc" id="exercise-tip">${tip}</p><div class="figure-panel">${figure(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)}<div class="motion-badge">${s.paused?'Пауза · демонстрация остановлена':'▶ Демонстрация движения'}</div></div><div class="clock" role="timer" aria-live="off"><span class="big-time" id="clock-value">${Math.ceil((s.remainingMs??time)/1000).toString().padStart(2,'0')}</span><span class="count-caption" id="count-caption">${s.paused?'Пауза':isExercise?'секунд движения':'секунд до начала'}</span></div><div class="next"><span>Дальше</span><strong id="next-name">${next}</strong></div><div class="work-actions"><button class="act secondary" id="stop-play">${ic(s.paused?'play':'pause')} ${s.paused?'Продолжить':'Пауза'}</button><button class="act primary" id="quit-secondary">${ic('x')} Завершить</button></div><div class="prep-tip">${data.music?'♪ Оригинальная фоновая мелодия':'Музыка выключена'} · Без прыжков</div></main>`;document.getElementById('quit').addEventListener('click',quitWorkout);document.getElementById('music-toggle').addEventListener('click',toggleMusic);document.getElementById('stop-play').addEventListener('click',togglePause);document.getElementById('quit-secondary').addEventListener('click',quitWorkout);updateTimerUI();startFigureAnimation(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose,s.paused);}
+    function updateTimerUI(){if(!session||!['prep','exercise','rest'].includes(session.phase))return;const s=session;const n=document.getElementById('clock-value'),bar=document.getElementById('progress-bar');if(n)n.textContent=String(Math.max(0,Math.ceil(s.remainingMs/1000))).padStart(2,'0');if(bar)bar.style.width=`${Math.min(100,Math.max(0,(s.totalElapsed||0)/s.totalDuration*100))}%`;}
+    function startWorkout(workout){
+      const picked=resolvedWorkout(workout&&Array.isArray(workout.ids)?workout:activeWorkout);
+      if(!picked){showToast('Добавь хотя бы одно упражнение.');return;}
+      activeWorkout=picked;
+      const workMs=picked.work*1000,restMs=picked.rest*1000;
+      const totalDuration=(5+picked.sequence.length*picked.work+Math.max(0,picked.sequence.length-1)*picked.rest)*1000;
+      session={phase:'prep',index:0,remainingMs:PREP,endAt:Date.now()+PREP,paused:false,totalElapsed:0,
+        sequence:picked.sequence,workMs,restMs,totalDuration,name:picked.name};
+      view='workout';render();
+      if(data.music)startMusic();if(interval)clearInterval(interval);interval=setInterval(tick,110);requestWake();
+    }
     async function requestWake(){try{if('wakeLock'in navigator&&document.visibilityState==='visible'&&session&&!session.paused)wakeLock=await navigator.wakeLock.request('screen');}catch(e){}}
     function releaseWake(){try{wakeLock?.release();}catch(e){}wakeLock=null;}
-    function segmentDuration(s){return s.phase==='prep'?PREP:s.phase==='rest'?REST:EXERCISE;}
+    function segmentDuration(s){return s.phase==='prep'?PREP:s.phase==='rest'?s.restMs:s.workMs;}
     function tick(){if(!session||session.paused)return;let remaining=session.endAt-Date.now(),guard=0;while(remaining<=0&&session&&guard++<40){const overflow=-remaining;transition();if(!session)return;remaining=segmentDuration(session)-overflow;session.endAt=Date.now()+remaining;}if(session){session.remainingMs=Math.max(0,remaining);session.totalElapsed=Math.min(TOTAL,computeElapsed(session));updateTimerUI();}}
-    function computeElapsed(s){if(s.phase==='prep')return PREP-s.remainingMs;let total=PREP;for(let i=0;i<s.index;i++)total+=EXERCISE+REST;if(s.phase==='rest')total+=EXERCISE+(REST-s.remainingMs);else total+=(EXERCISE-s.remainingMs);return total;}
-    function transition(){if(!session)return;const s=session;if(s.phase==='prep'){s.phase='exercise';s.remainingMs=EXERCISE;}else if(s.phase==='exercise'){if(s.index===moves.length-1){finishWorkout();return;}s.phase='rest';s.remainingMs=REST;}else if(s.phase==='rest'){s.index++;s.phase='exercise';s.remainingMs=EXERCISE;}s.endAt=Date.now()+s.remainingMs;playChime(s.phase==='exercise');renderWorkout();}
+    function computeElapsed(s){if(s.phase==='prep')return PREP-s.remainingMs;let total=PREP;for(let i=0;i<s.index;i++)total+=s.workMs+s.restMs;if(s.phase==='rest')total+=s.workMs+(s.restMs-s.remainingMs);else total+=(s.workMs-s.remainingMs);return total;}
+    function transition(){
+      if(!session)return;const s=session;
+      if(s.phase==='prep'){s.phase='exercise';s.remainingMs=s.workMs;}
+      else if(s.phase==='exercise'){
+        if(s.index===s.sequence.length-1){finishWorkout();return;}
+        if(s.restMs>0){s.phase='rest';s.remainingMs=s.restMs;}
+        else{s.index++;s.phase='exercise';s.remainingMs=s.workMs;}
+      }else if(s.phase==='rest'){s.index++;s.phase='exercise';s.remainingMs=s.workMs;}
+      s.endAt=Date.now()+s.remainingMs;playChime(s.phase==='exercise');renderWorkout();
+    }
     function togglePause(){if(!session)return;const s=session;if(!s.paused){s.remainingMs=Math.max(0,s.endAt-Date.now());s.paused=true;stopMusic();releaseWake();}else{s.endAt=Date.now()+s.remainingMs;s.paused=false;if(data.music)startMusic();requestWake();}renderWorkout();}
     function quitWorkout(){if(!session)return;if(!window.confirm('Завершить тренировку досрочно? Этот день не будет отмечен.'))return;cleanup();view='home';render();}
     function cleanup(){stopFigureAnimation();if(interval)clearInterval(interval);interval=null;stopMusic();releaseWake();session=null;}
-    function finishWorkout(){if(!session)return;const wasDone=data.completed.includes(today());if(!wasDone){data.completed.push(today());data.completed.sort();save();}cleanup();view='done';render();playChime(true);}
-    function renderComplete(){$root.innerHTML=`<main class="complete"><div class="complete-mark">${ic('check',78)}</div><div class="kicker">Утренний ритуал выполнен</div><h1>Отличное начало!</h1><p class="sub">Семь минут движения позади.<br>Этот день уже в твоём календаре.</p><div class="complete-stats"><div><div class="big">7:00</div><p>Длительность</p></div><div><div class="big">${currentStreak()}</div><p>${plural(currentStreak(),'день','дня','дней')} подряд</p></div></div><button class="start" id="back-home">${ic('check')} Готово</button></main>`;document.getElementById('back-home').addEventListener('click',()=>{view='home';render();});}
-    function render(){if(view!=='workout'&&view!=='guide')stopFigureAnimation();if(view==='home')renderHome();else if(view==='history')renderHistory();else if(view==='workout')renderWorkout();else if(view==='guide')renderGuide();else if(view==='done')renderComplete();}
+    function finishWorkout(){if(!session)return;lastCompletedWorkout={name:session.name,duration:session.totalDuration};const wasDone=data.completed.includes(today());if(!wasDone){data.completed.push(today());data.completed.sort();save();}cleanup();view='done';render();playChime(true);}
+    function renderComplete(){$root.innerHTML=`<main class="complete"><div class="complete-mark">${ic('check',78)}</div><div class="kicker">Утренний ритуал выполнен</div><h1>Отличное начало!</h1><p class="sub">Тренировка «${escapeHtml(lastCompletedWorkout.name)}» завершена.<br>Этот день уже в твоём календаре.</p><div class="complete-stats"><div><div class="big">${formatDuration(lastCompletedWorkout.duration/1000)}</div><p>Длительность</p></div><div><div class="big">${currentStreak()}</div><p>${plural(currentStreak(),'день','дня','дней')} подряд</p></div></div><button class="start" id="back-home">${ic('check')} Готово</button></main>`;document.getElementById('back-home').addEventListener('click',()=>{view='home';render();});}
+    function render(){if(view!=='workout'&&view!=='guide')stopFigureAnimation();if(view==='home')renderHome();else if(view==='history')renderHistory();else if(view==='workout')renderWorkout();else if(view==='guide')renderGuide();else if(view==='presets')renderPresets();else if(view==='catalog')renderCatalog();else if(view==='builder')renderBuilder();else if(view==='done')renderComplete();}
     function toggleMusic(){data.music=!data.music;save();if(data.music&&session&&!session.paused)startMusic();else stopMusic();renderWorkout();}
     function setupAudio(){if(audio)return true;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return false;audio=new A();master=audio.createGain();master.gain.value=.40;master.connect(audio.destination);noiseBuffer=audio.createBuffer(1,Math.ceil(audio.sampleRate*.09),audio.sampleRate);const c=noiseBuffer.getChannelData(0);for(let i=0;i<c.length;i++)c[i]=Math.random()*2-1;return true;}catch(e){return false;}}
     function tone(hz,start,duration,vol=.09,wave='sine'){if(!audio)return;const osc=audio.createOscillator(),gain=audio.createGain();osc.type=wave;osc.frequency.setValueAtTime(hz,start);gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(Math.max(.0002,vol),start+.015);gain.gain.exponentialRampToValueAtTime(.0001,start+duration);osc.connect(gain).connect(master);osc.start(start);osc.stop(start+duration+.025);}

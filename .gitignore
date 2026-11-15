@@ -2,3 +2,12 @@
 # Generated 3D frame cache and Blender backups
 assets/motion/v1/_frames/
 assets/motion/v1/*.blend1
+
+# External research, not product source
+_research/
+# Large intermediary renders, editor backups, and temp reviews
+assets/motion/quality-v2/_frames/
+assets/motion/quality-v2/pushup-*.png
+assets/motion/quality-v2/*-preview.jpg
+assets/motion/quality-v2/*.blend1
+tools/blender/__pycache__/

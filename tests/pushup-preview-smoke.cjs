@@ -1,0 +1,26 @@
+const puppeteer=require(process.env.PUPPETEER_PATH||'puppeteer');
+const path=require('path');
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+(async()=>{
+ const b=await puppeteer.launch({headless:true,args:['--no-sandbox','--autoplay-policy=no-user-gesture-required']});
+ const p=await b.newPage();
+ await p.setViewport({width:390,height:844,isMobile:true,hasTouch:true,deviceScaleFactor:1});
+ const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ const url=process.env.PREVIEW_URL||'file://'+path.resolve(__dirname,'../preview/pushup/index.html');
+ const response=await p.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
+ await p.waitForFunction(()=>{let v=document.querySelector('#demo');return v&&v.readyState>=2},{timeout:10000});
+ const initial=await p.$eval('#demo',v=>({src:v.currentSrc,muted:v.muted,loop:v.loop,inline:v.hasAttribute('playsinline'),width:v.videoWidth,height:v.videoHeight,ready:v.readyState,paused:v.paused,time:v.currentTime}));
+ await delay(500);
+ const moving=await p.$eval('#demo',v=>v.currentTime);
+ await p.click('#toggle');
+ const pauseTime=await p.$eval('#demo',v=>v.currentTime);await delay(440);
+ const pauseTime2=await p.$eval('#demo',v=>v.currentTime);
+ await p.click('#toggle');
+ const resumed1=await p.$eval('#demo',v=>v.currentTime);await delay(450);
+ const resumed2=await p.$eval('#demo',v=>v.currentTime);
+ const viewport=await p.evaluate(()=>({client:document.documentElement.clientWidth,scroll:document.body.scrollWidth}));
+ const result={http:response?response.status():null,title:await p.title(),initial,moving,pauses:Math.abs(pauseTime2-pauseTime)<.065,resumes:resumed2>resumed1+.1,videoMoves:moving>initial.time+.1,viewport,errors};
+ console.log(JSON.stringify(result,null,2));
+ await b.close();
+ if(errors.length||!initial.src.endsWith('female-pushup.mp4')||!initial.muted||!initial.inline||!initial.loop||initial.width!==840||initial.height!==560||!result.pauses||!result.resumes||!result.videoMoves||viewport.scroll>viewport.client+2)process.exitCode=1;
+})().catch(e=>{console.error('QA_ERROR',e.stack);process.exitCode=2});

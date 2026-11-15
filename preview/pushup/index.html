@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c1928"><title>Утро 7 — 3D-отжимания</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 95% 5%,#1b4053,transparent 38%),#0b1726;color:#eefaff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:calc(23px + env(safe-area-inset-top)) 18px calc(36px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:34px;font-weight:850}
+.logo{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(130deg,#8af8d5,#52b9fc);border-radius:10px;width:39px;height:39px;color:#103749;font-size:25px;margin-right:7px}
+a{color:#a8f7e1;text-decoration:none;font-size:13px;border:1px solid #3b6575;border-radius:12px;padding:10px}
+.kicker{text-transform:uppercase;color:#8bf2d7;letter-spacing:.14em;font-size:11px;font-weight:850}
+h1{font-size:clamp(35px,8vw,47px);letter-spacing:-.045em;margin:10px 0 12px}
+p{color:#b1c6d0;font-size:14px;line-height:1.6}
+.stage{position:relative;border:1px solid #648c9a;border-radius:22px;overflow:hidden;background:#dce2e8;aspect-ratio:3/2;margin:25px 0 13px}
+video{width:100%;height:100%;display:block;object-fit:contain}
+.tag{position:absolute;top:11px;left:11px;padding:8px 11px;background:#dafff4e8;color:#123f4c;border-radius:30px;font-weight:850;font-size:11px}
+button{font:inherit;cursor:pointer;border:0;border-radius:13px;background:#86f0d5;color:#17394a;padding:14px 19px;font-weight:850}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:14px 0 26px}
+.note{font-size:12px;color:#a7beca}
+section{background:#142b3c;border:1px solid #365667;border-radius:19px;padding:18px}
+section h2{font-size:17px;margin:0 0 10px}
+ol{font-size:14px;line-height:1.6;color:#d6e7ee;padding-left:24px;margin:0}
+li{margin:8px 0}
+footer{font-size:12px;color:#849eab;line-height:1.5;padding:21px 2px}
+@media(max-width:510px){.controls{flex-direction:column;align-items:stretch;text-align:center}}
+</style>
+</head>
+<body><main>
+<header><div><span class="logo">7</span> УТРО 7</div><a href="../../">← Приложение</a></header>
+<div class="kicker">Motion Quality v2 · 1 тренер · 1 упражнение</div>
+<h1>Отжимания</h1>
+<p>Контрольный образец риггированной 3D-модели человека. Пока не заменяет анимации в основной тренировке.</p>
+<div class="stage">
+<video id="demo" muted playsinline autoplay loop preload="metadata" poster="../../assets/motion/quality-v2/female-pushup-poster.jpg" aria-label="3D-демонстрация отжимания">
+<source src="../../assets/motion/quality-v2/female-pushup.mp4" type="video/mp4">
+Браузер не поддерживает видео.
+</video>
+<span class="tag">3D · прототип</span>
+</div>
+<div class="controls"><span id="status" class="note">Загрузка…</span><button id="toggle" type="button">▶ Воспроизвести</button></div>
+<section><h2>Что проверяем</h2><ol><li>Правдоподобность пропорций и положение корпуса.</li><li>Опору ладоней и стоп, сгибание локтей.</li><li>Плавность перехода между верхней и нижней фазой.</li></ol></section>
+<footer>Модель создана в Blender с MPFB/MakeHuman, ассеты CC0. Техника ещё не проверена специалистом по фитнесу. Ролик без звука, музыка и трекер привычки здесь намеренно не представлены.</footer>
+</main>
+<script>
+const v=document.querySelector('#demo'),b=document.querySelector('#toggle'),s=document.querySelector('#status');
+function update(){b.textContent=v.paused?'▶ Воспроизвести':'Ⅱ Пауза';s.textContent=v.error?'Ошибка загрузки видео':v.paused?'На паузе':'Повтор упражнения · 2 секунды'}
+b.addEventListener('click',()=>{if(v.paused){const p=v.play();if(p&&p.catch)p.catch(update)}else v.pause()});
+for(const name of ['play','pause','loadedmetadata','error'])v.addEventListener(name,update);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)v.pause()});
+const p=v.play();if(p&&p.catch)p.catch(update);update();
+</script>
+</body></html>

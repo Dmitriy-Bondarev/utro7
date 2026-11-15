@@ -42,6 +42,55 @@
     .builder-add button{border:0;border-radius:11px;background:#305a62;color:#edfff7;padding:0 12px;font-size:13px;font-weight:780}
     .builder-app #builder-save{margin:14px 0 10px}.builder-app .preview-link{width:100%}
     @media(max-width:370px){.catalog-tools{grid-template-columns:1fr}.recipe-actions button{padding:8px}.mode-tile{padding:10px}}
+    .text-back{padding:9px 0;color:#9eefd9;background:transparent;border:0;font-weight:750;font-size:14px}
+    .detail-hero{border:1px solid #355b67;border-radius:23px;background:radial-gradient(circle at 100% 0%,#1b5863,#132b3a 65%);padding:22px 20px;margin:14px 0 20px}
+    .detail-hero h1{font-size:clamp(30px,8vw,39px);line-height:1.1;letter-spacing:-.04em;margin:5px 0 12px}
+    .detail-hero p{color:#b6ccd5;font-size:14px;line-height:1.55;margin:0 0 22px}
+    .detail-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .detail-stats>div{border:1px solid #386370;border-radius:12px;padding:12px 6px;text-align:center;background:#0b2233a6}
+    .detail-stats strong{display:block;font-size:19px;color:#97f2d8}
+    .detail-stats span{display:block;font-size:10px;color:#a8c2cd;margin-top:3px}
+    .workout-detail .section-head{margin-top:27px}
+    .workout-moves{display:grid;gap:8px;padding-bottom:26px}
+    .workout-move{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:#14293a;border:1px solid #34556b;border-radius:15px;padding:13px;color:#f5fbff}
+    .move-index{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#235060;color:#9af6da;font-weight:850;font-size:14px;flex-shrink:0}
+    .move-text{flex:1;min-width:0}.move-text strong{display:block;font-size:14px}.move-text small{display:block;color:#97aebb;margin-top:4px}
+    .move-chevron{font-size:26px;color:#99eeda;line-height:1}
+    .guide-detail{padding-bottom:calc(25px + env(safe-area-inset-bottom));}
+    .guide-detail .work-label{margin-top:26px}
+    .guide-detail .work-title{font-size:31px;line-height:1.14;min-height:auto}
+    .guide-detail .detail-figure{width:min(100%,420px);height:min(35dvh,300px);min-height:230px;margin:14px auto 20px}
+    .guide-detail .figure{max-height:250px}
+    .technique{background:#142839;border:1px solid #345365;padding:18px;border-radius:18px;margin-bottom:22px}
+    .technique h2,.guide-collection h2{font-size:18px;margin:0 0 12px;letter-spacing:-.02em}
+    .technique ol{margin:0;padding-left:21px;color:#eaf7f9;font-size:14px;line-height:1.5}
+    .technique li{margin-bottom:10px;padding-left:3px}
+    .technique-easy,.technique-care{background:#1d3948;border-radius:11px;padding:11px 12px;margin-top:9px;color:#bbd5df;font-size:12px;line-height:1.5}
+    .technique-easy strong,.technique-care strong{color:#98f0d7}
+    .guide-collection{margin:5px 0 22px}
+    .guide-strip{display:flex;gap:9px;overflow-x:auto;padding:3px 2px 12px;scroll-snap-type:x mandatory;scrollbar-color:#438687 #122334}
+    .guide-item{flex:0 0 103px;min-height:83px;border:1px solid #315565;border-radius:14px;background:#162d3e;color:#d6e7f0;text-align:center;padding:9px;scroll-snap-align:center}
+    .guide-item.selected{border:2px solid #8cf2d5;background:#234c57}
+    .guide-item span{display:block;font-size:13px;color:#a3f4da;font-weight:800;margin-bottom:6px}
+    .guide-item small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:11px;line-height:1.3}
+    .guide-detail #guide-start{width:100%}
+    @media(max-height:690px){.guide-detail .detail-figure{min-height:170px;height:27dvh}.guide-detail .work-label{margin-top:15px}}
+    .moving-figure[data-avatar="man"] .torso{stroke:#55bafa;stroke-width:28}
+    .moving-figure[data-avatar="man"] .leg{stroke:#297dc1;stroke-width:15}
+    .moving-figure[data-avatar="man"] .arm{stroke:#e6b28e;stroke-width:12}
+    .moving-figure[data-avatar="man"] .figure-head{fill:#e9b78f;stroke:#d79f82}
+    .moving-figure[data-avatar="man"] .figure-hair{fill:#293c4d}
+    .moving-figure[data-avatar="woman"] .figure-ponytail{fill:none;stroke:#654037;stroke-width:11;stroke-linecap:round}
+    .moving-figure[data-avatar="man"] .figure-ponytail{display:none}
+    .avatar-page .avatar-preview .figure-panel{height:260px;min-height:230px;width:min(100%,370px);margin:12px auto 18px}
+    .avatar-choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .avatar-card{background:#14293a;border:1px solid #416373;color:#e8f7fa;border-radius:18px;min-height:155px;display:flex;align-items:center;flex-direction:column;gap:8px;padding:16px 10px}
+    .avatar-card.selected{border:2px solid #8df0d7;background:#214b52}
+    .avatar-circle{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:31px}
+    .avatar-circle.woman{background:#2f726f;color:#baf7e4}.avatar-circle.man{background:#24587a;color:#a7dcff}
+    .avatar-card small{font-size:11px;color:#a4b8c9}.avatar-note{font-size:12px;color:#8ca4b3;line-height:1.6;margin:20px 0}
+    .avatar-page .start{width:100%}
+    .content-app + nav.bottom{position:static;max-width:520px;margin:0 auto;padding:12px 22px calc(22px + env(safe-area-inset-bottom));background:#0b1422;border-top:1px solid #253647}
   </style>
 </head>
 <body>
@@ -67,6 +116,7 @@
       musicOff:'<path d="M9 9V5l12-2v13"/><path d="M9 15v3a3 3 0 1 1-3-3"/><path d="M18 13a3 3 0 1 1 0 6"/><path d="M3 3l18 18"/>',
       arrow:'<path d="M5 12h14m-6-6 6 6-6 6"/>',
       shield:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+      user:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
       volume:'<path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/>'
     };
     const ic=(name,size=20)=>`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${glyph[name]||''}</svg>`;
@@ -120,13 +170,14 @@
     function loadCustom(){try{const c=JSON.parse(localStorage.getItem(CUSTOM_KEY)||'[]');return Array.isArray(c)?c.map(normalizeCustom).filter(Boolean).slice(0,25):[];}catch(e){return [];}}
     let customWorkouts=loadCustom();
     function saveCustom(){try{localStorage.setItem(CUSTOM_KEY,JSON.stringify(customWorkouts));}catch(e){showToast('Не удалось сохранить комплексы.');}}
+    let selectedWorkout=presets[0],guideWorkout=presets[0],guideSequence=exerciseCatalog,avatarReturn='home';
     let activeWorkout=presets[0],catalogCategory='Все',catalogQuery='',builderIds=[],builderName='Моя тренировка',
       builderWork=30,builderRest=5,builderEditingId=null,guideReturn='home',lastCompletedWorkout=presets[0];
     function resolvedWorkout(w){const ids=(w&&w.ids||[]).map(id=>byExerciseId.get(id)).filter(Boolean);return ids.length?Object.assign({},w,{sequence:ids}):null;}
     // The work interval is precisely 7:00: 5s preparation + 12×30s + 11×5s rests.
     const PREP=5000, EXERCISE=30000, REST=5000, TOTAL=420000;
     const weekday=['пн','вт','ср','чт','пт','сб','вс'];
-    function load(){try{const obj=JSON.parse(localStorage.getItem(STORE));if(obj&&Array.isArray(obj.completed))return {completed:[...new Set(obj.completed.filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x)))].sort(),music:obj.music!==false};}catch(e){}return {completed:[],music:true};}
+    function load(){try{const obj=JSON.parse(localStorage.getItem(STORE));if(obj&&Array.isArray(obj.completed))return {completed:[...new Set(obj.completed.filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x)))].sort(),music:obj.music!==false,avatar:obj.avatar==='man'?'man':'woman'};}catch(e){}return {completed:[],music:true,avatar:'woman'};}
     let data=load(),view='home',monthOffset=0,session=null,interval=null,audio=null,audioTimer=null,master=null,nextNoteTime=0,noteStep=0,noiseBuffer=null,wakeLock=null;
     function save(){try{localStorage.setItem(STORE,JSON.stringify(data));}catch(e){showToast('Не удалось сохранить прогресс. Проверьте настройки браузера.');}}
     function showToast(message){const old=document.querySelector('.toast');if(old)old.remove();const n=document.createElement('div');n.className='toast';n.textContent=message;n.setAttribute('role','status');Object.assign(n.style,{position:'fixed',zIndex:60,bottom:'115px',left:'50%',transform:'translateX(-50%)',background:'#e9fff6',color:'#103349',borderRadius:'13px',padding:'12px 16px',fontSize:'13px',maxWidth:'90vw',boxShadow:'0 12px 40px #0006',textAlign:'center'});document.body.appendChild(n);setTimeout(()=>n.remove(),4200);}
@@ -141,10 +192,10 @@
     function week(){const d=new Date();const offset=(d.getDay()+6)%7;let html='';for(let i=0;i<7;i++){const x=addDays(d,i-offset),key=dayKey(x),done=data.completed.includes(key),isToday=key===today();html+=`<div class="day ${done?'done':''} ${isToday?'today':''}"><span>${weekday[i]}</span><div class="bubble" aria-label="${shortDate(x)}${done?', выполнено':''}">${done?ic('check',18):x.getDate()}</div></div>`;}return html;}
     function nav(which){return `<nav class="bottom" aria-label="Навигация"><button class="tab ${which==='home'?'on':''}" id="go-home" aria-current="${which==='home'?'page':'false'}">${ic('sun')} Сегодня</button><button class="tab ${which==='history'?'on':''}" id="go-history" aria-current="${which==='history'?'page':'false'}">${ic('calendar')} Привычка</button></nav>`;}
     function header(){const d=new Date();return `<header class="top"><div class="brand"><div class="logo">${ic('sun')}</div>УТРО 7</div><div class="date">${d.toLocaleDateString('ru-RU',{weekday:'long'})}<br>${d.toLocaleDateString('ru-RU',{day:'numeric',month:'long'})}</div></header>`;}
-    function renderHome(){const done=data.completed.includes(today());$root.innerHTML=`<main class="app">${header()}<section class="hero"><div class="kicker">Семь минут для себя</div><h1>Начни день<br><em>с движения.</em></h1><p class="sub">Лёгкая утренняя тренировка под музыку.<br>Без оборудования и лишних настроек.</p></section><section class="feature" aria-label="Тренировка на семь минут"><div class="eyebrow">${ic('sun',15)} ${done?'Уже выполнено сегодня':'Твоя утренняя практика'}</div><div class="seven">7<small> мин</small></div><p class="feature-caption">12 упражнений · 30 секунд каждое</p><button class="start" id="start">${ic('play',19)} ${done?'Повторить тренировку':'Начать тренировку'}</button><div class="mode-grid"><button class="mode-tile" id="open-presets"><b>▶</b><strong>Готовые комплексы</strong><small>Выбрать тренировку</small></button><button class="mode-tile" id="open-builder"><b>＋</b><strong>Своя тренировка</strong><small>Собрать и сохранить</small></button></div><button class="preview-link" id="open-catalog">Каталог упражнений</button><button class="preview-link" id="preview-moves">${ic('play',15)} Посмотреть упражнения</button></section><section class="section-head"><h2>Твоя неделя</h2><span class="smallnote">${thisWeekCount()} из 7 дней</span></section><div class="week">${week()}</div><section class="stats-row"><div class="mini-stat"><div class="num spark">${currentStreak()} <span class="unit">дн.</span></div><p>Серия тренировок подряд</p></div><div class="mini-stat"><div class="num">${thisMonthCount()} <span class="unit">дн.</span></div><p>В этом месяце</p></div></section></main>${nav('home')}`;bindNavigation();document.getElementById('start').addEventListener('click',()=>startWorkout(presets[0]));document.getElementById('preview-moves').addEventListener('click',()=>{guideIndex=0;guideReturn='home';view='guide';render();});document.getElementById('open-presets').addEventListener('click',()=>{view='presets';render();});document.getElementById('open-builder').addEventListener('click',()=>{newBuilder();view='builder';render();});document.getElementById('open-catalog').addEventListener('click',()=>{view='catalog';render();});}
+    function renderHome(){const done=data.completed.includes(today());$root.innerHTML=`<main class="app">${header()}<section class="hero"><div class="kicker">Семь минут для себя</div><h1>Начни день<br><em>с движения.</em></h1><p class="sub">Лёгкая утренняя тренировка под музыку.<br>Без оборудования и лишних настроек.</p></section><section class="feature" aria-label="Тренировка на семь минут"><div class="eyebrow">${ic('sun',15)} ${done?'Уже выполнено сегодня':'Твоя утренняя практика'}</div><div class="seven">7<small> мин</small></div><p class="feature-caption">12 упражнений · 30 секунд каждое</p><button class="start" id="start">${ic('play',19)} ${done?'Повторить тренировку':'Начать тренировку'}</button><div class="mode-grid"><button class="mode-tile" id="open-presets"><b>▶</b><strong>Готовые комплексы</strong><small>Выбрать тренировку</small></button><button class="mode-tile" id="open-builder"><b>＋</b><strong>Своя тренировка</strong><small>Собрать и сохранить</small></button></div><button class="preview-link" id="open-catalog">Каталог упражнений</button><button class="preview-link" id="choose-avatar">Инструктор: ${data.avatar==='man'?'Мужчина':'Женщина'}</button><button class="preview-link" id="preview-moves">${ic('play',15)} Посмотреть упражнения</button></section><section class="section-head"><h2>Твоя неделя</h2><span class="smallnote">${thisWeekCount()} из 7 дней</span></section><div class="week">${week()}</div><section class="stats-row"><div class="mini-stat"><div class="num spark">${currentStreak()} <span class="unit">дн.</span></div><p>Серия тренировок подряд</p></div><div class="mini-stat"><div class="num">${thisMonthCount()} <span class="unit">дн.</span></div><p>В этом месяце</p></div></section></main>${nav('home')}`;bindNavigation();document.getElementById('start').addEventListener('click',()=>startWorkout(presets[0]));document.getElementById('preview-moves').addEventListener('click',()=>{guideSequence=exerciseCatalog;guideWorkout=presets[0];guideIndex=0;guideReturn='home';view='guide';render();});document.getElementById('open-presets').addEventListener('click',()=>{view='presets';render();});document.getElementById('open-builder').addEventListener('click',()=>{newBuilder();view='builder';render();});document.getElementById('open-catalog').addEventListener('click',()=>{view='catalog';render();});document.getElementById('choose-avatar').addEventListener('click',()=>openAvatar('home'));}
     function renderCalendar(){const d=new Date();const first=new Date(d.getFullYear(),d.getMonth()+monthOffset,1);const year=first.getFullYear(),month=first.getMonth();const days=new Date(year,month+1,0).getDate();const offset=(first.getDay()+6)%7;let cells=weekday.map(x=>`<div class="cal-label">${x}</div>`).join('');for(let i=0;i<offset;i++)cells+='<div class="cal-day empty"></div>';for(let i=1;i<=days;i++){const key=dayKey(new Date(year,month,i)),done=data.completed.includes(key),isToday=key===today(),future=key>today();cells+=`<div class="cal-day ${done?'done':''} ${isToday?'today':''} ${future?'future':''}" aria-label="${i} ${first.toLocaleDateString('ru-RU',{month:'long'})}${done?' — выполнено':''}">${done?ic('check',17):i}</div>`;}return `<section class="calendar"><div class="monthhead"><button class="arrow" id="prev-month" aria-label="Предыдущий месяц">${ic('chevronLeft')}</button><h2>${first.toLocaleDateString('ru-RU',{month:'long',year:'numeric'})}</h2><button class="arrow" id="next-month" aria-label="Следующий месяц" ${monthOffset>=0?'disabled':''}>${ic('chevronRight')}</button></div><div class="cal-grid">${cells}</div><div class="callegend"><span class="legend-dot"></span>День с выполненной тренировкой</div></section>`;}
     function renderHistory(){$root.innerHTML=`<main class="app">${header()}<div class="kicker">Маленькие шаги каждый день</div><h1 class="habit-title">Моя привычка</h1><p class="habit-intro">Каждая завершённая тренировка отмечается в календаре автоматически.</p><section class="large-stats"><div class="streak-number">${currentStreak()}</div><div><h2>${plural(currentStreak(),'день','дня','дней')} подряд</h2><div class="caption">Текущая серия.<br>Продолжай в удобном ритме.</div></div></section>${renderCalendar()}<div class="history-stats"><div class="mini-stat"><div class="num">${data.completed.length}</div><p>Дней с тренировкой</p></div><div class="mini-stat"><div class="num">${longestStreak()}</div><p>Лучшая серия, дней</p></div></div><p class="muted-footer privacy">${ic('shield')} История хранится только в этом браузере.</p><p class="muted-footer"><button id="export-history">Сохранить историю</button> · <button id="import-history">Восстановить историю</button><input id="import-file" type="file" accept=".json,application/json" hidden></p></main>${nav('history')}`;bindNavigation();document.getElementById('prev-month').addEventListener('click',()=>{monthOffset--;renderHistory();});document.getElementById('next-month').addEventListener('click',()=>{if(monthOffset<0){monthOffset++;renderHistory();}});document.getElementById('export-history').addEventListener('click',exportHistory);document.getElementById('import-history').addEventListener('click',()=>document.getElementById('import-file').click());document.getElementById('import-file').addEventListener('change',importHistory);}
-    function exportHistory(){const payload=JSON.stringify({app:'Утро 7',version:1,exportedAt:new Date().toISOString(),completed:data.completed,customWorkouts:customWorkouts},null,2);const blob=new Blob([payload],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`utro7-history-${today()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
+    function exportHistory(){const payload=JSON.stringify({app:'Утро 7',version:1,exportedAt:new Date().toISOString(),completed:data.completed,customWorkouts:customWorkouts,avatarId:data.avatar},null,2);const blob=new Blob([payload],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`utro7-history-${today()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}
     async function importHistory(event){const file=event.target.files?.[0];if(!file)return;try{if(file.size>200000)throw Error('Файл слишком большой');const obj=JSON.parse(await file.text());if(obj.app!=='Утро 7'||!Array.isArray(obj.completed))throw Error('Неподходящий формат');const valid=obj.completed.filter(x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)&&x<=today());const keys=[...new Set([...data.completed,...valid])].sort();data.completed=keys;save();if(Array.isArray(obj.customWorkouts)){const added=obj.customWorkouts.map(normalizeCustom).filter(Boolean);for(const w of added){if(!customWorkouts.some(x=>x.id===w.id)&&customWorkouts.length<25)customWorkouts.push(w);}saveCustom();}renderHistory();showToast('Данные восстановлены.');}catch(e){showToast('Не удалось прочитать историю. Выбери копию из «Утро 7».');}}
     function bindNavigation(){document.getElementById('go-home').addEventListener('click',()=>{view='home';render();});document.getElementById('go-history').addEventListener('click',()=>{view='history';render();});}
     function plural(n,a,b,c){const x=Math.abs(n)%100,z=x%10;return x>10&&x<20?c:z===1?a:z>=2&&z<=4?b:c;}
@@ -185,7 +236,7 @@
     const MOTION_FIELDS=['head','shoulder','hip','le','lh','re','rh','lk','lf','rk','rf'];
     function figure(key){
       const label=moves.find(m=>m.pose===key)?.name||'движение';
-      return `<svg class="figure moving-figure" viewBox="0 0 250 196" role="img" aria-label="Анимация движения: ${label}">
+      return `<svg class="figure moving-figure" data-avatar="${data.avatar}" viewBox="0 0 250 196" role="img" aria-label="Анимация движения: ${label}">
         <path class="floor" d="M16 185H234"/>
         <g class="character">
           <path data-limb="legL1" class="limb leg"/><path data-limb="legL2" class="limb leg"/>
@@ -194,7 +245,7 @@
           <path data-limb="armL1" class="limb arm"/><path data-limb="armL2" class="limb arm"/>
           <path data-limb="armR1" class="limb arm"/><path data-limb="armR2" class="limb arm"/>
           <circle id="figure-head" class="figure-head" r="15.5"/>
-          <ellipse id="figure-hair" class="figure-hair" rx="16" ry="6"/>
+          <ellipse id="figure-hair" class="figure-hair" rx="16" ry="6"/><path id="figure-ponytail" class="figure-ponytail"/>
           <circle id="figure-eye" r="1.6" fill="#164052"/>
           <circle id="figure-footL" r="5.5" fill="#70eed6"/>
           <circle id="figure-footR" r="5.5" fill="#70eed6"/>
@@ -222,7 +273,7 @@
       svg.querySelector('#figure-head').setAttribute('cx',h[0]);
       svg.querySelector('#figure-head').setAttribute('cy',h[1]);
       svg.querySelector('#figure-hair').setAttribute('cx',h[0]);
-      svg.querySelector('#figure-hair').setAttribute('cy',h[1]-11);
+      svg.querySelector('#figure-hair').setAttribute('cy',h[1]-11);svg.querySelector('#figure-ponytail').setAttribute('d','M '+(h[0]-12)+' '+(h[1]-12)+' Q '+(h[0]-30)+' '+(h[1]-25)+' '+(h[0]-31)+' '+(h[1]-4)+' Q '+(h[0]-38)+' '+(h[1]+12)+' '+(h[0]-42)+' '+(h[1]+17));
       svg.querySelector('#figure-eye').setAttribute('cx',h[0]+6);
       svg.querySelector('#figure-eye').setAttribute('cy',h[1]+1);
       for(const n of ['L','R']){
@@ -251,30 +302,82 @@
       }
       motionFrame=requestAnimationFrame(frame);
     }
+    function openAvatar(from){
+      avatarReturn=from;
+      if(session&&!session.paused){session.remainingMs=Math.max(0,session.endAt-Date.now());session.paused=true;stopMusic();releaseWake();}
+      view='avatar';render();
+    }
+    function renderAvatar(){
+      $root.innerHTML=`<main class="app content-app avatar-page">${header()}
+        <button class="text-back" id="avatar-back">← Назад</button>
+        <div class="section-intro"><div class="kicker">НАСТРОЙКА</div><h1>Твой инструктор</h1>
+        <p>Выбери персонажа. Оба используют одну систему движений.</p></div>
+        <div class="avatar-preview"><div class="figure-panel">${figure('march')}<div class="motion-badge">▶ Предпросмотр движения</div></div></div>
+        <div class="avatar-choices">
+          <button class="avatar-card ${data.avatar==='woman'?'selected':''}" data-avatar="woman"><span class="avatar-circle woman">♀</span><strong>Женщина</strong><small>Бирюзовая форма</small></button>
+          <button class="avatar-card ${data.avatar==='man'?'selected':''}" data-avatar="man"><span class="avatar-circle man">♂</span><strong>Мужчина</strong><small>Синяя форма</small></button>
+        </div>
+        <p class="avatar-note">Пока это оригинальные схематичные фигуры. Реалистичная анимация — отдельная задача.</p>
+        <button class="start" id="avatar-confirm">Готово</button></main>`;
+      document.getElementById('avatar-back').addEventListener('click',()=>{view=avatarReturn;render();});
+      document.getElementById('avatar-confirm').addEventListener('click',()=>{view=avatarReturn;render();});
+      document.querySelectorAll('[data-avatar]').forEach(b=>b.addEventListener('click',()=>{data.avatar=b.dataset.avatar==='man'?'man':'woman';save();renderAvatar();}));
+      startFigureAnimation('march',false);
+    }
+    // Original text guidance, not a substitute for coaching or medical advice.
+    const technique={
+      march:{steps:['Встань ровно, стопы примерно на ширине таза.','Попеременно переноси вес с ноги на ногу, поднимая стопу от пола.','Двигай руками естественно и сохраняй спокойное дыхание.'],easy:'Замедли шаг и уменьшай амплитуду.',care:'Не запрокидывай голову и не задерживай дыхание.'},
+      shoulder:{steps:['Встань прямо, расслабь шею и опусти плечи.','Медленно веди плечи вверх, назад и вниз по кругу.','Затем поменяй направление, избегая рывков.'],easy:'Сделай круги меньшей амплитуды.',care:'Остановись при неприятном ощущении в шее или плече.'},
+      pushup:{steps:['Поставь ладони примерно на ширине плеч, вытяни ноги назад.','Согни локти и опускай грудь к полу без прогиба в пояснице.','На выдохе разогни руки, удерживая корпус прямым.'],easy:'Поставь колени на пол или выполняй упражнение у стены.',care:'Не роняй голову и не прогибай поясницу.'},
+      squat:{steps:['Поставь стопы чуть шире таза и слегка разверни носки наружу.','Отведи таз назад и вниз, сгибая колени в направлении носков.','Поднимись через опору на всю стопу, без резкого толчка.'],easy:'Приседай неглубоко или до устойчивого стула.',care:'Не своди колени внутрь и не отрывай пятки от пола.'},
+      knee:{steps:['Встань прямо, напряги мышцы живота.','Подними одно колено перед собой до комфортной высоты.','Опусти ногу мягко, затем повтори другой ногой.'],easy:'Уменьши высоту подъёма и скорость.',care:'Старайся не отклонять корпус назад.'},
+      lunge:{steps:['Встань прямо, стопы на ширине таза.','Сделай шаг одной ногой назад и плавно согни обе ноги.','Вернись в исходное положение, поменяй ногу.'],easy:'Сделай короткий шаг и неглубокий выпад, держись за опору.',care:'Следи, чтобы переднее колено двигалось по направлению стопы.'},
+      twist:{steps:['Встань устойчиво, стопы на ширине плеч.','Мягко поверни плечевой пояс вправо, не скручивая колени.','Вернись в центр и повтори влево.'],easy:'Сократи амплитуду поворота.',care:'Не делай резких вращений поясницей.'},
+      step:{steps:['Встань прямо и слегка согни колени.','Сделай шаг в сторону и подтяни вторую ногу.','Повтори в другую сторону, помогая руками.'],easy:'Сделай шаг меньше и медленнее.',care:'Не разворачивай колени внутрь при переносе веса.'},
+      plank:{steps:['Опирайся на предплечья и носки, локти под плечами.','Вытяни корпус в линию от головы до пяток.','Дыши ровно, удерживая живот и ягодицы в лёгком напряжении.'],easy:'Опирайся на колени или держи планку у опоры.',care:'Не провисай поясницей и не задирай таз.'},
+      bridge:{steps:['Ляг на спину, согни ноги, стопы поставь ближе к тазу.','На выдохе плавно подними таз, опираясь на стопы и плечи.','Опусти таз контролируемо, не бросая его на пол.'],easy:'Поднимай таз невысоко.',care:'Не переразгибай поясницу в верхнем положении.'},
+      bird:{steps:['Встань на четвереньки: ладони под плечами, колени под тазом.','Одновременно вытяни противоположную руку и ногу.','Сохраняя ровную спину, вернись и поменяй стороны.'],easy:'Поочерёдно вытягивай только одну руку или ногу.',care:'Избегай скручивания таза и прогиба поясницы.'},
+      stretch:{steps:['Встань ровно и поставь стопы устойчиво.','Подними руки и мягко потянись вверх.','Опусти руки, продолжая дышать спокойно.'],easy:'Тянись одной рукой, если обе поднимать неудобно.',care:'Не запрокидывай голову и не тянись через боль.'}
+    };
     let guideIndex=0;
     function renderGuide(){
-      const m=moves[guideIndex];
-      $root.innerHTML=`<main class="workout guide">
+      const sequence=(guideSequence&&guideSequence.length)?guideSequence:exerciseCatalog;
+      guideIndex=Math.min(sequence.length-1,Math.max(0,guideIndex));
+      const m=sequence[guideIndex],instruction=technique[m.id]||{steps:[m.tip],easy:'Уменьши амплитуду.',care:'Двигайся без боли.'};
+      const w=guideWorkout||presets[0];
+      const items=sequence.map((e,i)=>`<button class="guide-item ${i===guideIndex?'selected':''}" data-guide-index="${i}" aria-label="Упражнение ${i+1}: ${escapeHtml(e.name)}">
+        <span>${i+1}</span><small>${escapeHtml(e.name)}</small></button>`).join('');
+      $root.innerHTML=`<main class="workout guide guide-detail">
         <header class="work-top">
-          <button class="round-btn" id="guide-home" aria-label="Вернуться на главную">${ic('x')}</button>
-          <div class="work-progress">${guideIndex+1} из 12 упражнений</div>
-          <div class="round-btn on" aria-hidden="true">${ic('play')}</div>
+          <button class="round-btn" id="guide-home" aria-label="Назад">${ic('chevronLeft')}</button>
+          <div class="work-progress">${guideIndex+1} из ${sequence.length}</div>
+          <button class="round-btn on" id="guide-avatar" aria-label="Выбрать инструктора">${ic('user')}</button>
         </header>
-        <div class="work-label">КАК ВЫПОЛНЯТЬ</div>
-        <h1 class="work-title">${m.name}</h1>
-        <p class="work-desc">${m.tip}</p>
-        <div class="figure-panel">${figure(m.pose)}<div class="motion-badge">▶ Повторяющаяся демонстрация</div></div>
-        <p class="guide-hint">Упражнение длится 30 секунд. Двигайся в своём темпе.</p>
+        <div class="work-label">УПРАЖНЕНИЕ</div>
+        <h1 class="work-title">${escapeHtml(m.name)}</h1>
+        <div class="figure-panel detail-figure">${figure(m.pose)}<div class="motion-badge">▶ Анимация движения</div></div>
+        <section class="technique">
+          <h2>Как выполнять</h2>
+          <ol id="exercise-steps">${instruction.steps.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol>
+          <div class="technique-easy"><strong>Проще:</strong> ${escapeHtml(instruction.easy)}</div>
+          <div class="technique-care"><strong>Обрати внимание:</strong> ${escapeHtml(instruction.care)}</div>
+        </section>
+        <section class="guide-collection">
+          <h2>Все упражнения</h2>
+          <div class="guide-strip" aria-label="Упражнения комплекса">${items}</div>
+        </section>
         <div class="guide-actions">
           <button class="act secondary" id="guide-prev" ${guideIndex===0?'disabled':''}>← Назад</button>
-          <button class="act secondary" id="guide-next" ${guideIndex===moves.length-1?'disabled':''}>Далее →</button>
+          <button class="act secondary" id="guide-next" ${guideIndex===sequence.length-1?'disabled':''}>Далее →</button>
         </div>
-        <button class="act primary" id="guide-start">${ic('play')} Начать 7 минут</button>
+        <button class="act primary" id="guide-start">${ic('play')} Начать: ${escapeHtml(w.name)}</button>
       </main>`;
       document.getElementById('guide-home').addEventListener('click',()=>{view=guideReturn;render();});
+      document.getElementById('guide-avatar').addEventListener('click',()=>{openAvatar('guide');});
       document.getElementById('guide-prev').addEventListener('click',()=>{if(guideIndex>0){guideIndex--;renderGuide();}});
-      document.getElementById('guide-next').addEventListener('click',()=>{if(guideIndex<moves.length-1){guideIndex++;renderGuide();}});
-      document.getElementById('guide-start').addEventListener('click',()=>startWorkout(presets[0]));
+      document.getElementById('guide-next').addEventListener('click',()=>{if(guideIndex<sequence.length-1){guideIndex++;renderGuide();}});
+      document.querySelectorAll('[data-guide-index]').forEach(b=>b.addEventListener('click',()=>{guideIndex=Number(b.dataset.guideIndex);renderGuide();}));
+      document.getElementById('guide-start').addEventListener('click',()=>startWorkout(w));
       startFigureAnimation(m.pose,false);
     }
     // Shared exercise library, built-in routines, and a persistent workout composer.
@@ -301,7 +404,7 @@
           '<p>'+escapeHtml(w.description)+'</p>'+
           '<div class="recipe-meta">'+w.ids.length+' упражнений · '+w.work+' с работа · '+w.rest+' с отдых</div>'+
           '<div class="recipe-steps">'+names.map(escapeHtml).join(' · ')+'</div>'+
-          '<div class="recipe-actions"><button class="recipe-start" data-run="'+w.id+'">▶ Начать</button>'+
+          '<div class="recipe-actions"><button data-detail="'+w.id+'">Подробнее</button><button class="recipe-start" data-run="'+w.id+'">▶ Начать</button>'+
           (custom?'<button data-edit="'+w.id+'">Изменить</button><button data-remove="'+w.id+'" aria-label="Удалить комплекс">×</button>':'')+
           '</div></article>';
       }
@@ -309,6 +412,7 @@
       $root.innerHTML=html;bindNavigation();
       document.getElementById('new-custom').addEventListener('click',()=>{newBuilder();view='builder';render();});
       document.getElementById('presets-catalog').addEventListener('click',()=>{view='catalog';render();});
+      document.querySelectorAll('[data-detail]').forEach(b=>b.addEventListener('click',()=>{selectedWorkout=getRecipe(b.dataset.detail);view='workoutDetail';render();}));
       document.querySelectorAll('[data-run]').forEach(b=>b.addEventListener('click',()=>startWorkout(getRecipe(b.dataset.run))));
       document.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>{newBuilder(getRecipe(b.dataset.edit));view='builder';render();}));
       document.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{
@@ -316,6 +420,42 @@
         if(w&&window.confirm('Удалить тренировку «'+w.name+'»?')){
           customWorkouts=customWorkouts.filter(x=>x.id!==w.id);saveCustom();renderPresets();
         }
+      }));
+    }
+    function renderWorkoutDetail(){
+      const w=selectedWorkout||presets[0],seq=(w.ids||[]).map(id=>byExerciseId.get(id)).filter(Boolean);
+      if(!seq.length){view='presets';render();return;}
+      $root.innerHTML=`<main class="app content-app workout-detail">
+        ${header()}
+        <button class="text-back" id="workout-detail-back">← Все комплексы</button>
+        <section class="detail-hero">
+          <div class="kicker">${w.kind==='custom'?'МОЯ ТРЕНИРОВКА':'ГОТОВЫЙ КОМПЛЕКС'}</div>
+          <h1>${escapeHtml(w.name)}</h1>
+          <p>${escapeHtml(w.description||'Комплекс из выбранных упражнений')}</p>
+          <div class="detail-stats">
+            <div><strong>${seq.length}</strong><span>упражнений</span></div>
+            <div><strong>${formatDuration(workoutSeconds(w))}</strong><span>длительность</span></div>
+            <div><strong>${w.work} с</strong><span>движение</span></div>
+          </div>
+        </section>
+        <button class="start" id="workout-detail-start">${ic('play')} Начать тренировку</button>
+        <button class="preview-link" id="workout-detail-avatar">Выбрать инструктора · ${data.avatar==='man'?'Мужчина':'Женщина'}</button>
+        <div class="section-head"><h2>Упражнения</h2><span class="smallnote">по порядку</span></div>
+        <div class="workout-moves">
+        ${seq.map((e,i)=>`<button class="workout-move" data-workout-move="${i}" aria-label="Упражнение ${i+1}: ${escapeHtml(e.name)}">
+          <span class="move-index">${i+1}</span>
+          <span class="move-text"><strong>${escapeHtml(e.name)}</strong><small>${escapeHtml(e.category)} · ${w.work} секунд</small></span>
+          <span class="move-chevron">›</span>
+        </button>`).join('')}
+        </div>
+      </main>${nav('home')}`;
+      bindNavigation();
+      document.getElementById('workout-detail-back').addEventListener('click',()=>{view='presets';render();});
+      document.getElementById('workout-detail-start').addEventListener('click',()=>startWorkout(w));
+      document.getElementById('workout-detail-avatar').addEventListener('click',()=>{openAvatar('workoutDetail');});
+      document.querySelectorAll('[data-workout-move]').forEach(b=>b.addEventListener('click',()=>{
+        guideWorkout=w;guideSequence=seq;guideIndex=Number(b.dataset.workoutMove);
+        guideReturn='workoutDetail';view='guide';render();
       }));
     }
     function renderCatalogCards(){
@@ -331,7 +471,7 @@
         '<p>'+escapeHtml(e.tip)+'</p></div><button data-see="'+e.id+'" class="exercise-see">▶</button></article>'
       ).join(''):'<p class="empty-note">Нет упражнений по этому запросу.</p>';
       container.querySelectorAll('[data-see]').forEach(b=>b.addEventListener('click',()=>{
-        guideIndex=moves.findIndex(x=>x.pose===b.dataset.see);
+        guideSequence=exerciseCatalog;guideWorkout=presets[0];guideIndex=exerciseCatalog.findIndex(x=>x.id===b.dataset.see);
         guideReturn='catalog';view='guide';render();
       }));
     }
@@ -406,7 +546,7 @@
       document.getElementById('builder-back').addEventListener('click',()=>{view='presets';render();});
     }
 
-    function renderWorkout(){if(!session)return;const s=session,idx=s.index,m=s.sequence[idx],isExercise=s.phase==='exercise',isRest=s.phase==='rest',isPrep=s.phase==='prep';const label=isPrep?'ПОДГОТОВКА':isRest?'ПЕРЕДЫШКА':'УПРАЖНЕНИЕ';const title=isPrep?s.sequence[0].name:isRest?(s.sequence[idx+1]?.name||m.name):m.name;const tip=isPrep?'Смотри на движение и приготовься. '+s.sequence[0].tip:isRest?'Следующее движение: '+(s.sequence[idx+1]?.tip||m.tip):m.tip;const time=isPrep?PREP:isRest?s.restMs:s.workMs;const next=isPrep?s.sequence[0].name:isRest?s.sequence[idx+1]?.name:s.sequence[idx+1]?.name||'Финиш!';$root.innerHTML=`<main class="workout ${s.paused?'paused':''}"><header class="work-top"><button class="round-btn" id="quit" aria-label="Закрыть тренировку">${ic('x')}</button><div class="work-progress"><span id="progress-label">${isPrep?'Начало':`${Math.min(idx+1,s.sequence.length)} из ${s.sequence.length} упражнений`}</span><div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:${((s.totalElapsed||0)/s.totalDuration)*100}%"></div></div></div><button class="round-btn ${data.music?'on':''}" id="music-toggle" aria-label="${data.music?'Выключить':'Включить'} музыку">${ic(data.music?'music':'musicOff')}</button></header><div class="work-label" id="phase-label">${label}</div><h1 class="work-title" id="exercise-name">${title}</h1><p class="work-desc" id="exercise-tip">${tip}</p><div class="figure-panel">${figure(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)}<div class="motion-badge">${s.paused?'Пауза · демонстрация остановлена':'▶ Демонстрация движения'}</div></div><div class="clock" role="timer" aria-live="off"><span class="big-time" id="clock-value">${Math.ceil((s.remainingMs??time)/1000).toString().padStart(2,'0')}</span><span class="count-caption" id="count-caption">${s.paused?'Пауза':isExercise?'секунд движения':'секунд до начала'}</span></div><div class="next"><span>Дальше</span><strong id="next-name">${next}</strong></div><div class="work-actions"><button class="act secondary" id="stop-play">${ic(s.paused?'play':'pause')} ${s.paused?'Продолжить':'Пауза'}</button><button class="act primary" id="quit-secondary">${ic('x')} Завершить</button></div><div class="prep-tip">${data.music?'♪ Оригинальная фоновая мелодия':'Музыка выключена'} · Без прыжков</div></main>`;document.getElementById('quit').addEventListener('click',quitWorkout);document.getElementById('music-toggle').addEventListener('click',toggleMusic);document.getElementById('stop-play').addEventListener('click',togglePause);document.getElementById('quit-secondary').addEventListener('click',quitWorkout);updateTimerUI();startFigureAnimation(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose,s.paused);}
+    function renderWorkout(){if(!session)return;const s=session,idx=s.index,m=s.sequence[idx],isExercise=s.phase==='exercise',isRest=s.phase==='rest',isPrep=s.phase==='prep';const label=isPrep?'ПОДГОТОВКА':isRest?'ПЕРЕДЫШКА':'УПРАЖНЕНИЕ';const title=isPrep?s.sequence[0].name:isRest?(s.sequence[idx+1]?.name||m.name):m.name;const tip=isPrep?'Смотри на движение и приготовься. '+s.sequence[0].tip:isRest?'Следующее движение: '+(s.sequence[idx+1]?.tip||m.tip):m.tip;const time=isPrep?PREP:isRest?s.restMs:s.workMs;const next=isPrep?s.sequence[0].name:isRest?s.sequence[idx+1]?.name:s.sequence[idx+1]?.name||'Финиш!';$root.innerHTML=`<main class="workout ${s.paused?'paused':''}"><header class="work-top"><button class="round-btn" id="quit" aria-label="Закрыть тренировку">${ic('x')}</button><div class="work-progress"><span id="progress-label">${isPrep?'Начало':`${Math.min(idx+1,s.sequence.length)} из ${s.sequence.length} упражнений`}</span><div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:${((s.totalElapsed||0)/s.totalDuration)*100}%"></div></div></div><button class="round-btn" id="workout-avatar" aria-label="Сменить инструктора">${ic('user')}</button><button class="round-btn ${data.music?'on':''}" id="music-toggle" aria-label="${data.music?'Выключить':'Включить'} музыку">${ic(data.music?'music':'musicOff')}</button></header><div class="work-label" id="phase-label">${label}</div><h1 class="work-title" id="exercise-name">${title}</h1><p class="work-desc" id="exercise-tip">${tip}</p><div class="figure-panel">${figure(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)}<div class="motion-badge">${s.paused?'Пауза · демонстрация остановлена':'▶ Демонстрация движения'}</div></div><div class="clock" role="timer" aria-live="off"><span class="big-time" id="clock-value">${Math.ceil((s.remainingMs??time)/1000).toString().padStart(2,'0')}</span><span class="count-caption" id="count-caption">${s.paused?'Пауза':isExercise?'секунд движения':'секунд до начала'}</span></div><div class="next"><span>Дальше</span><strong id="next-name">${next}</strong></div><div class="work-actions"><button class="act secondary" id="stop-play">${ic(s.paused?'play':'pause')} ${s.paused?'Продолжить':'Пауза'}</button><button class="act primary" id="quit-secondary">${ic('x')} Завершить</button></div><div class="prep-tip">${data.music?'♪ Оригинальная фоновая мелодия':'Музыка выключена'} · Без прыжков</div></main>`;document.getElementById('quit').addEventListener('click',quitWorkout);document.getElementById('music-toggle').addEventListener('click',toggleMusic);document.getElementById('workout-avatar').addEventListener('click',()=>openAvatar('workout'));document.getElementById('stop-play').addEventListener('click',togglePause);document.getElementById('quit-secondary').addEventListener('click',quitWorkout);updateTimerUI();startFigureAnimation(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose,s.paused);}
     function updateTimerUI(){if(!session||!['prep','exercise','rest'].includes(session.phase))return;const s=session;const n=document.getElementById('clock-value'),bar=document.getElementById('progress-bar');if(n)n.textContent=String(Math.max(0,Math.ceil(s.remainingMs/1000))).padStart(2,'0');if(bar)bar.style.width=`${Math.min(100,Math.max(0,(s.totalElapsed||0)/s.totalDuration*100))}%`;}
     function startWorkout(workout){
       const picked=resolvedWorkout(workout&&Array.isArray(workout.ids)?workout:activeWorkout);
@@ -422,7 +562,7 @@
     async function requestWake(){try{if('wakeLock'in navigator&&document.visibilityState==='visible'&&session&&!session.paused)wakeLock=await navigator.wakeLock.request('screen');}catch(e){}}
     function releaseWake(){try{wakeLock?.release();}catch(e){}wakeLock=null;}
     function segmentDuration(s){return s.phase==='prep'?PREP:s.phase==='rest'?s.restMs:s.workMs;}
-    function tick(){if(!session||session.paused)return;let remaining=session.endAt-Date.now(),guard=0;while(remaining<=0&&session&&guard++<40){const overflow=-remaining;transition();if(!session)return;remaining=segmentDuration(session)-overflow;session.endAt=Date.now()+remaining;}if(session){session.remainingMs=Math.max(0,remaining);session.totalElapsed=Math.min(TOTAL,computeElapsed(session));updateTimerUI();}}
+    function tick(){if(!session||session.paused)return;let remaining=session.endAt-Date.now(),guard=0;while(remaining<=0&&session&&guard++<150){const overflow=-remaining;transition();if(!session)return;remaining=segmentDuration(session)-overflow;session.endAt=Date.now()+remaining;}if(session){session.remainingMs=Math.max(0,remaining);session.totalElapsed=Math.min(session.totalDuration,computeElapsed(session));updateTimerUI();}}
     function computeElapsed(s){if(s.phase==='prep')return PREP-s.remainingMs;let total=PREP;for(let i=0;i<s.index;i++)total+=s.workMs+s.restMs;if(s.phase==='rest')total+=s.workMs+(s.restMs-s.remainingMs);else total+=(s.workMs-s.remainingMs);return total;}
     function transition(){
       if(!session)return;const s=session;
@@ -439,7 +579,7 @@
     function cleanup(){stopFigureAnimation();if(interval)clearInterval(interval);interval=null;stopMusic();releaseWake();session=null;}
     function finishWorkout(){if(!session)return;lastCompletedWorkout={name:session.name,duration:session.totalDuration};const wasDone=data.completed.includes(today());if(!wasDone){data.completed.push(today());data.completed.sort();save();}cleanup();view='done';render();playChime(true);}
     function renderComplete(){$root.innerHTML=`<main class="complete"><div class="complete-mark">${ic('check',78)}</div><div class="kicker">Утренний ритуал выполнен</div><h1>Отличное начало!</h1><p class="sub">Тренировка «${escapeHtml(lastCompletedWorkout.name)}» завершена.<br>Этот день уже в твоём календаре.</p><div class="complete-stats"><div><div class="big">${formatDuration(lastCompletedWorkout.duration/1000)}</div><p>Длительность</p></div><div><div class="big">${currentStreak()}</div><p>${plural(currentStreak(),'день','дня','дней')} подряд</p></div></div><button class="start" id="back-home">${ic('check')} Готово</button></main>`;document.getElementById('back-home').addEventListener('click',()=>{view='home';render();});}
-    function render(){if(view!=='workout'&&view!=='guide')stopFigureAnimation();if(view==='home')renderHome();else if(view==='history')renderHistory();else if(view==='workout')renderWorkout();else if(view==='guide')renderGuide();else if(view==='presets')renderPresets();else if(view==='catalog')renderCatalog();else if(view==='builder')renderBuilder();else if(view==='done')renderComplete();}
+    function render(){if(view!=='workout'&&view!=='guide'&&view!=='avatar')stopFigureAnimation();if(view==='home')renderHome();else if(view==='history')renderHistory();else if(view==='workout')renderWorkout();else if(view==='guide')renderGuide();else if(view==='presets')renderPresets();else if(view==='workoutDetail')renderWorkoutDetail();else if(view==='avatar')renderAvatar();else if(view==='catalog')renderCatalog();else if(view==='builder')renderBuilder();else if(view==='done')renderComplete();}
     function toggleMusic(){data.music=!data.music;save();if(data.music&&session&&!session.paused)startMusic();else stopMusic();renderWorkout();}
     function setupAudio(){if(audio)return true;try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return false;audio=new A();master=audio.createGain();master.gain.value=.40;master.connect(audio.destination);noiseBuffer=audio.createBuffer(1,Math.ceil(audio.sampleRate*.09),audio.sampleRate);const c=noiseBuffer.getChannelData(0);for(let i=0;i<c.length;i++)c[i]=Math.random()*2-1;return true;}catch(e){return false;}}
     function tone(hz,start,duration,vol=.09,wave='sine'){if(!audio)return;const osc=audio.createOscillator(),gain=audio.createGain();osc.type=wave;osc.frequency.setValueAtTime(hz,start);gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(Math.max(.0002,vol),start+.015);gain.gain.exponentialRampToValueAtTime(.0001,start+duration);osc.connect(gain).connect(master);osc.start(start);osc.stop(start+duration+.025);}

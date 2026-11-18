@@ -41,6 +41,9 @@ jobs:
       - name: Validate EX-04 squat review candidate and MP4
         run: python3 tools/dev/validate_squat_g1.py
 
+      - name: Check master-trainer T0/T4 acceptance contract
+        run: python3 tools/dev/check_master_trainer_contract.py
+
       - name: Check JavaScript syntax
         run: python3 tools/dev/check_frontend_syntax.py
 

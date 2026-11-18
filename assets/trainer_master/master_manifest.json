@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "assetId": "trainer_female_master_01",
+  "version": "v1",
+  "project": "Utro7",
+  "milestone": "T0_SOURCE_REVIEW",
+  "status": "not_started_visual",
+  "masterModelAvailable": false,
+  "visualApproved": false,
+  "rigApproved": false,
+  "posesApproved": false,
+  "rightsReviewed": false,
+  "sourceVendor": null,
+  "sourceFile": null,
+  "sourceAssetLicense": null,
+  "studioScene": "assets/trainer_master/scenes/utro7_studio_template.blend",
+  "modelScene": null,
+  "dimensions": {
+    "unit": "m",
+    "approxHeightM": 1.7,
+    "forwardAxis": "-Y",
+    "upAxis": "+Z"
+  },
+  "reviewRenderIds": [
+    "RV_01_FRONT_FULL",
+    "RV_02_SIDE_FULL",
+    "RV_03_THREE_QUARTER_FULL",
+    "RV_04_FACE_CLOSEUP",
+    "RV_05_HANDS_CLOSEUP",
+    "RV_06_FEET_SHOES_CLOSEUP",
+    "RV_07_TORSO_CLOTHING"
+  ],
+  "requiredPoseIds": [
+    "CP-00",
+    "CP-01",
+    "CP-02",
+    "CP-03",
+    "CP-04",
+    "CP-05",
+    "CP-06",
+    "CP-07"
+  ],
+  "userVisualScoreOutOf100": null,
+  "userAcceptanceVerdict": null,
+  "priorRejectedUserScoreRange": [
+    5,
+    7
+  ],
+  "notes": "This is a T0 pipeline scaffold, NOT a model. Do not mark accepted without a licensed, rigged human and user review."
+}

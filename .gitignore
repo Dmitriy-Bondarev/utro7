@@ -27,3 +27,8 @@ assets/motion/quality-g2/trainer-female-pushup-motion-candidate.blend
 assets/motion/squat-g1/_frames/
 assets/motion/squat-g1/*.blend
 assets/motion/squat-g1/*.blend1
+
+# New master-trainer: prevent accidental publication of proprietary assets
+assets/trainer_master/private/
+assets/trainer_master/source/
+assets/trainer_master/scenes/*.blend1

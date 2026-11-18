@@ -8,6 +8,7 @@ const path = require('path');
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(process.env.POSE_URL||'file://'+path.resolve(__dirname,'../preview/pushup-v3/index.html'),{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>document.querySelector('#poseImage').complete && document.querySelector('#poseImage').naturalWidth>0);
   const initial=await page.$eval('#poseImage',e=>({src:e.currentSrc,loaded:e.complete&&e.naturalWidth>0,width:e.naturalWidth}));
   await page.click('[data-pose="P3"]');
   await page.waitForFunction(()=>document.querySelector('#poseImage').complete && document.querySelector('#poseImage').naturalWidth>0);

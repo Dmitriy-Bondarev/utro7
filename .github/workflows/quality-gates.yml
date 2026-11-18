@@ -30,6 +30,11 @@ jobs:
       - name: Validate one-trainer G1 assets and motion statuses
         run: python3 tools/dev/validate_g1.py
 
+      - name: Install video inspection tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+
       - name: Validate unapproved G2 candidate and MP4
         run: python3 tools/dev/validate_g2.py
 

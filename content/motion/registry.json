@@ -72,6 +72,18 @@
       "poster": "./assets/motion/quality-v2/female-pushup-poster.jpg",
       "source": "./assets/motion/quality-v2/trainer-female-pushup.blend",
       "review": null
+    },
+    {
+      "exerciseId": "pushup",
+      "trainerId": "trainer_female_01",
+      "rigId": "mpfb-game-engine-53-bones-g2-v1",
+      "status": "review",
+      "reason": "96-frame 30fps H.264 candidate, 12/12 geometric checks pass; visual/fitness professional/iPhone acceptance pending.",
+      "video": "./assets/motion/quality-g2/female-pushup-candidate.mp4",
+      "poster": "./assets/motion/quality-g2/female-pushup-candidate-poster.jpg",
+      "source": "./assets/motion/quality-g2/trainer-female-pushup-motion-candidate.blend",
+      "reviewPage": "./preview/pushup-g2/",
+      "review": null
     }
   ]
 }

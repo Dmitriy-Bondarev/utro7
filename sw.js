@@ -1,4 +1,4 @@
-const CACHE = 'utro7-static-v8';
+const CACHE = 'utro7-static-v9';
 const PRECACHE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './src/motion/motion-policy.js'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));
@@ -11,6 +11,10 @@ self.addEventListener('fetch', event => {
   // Let the browser handle byte-range video requests; do not corrupt Safari MP4 seeking.
   if (event.request.destination === 'video' || event.request.headers.has('range') || new URL(event.request.url).pathname.endsWith('.mp4')) return;
   if (event.request.mode === 'navigate') {
+    // Review pages are not the app shell; never overwrite cached index.html with them.
+    const path = new URL(event.request.url).pathname;
+    const rootPath = new URL(self.registration.scope).pathname;
+    if (path !== rootPath && path !== rootPath + 'index.html') return;
     event.respondWith(fetch(event.request).then(response => {
       if (response.ok) {
         const copy = response.clone();

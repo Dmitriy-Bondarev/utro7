@@ -147,8 +147,10 @@
     "status": "review",
     "rigSource": "./assets/motion/quality-v3/trainer-female-pushup-static-v3.blend",
     "poseSheetImage": "./assets/motion/quality-v3/pushup-pose-sheet-v3.jpg",
-    "reviewPage": "./preview/pushup-v3/",
-    "motionVideo": null,
-    "techniqueApproved": false
+    "reviewPage": "./preview/pushup-g2/",
+    "motionVideo": "./assets/motion/quality-g2/female-pushup-candidate.mp4",
+    "techniqueApproved": false,
+    "motionStatus": "review",
+    "validation": "12 geometry checks PASS; technique unreviewed"
   }
 }

@@ -30,6 +30,9 @@ jobs:
       - name: Validate one-trainer G1 assets and motion statuses
         run: python3 tools/dev/validate_g1.py
 
+      - name: Validate unapproved G2 candidate and MP4
+        run: python3 tools/dev/validate_g2.py
+
       - name: Check JavaScript syntax
         run: python3 tools/dev/check_frontend_syntax.py
 

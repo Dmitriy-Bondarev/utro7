@@ -1,0 +1,39 @@
+{
+  "status": "CANDIDATE_NOT_APPROVED",
+  "checks": {
+    "96_frames": true,
+    "hands_fixed": true,
+    "toes_above_floor": true,
+    "toe_height_stable": true,
+    "elbow_angles_symmetric": true,
+    "elbows_mirrored_x": true,
+    "elbows_symmetric_y": true,
+    "top_elbows_extended": true,
+    "bottom_elbows_bent": true,
+    "shoulders_lowered": true,
+    "loop_seam_closed": true,
+    "elbows_dont_flip": true
+  },
+  "failed": [],
+  "frameCount": 96,
+  "fps": 30,
+  "measurements": {
+    "topElbows": [
+      157.0,
+      157.0
+    ],
+    "bottomElbows": [
+      80.7,
+      80.7
+    ],
+    "shoulderDropM": 0.1734,
+    "maxWristSlipM": 0.0,
+    "minToeZ": 0.017,
+    "maxToeDriftM": 0.0064,
+    "maxElbowAngleDiff": 0.0,
+    "maxMirrorX": 0.0,
+    "maxMirrorY": 0.0,
+    "loopSeamM": 0.0
+  },
+  "warning": "Geometry heuristics only; does not certify safe exercise technique."
+}

@@ -15,3 +15,10 @@ tools/blender/__pycache__/
 # G1 pose review intermediary PNGs and Blender backup
 assets/motion/quality-v3/_frames/
 assets/motion/quality-v3/*.blend1
+
+# G2 rendered frame intermediates (regenerable)
+assets/motion/quality-g2/_frames/
+assets/motion/quality-g2/*.blend1
+
+# Regenerable G2 Blender scene (source is G1 .blend + Python generator)
+assets/motion/quality-g2/trainer-female-pushup-motion-candidate.blend

@@ -49,7 +49,7 @@ const path = require('path');
   };
   console.log(JSON.stringify(result,null,2));
   await browser.close();
-  if(!policy||policy.count!==8||policy.published!==0||policy.pushupWoman!=='rejected'||
+  if(!policy||policy.count!==9||policy.published!==0||policy.pushupWoman!=='rejected'||
      policy.marchWoman!=='prototype'||rejection.status!=='rejected'||badVideoInDetail||
      !squat.schematic||squat.video||!squat.label.includes('не проверена')||
      player.title!=='Отжимания'||player.blocked!=='rejected'||player.video||errors.length)process.exitCode=1;

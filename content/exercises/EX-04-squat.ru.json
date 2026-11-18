@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "squat",
+  "title": "Приседания с собственным весом",
+  "locale": "ru-RU",
+  "category": "Сила",
+  "difficulty": "Лёгкая–средняя",
+  "targets": [
+    "квадрицепсы",
+    "ягодицы",
+    "мышцы корпуса"
+  ],
+  "equipment": [],
+  "trainerId": "trainer_female_01",
+  "motionStatus": "review",
+  "acceptedVideo": null,
+  "videoCandidate": "./assets/motion/squat-g1/female-squat-candidate.mp4",
+  "poster": "./assets/motion/squat-g1/female-squat-poster.jpg",
+  "reviewPage": "./preview/squat-g1/",
+  "instructions": [
+    "Исходное положение стоя, стопы на ширине таза или немного шире, носки слегка развёрнуты.",
+    "Начни сгибать тазобедренные и коленные суставы, отводя таз назад, сохраняя опору на всю стопу.",
+    "Опускайся только до контролируемой глубины, удерживая колени по направлению носков и устойчивый позвоночник.",
+    "Плавно выпрямись, поднимая таз и грудь согласованно."
+  ],
+  "commonMistakes": [
+    "Отрыв пяток от пола",
+    "Провал коленей внутрь",
+    "Чрезмерное округление или прогиб поясницы",
+    "Скользящие стопы и выворачивание коленей",
+    "Неконтролируемое падение вниз"
+  ],
+  "easierVariants": [
+    "неглубокое приседание",
+    "приседание до устойчивого стула"
+  ],
+  "referenceSources": [
+    {
+      "title": "ACE Bodyweight Squat",
+      "url": "https://www.acefitness.org/resources/everyone/exercise-library/135/bodyweight-squat/"
+    }
+  ],
+  "poses": [
+    {
+      "id": "P0",
+      "phase": "Исходное положение"
+    },
+    {
+      "id": "P1",
+      "phase": "Начало сгибания"
+    },
+    {
+      "id": "P2",
+      "phase": "Опускание"
+    },
+    {
+      "id": "P3",
+      "phase": "Нижняя точка"
+    },
+    {
+      "id": "P4",
+      "phase": "Подъём"
+    },
+    {
+      "id": "P5",
+      "phase": "Возврат"
+    }
+  ],
+  "acceptance": {
+    "geometryCheckPassed": true,
+    "visualAccepted": false,
+    "fitnessExpertApproved": false,
+    "realIphoneValidated": false,
+    "assetRightsChecked": false
+  }
+}

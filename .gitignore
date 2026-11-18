@@ -22,3 +22,8 @@ assets/motion/quality-g2/*.blend1
 
 # Regenerable G2 Blender scene (source is G1 .blend + Python generator)
 assets/motion/quality-g2/trainer-female-pushup-motion-candidate.blend
+
+# EX-04 squat intermediate frames and derived Blender scene (regenerate via build_squat_g1.py)
+assets/motion/squat-g1/_frames/
+assets/motion/squat-g1/*.blend
+assets/motion/squat-g1/*.blend1

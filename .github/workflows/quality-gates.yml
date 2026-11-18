@@ -38,6 +38,9 @@ jobs:
       - name: Validate unapproved G2 candidate and MP4
         run: python3 tools/dev/validate_g2.py
 
+      - name: Validate EX-04 squat review candidate and MP4
+        run: python3 tools/dev/validate_squat_g1.py
+
       - name: Check JavaScript syntax
         run: python3 tools/dev/check_frontend_syntax.py
 

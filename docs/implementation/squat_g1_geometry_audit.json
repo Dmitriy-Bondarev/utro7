@@ -1,0 +1,137 @@
+{
+  "exercise": "squat",
+  "trainer": "trainer_female_01",
+  "status": "REVIEW",
+  "checks": {
+    "120_frames": true,
+    "ankles_fixed": true,
+    "knee_angle_symmetric": true,
+    "top_knees_nearly_extended": true,
+    "bottom_knees_bent": true,
+    "knee_bend_facing_forward": true,
+    "toe_placement_doesnt_drift": true,
+    "toe_above_floor": true,
+    "loop_closure": true
+  },
+  "failed": [],
+  "top": {
+    "frame": 1,
+    "legs": {
+      "l": {
+        "hip": [
+          0.09899,
+          0.00357,
+          0.83958
+        ],
+        "knee": [
+          0.11316,
+          0.01513,
+          0.4534
+        ],
+        "ankle": [
+          0.18131,
+          -0.01179,
+          0.06361
+        ],
+        "toe": [
+          0.03326,
+          0.07429,
+          -0.00764
+        ],
+        "kneeAngleDeg": 170.39,
+        "ankleTargetErrorM": 0.0
+      },
+      "r": {
+        "hip": [
+          -0.09899,
+          0.00357,
+          0.83958
+        ],
+        "knee": [
+          -0.16608,
+          -0.02315,
+          0.45978
+        ],
+        "ankle": [
+          -0.18132,
+          -0.01179,
+          0.06361
+        ],
+        "toe": [
+          -0.34066,
+          -0.09998,
+          0.02842
+        ],
+        "kneeAngleDeg": 170.39,
+        "ankleTargetErrorM": 0.0
+      }
+    }
+  },
+  "bottom": {
+    "frame": 51,
+    "legs": {
+      "l": {
+        "hip": [
+          0.09899,
+          0.19357,
+          0.50958
+        ],
+        "knee": [
+          -0.09714,
+          0.24531,
+          0.18045
+        ],
+        "ankle": [
+          0.18133,
+          -0.01181,
+          0.06359
+        ],
+        "toe": [
+          0.03328,
+          0.07427,
+          -0.00766
+        ],
+        "kneeAngleDeg": 78.93,
+        "ankleTargetErrorM": 3e-05
+      },
+      "r": {
+        "hip": [
+          -0.09899,
+          0.19357,
+          0.50958
+        ],
+        "knee": [
+          -0.37484,
+          -0.05705,
+          0.40681
+        ],
+        "ankle": [
+          -0.18131,
+          -0.0118,
+          0.06358
+        ],
+        "toe": [
+          -0.34065,
+          -0.09998,
+          0.02839
+        ],
+        "kneeAngleDeg": 78.93,
+        "ankleTargetErrorM": 3e-05
+      }
+    }
+  },
+  "metrics": {
+    "kneeAnglesTop": [
+      170.39,
+      170.39
+    ],
+    "kneeAnglesBottom": [
+      78.93,
+      78.93
+    ],
+    "maxToeYDriftM": 0.0,
+    "minToeHeightM": -0.0077,
+    "maxAnkleErrorM": 0.0001
+  },
+  "note": "Geometry heuristics only; exercise technique is NOT professionally approved"
+}

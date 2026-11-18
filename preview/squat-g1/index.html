@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1828"><title>Утро 7 — 3D-приседания, G1-кандидат</title>
+<style>
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}body{background:radial-gradient(circle at 100% 0%,#1f4253,transparent 36%),#0b1828;color:#eef7fb;margin:0}
+main{max-width:850px;margin:0 auto;padding:calc(22px + env(safe-area-inset-top)) 16px calc(50px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:26px}
+.brand{font-weight:900;letter-spacing:.08em}.logo{display:inline-grid;place-items:center;background:#8bf0d8;border-radius:10px;width:35px;height:35px;color:#092c3a;font-size:24px;margin-right:8px}
+a{color:#a4f2dd;text-decoration:none}header a{font-size:13px;border:1px solid #365668;padding:10px 12px;border-radius:12px}
+.overline{font-size:11px;text-transform:uppercase;color:#8bf0d8;letter-spacing:.14em;font-weight:900}
+h1{font-size:clamp(29px,6.5vw,43px);line-height:1.1;letter-spacing:-.04em;margin:9px 0 10px}
+p{font-size:14px;line-height:1.6;color:#aec5d1}
+.flag{display:inline-flex;color:#f7d9b4;border:1px solid #8b6549;padding:10px 13px;border-radius:999px;font-weight:800;font-size:12px;margin:5px 0 17px;background:#60402d55}
+.stage{position:relative;background:#e0e4e7;border-radius:20px;overflow:hidden;border:1px solid #6a8e99}
+video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#e0e4e7}
+.pill{position:absolute;top:12px;left:12px;background:#d6fff2ee;color:#17413e;padding:8px 11px;border-radius:100px;font-size:11px;font-weight:850}
+.mediacontrols{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+button{font-family:inherit;cursor:pointer;border:none;border-radius:13px;padding:12px 16px;font-size:14px;font-weight:850;min-height:44px}
+.primary{background:#85edd5;color:#0e3943}.secondary{background:#182f41;border:1px solid #4b6b7b;color:#ecf7fa}
+#scrub{accent-color:#86f0d6;flex:1 1 100%;width:100%;margin:13px 0 5px}
+.detail{font-size:12px;color:#abc2ce;display:flex;justify-content:space-between;margin:6px 1px 20px}
+.details{background:#142c3d;border:1px solid #365365;border-radius:16px;padding:18px;margin-top:18px}
+.details h2{font-size:17px;margin:0 0 11px}
+.details ul{font-size:14px;line-height:1.65;color:#d6e7ee;padding-left:20px;margin:0}
+.details li{margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:14px}
+.grid>div{padding:13px 7px;border:1px solid #355466;border-radius:13px;text-align:center}
+.grid b{font-size:20px;color:#86f0d6;display:block}.grid small{font-size:11px;color:#a6bdc9}
+.sheet{max-width:100%;border-radius:13px;border:1px solid #527284;margin-top:12px}
+.note{border-top:1px solid #2b4b59;padding-top:18px;margin-top:22px;font-size:12px;line-height:1.6;color:#9db5c1}
+#mediaStatus{font-size:12px;color:#c2d9e2;margin-top:10px;min-height:1em}
+@media(max-width:450px){.mediacontrols button{flex:1}.grid b{font-size:18px}}
+</style>
+</head><body><main>
+<header><div class="brand"><span class="logo">7</span> УТРО 7</div><a href="../../">← Приложение</a></header>
+<div class="overline">EX-04 · 1 цифровой тренер · 1 упражнение</div>
+<h1>Приседания — 3D-видео</h1>
+<p>Отдельный прототип приседания на женском 3D-тренере. Проверены симметрия сгибания колен, неподвижность стоп и замкнутость видеопетли. Доступны замедление и перемотка.</p>
+<div class="flag">Не принято · только контрольный видеопрототип</div>
+<section class="stage" aria-label="Просмотр приседания">
+<video id="motion" autoplay muted loop playsinline preload="metadata"
+ poster="../../assets/motion/squat-g1/female-squat-poster.jpg"
+ aria-label="Тестовая 3D-анимация женщины, выполняющей одно приседание">
+<source src="../../assets/motion/squat-g1/female-squat-candidate.mp4" type="video/mp4">
+Невозможно воспроизвести видео.
+</video>
+<span class="pill">3D Blender · G1-кандидат</span>
+</section>
+<div class="mediacontrols">
+<button type="button" id="play" class="primary">▶ Воспроизвести</button>
+<button type="button" id="speed" class="secondary">½ скорость</button>
+<button type="button" id="restart" class="secondary">↺ С начала</button>
+<input type="range" min="0" max="4000" step="33" id="scrub" value="0" aria-label="Положение в видеоповторе">
+</div>
+<div class="detail"><span id="time">0:00 / 0:04.0</span><span>30 кадр/с · 4,0 секунды · без звука</span></div>
+<div id="mediaStatus" role="status">Загрузка видеоповтора…</div>
+<div class="grid">
+<div><b>120</b><small>кадров</small></div>
+<div><b>9/9</b><small>геометрических проверок</small></div>
+<div><b>1</b><small>упражнение</small></div>
+</div>
+<section class="details">
+<h2>Что нужно оценить</h2>
+<ul>
+<li>Оба колена естественно сгибаются в одной плоскости по направлению стоп.</li>
+<li>Стопы сохраняют контакт с полом; таз уходит назад, колени сгибаются, корпус остаётся под контролем.</li>
+<li>Темп естественный, переход между концом и началом цикла плавный.</li>
+<li>Положение тазобедренных суставов, колен, стоп и позвоночника выглядит убедительно.</li>
+</ul>
+<p>Визуальная и профессиональная приёмка движения ещё не проведена.</p>
+</section>
+<h2 style="font-size:18px;margin:27px 0 8px">Кадры одного движения</h2>
+<a href="../../assets/motion/squat-g1/female-squat-motion-sheet.jpg" target="_blank" rel="noopener">
+<img class="sheet" src="../../assets/motion/squat-g1/female-squat-motion-sheet.jpg" alt="Двенадцать последовательных кадров одного приседания"></a>
+<p class="note">Это техническая демонстрация приседаний, не профессионально подтверждённое руководство. Автоматические тесты оценивают геометрию, но не безопасность и правильность спортивной техники. В основном приложении данный видеопрототип не используется, пока не пройдёт визуальную и экспертную приёмку.</p>
+</main>
+<script>
+(function(){
+ const v=document.getElementById('motion');
+ const play=document.getElementById('play');
+ const speed=document.getElementById('speed');
+ const restart=document.getElementById('restart');
+ const scrub=document.getElementById('scrub');
+ const time=document.getElementById('time');
+ const status=document.getElementById('mediaStatus');
+ let scrubbing=false;
+ function fmt(t){return Math.max(0,t).toFixed(1)+' с';}
+ function update(){
+  play.textContent=v.paused?'▶ Воспроизвести':'Ⅱ Пауза';
+  if(!scrubbing&&Number.isFinite(v.currentTime))scrub.value=Math.round(v.currentTime*1000);
+  time.textContent=fmt(v.currentTime)+' / '+fmt(v.duration||4.0);
+  if(v.error)status.textContent='Не удалось загрузить видео. Попробуйте открыть страницу в Safari.';
+  else status.textContent=v.paused?'Демонстрация остановлена':'Воспроизводится один повтор по кругу';
+ }
+ play.addEventListener('click',()=>{if(v.paused){const p=v.play();if(p?.catch)p.catch(()=>{status.textContent='Разрешите воспроизведение в браузере.';});}else v.pause();});
+ speed.addEventListener('click',()=>{
+   v.playbackRate=v.playbackRate===1?.5:1;
+   speed.textContent=v.playbackRate===1?'½ скорость':'1× скорость';
+ });
+ restart.addEventListener('click',()=>{v.currentTime=0;update();});
+ scrub.addEventListener('input',()=>{scrubbing=true;v.pause();v.currentTime=Number(scrub.value)/1000;update();});
+ scrub.addEventListener('change',()=>{scrubbing=false;update();});
+ ['loadedmetadata','timeupdate','play','pause','error'].forEach(e=>v.addEventListener(e,update));
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)v.pause();});
+ const p=v.play();if(p?.catch)p.catch(update);update();
+})();
+</script>
+</body></html>

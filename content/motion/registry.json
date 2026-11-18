@@ -84,6 +84,18 @@
       "source": "./assets/motion/quality-g2/trainer-female-pushup-motion-candidate.blend",
       "reviewPage": "./preview/pushup-g2/",
       "review": null
+    },
+    {
+      "exerciseId": "squat",
+      "trainerId": "trainer_female_01",
+      "rigId": "mpfb-game-engine-53-bones-squat-g1",
+      "status": "review",
+      "reason": "Full 120-frame squat 3D candidate. 9/9 heuristic geometry tests passed; user/fitness expert/iPhone review not completed.",
+      "video": "./assets/motion/squat-g1/female-squat-candidate.mp4",
+      "poster": "./assets/motion/squat-g1/female-squat-poster.jpg",
+      "sourceGenerator": "tools/blender/build_squat_g1.py",
+      "reviewPage": "./preview/squat-g1/",
+      "review": null
     }
   ]
 }

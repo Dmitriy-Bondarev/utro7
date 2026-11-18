@@ -1,4 +1,4 @@
-const CACHE = 'utro7-static-v9';
+const CACHE = 'utro7-static-v10';
 const PRECACHE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png', './src/motion/motion-policy.js'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));

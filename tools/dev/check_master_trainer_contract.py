@@ -22,7 +22,7 @@ for p in docs:
 
 m=json.loads((ROOT/"assets/trainer_master/master_manifest.json").read_text(encoding="utf-8"))
 assert m["schemaVersion"]==1
-assert m["assetId"]=="trainer_female_master_01"
+assert m["assetId"]=="trainer_male_master_01"
 assert m["version"]=="v1"
 assert m["milestone"] in {
     "T0_SOURCE_REVIEW","T1_VISUAL_REVIEW","T2_RIG_REVIEW",

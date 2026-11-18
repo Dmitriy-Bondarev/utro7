@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "assetId": "trainer_female_master_01",
+  "assetId": "trainer_male_master_01",
   "version": "v1",
   "project": "Utro7",
   "milestone": "T0_SOURCE_REVIEW",
@@ -46,5 +46,11 @@
     5,
     7
   ],
-  "notes": "This is a T0 pipeline scaffold, NOT a model. Do not mark accepted without a licensed, rigged human and user review."
+  "notes": "User switched first master to male 2026-11-19. Private male trial candidate exists with 102-bone rig and 7 review renders; trial watermarks and non-sports attire; NOT accepted, NOT commercial-release ready.",
+  "candidateAvailable": true,
+  "candidateSource": "Human Generator 4.0.29 Trial / male Caucasian 1",
+  "candidatePrivateScene": "assets/trainer_master/private/humgen_trial/male_studio_candidate.blend",
+  "candidateIsLicensedForCommercialUse": false,
+  "candidateTrialWatermarks": true,
+  "candidateOutfitIsSportswear": false
 }

@@ -50,6 +50,19 @@ for id_ in m["requiredPoseIds"]:
     assert id_ in doc, f"Pose acceptance missing: {id_}"
 assert "NOT STARTED" in doc
 
+# T0 experiment is a genuine 3D asset review, explicitly REJECTED for mastering.
+trial=ROOT/"docs/implementation/TRAINER_T0_GRAB3D_EVALUATION.md"
+if trial.exists():
+    report=trial.read_text(encoding="utf-8")
+    assert "REJECTED AT T0" in report
+    assert "24 кости" in report or "24 кости" in report.replace("**", "")
+    assert (ROOT/"preview/trainer-master-t0/index.html").is_file()
+    for render_id in m["reviewRenderIds"]:
+        img=ROOT/"assets/trainer_master/renders/grab3d_evaluation/review"/(render_id+".jpg")
+        assert img.is_file() and img.stat().st_size>1000, f"Missing T0 evidence: {render_id}"
+    assert not m["masterModelAvailable"], "Rejected trial must not become master"
+    print("PASS T0 EVIDENCE: 7 real renders and explicit failed-candidate verdict")
+
 print("PASS TRAINER CONTRACT: 7 render views, 8 pose IDs, source status",m["milestone"])
 print("PASS ACCEPTANCE SAFETY: no unreviewed master asset promoted to accepted")
 print("NOTE: Visual fidelity is user-reviewed, never automated.")

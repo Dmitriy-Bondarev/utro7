@@ -1,3 +1,7 @@
+### T0: первый проверенный источник 3D-человека
+
+[**Семь реальных Blender-ракурсов тестового персонажа**](https://dmitriy-bondarev.github.io/utro7/preview/trainer-master-t0/) · [отчёт об отклонении технического кандидата](docs/implementation/TRAINER_T0_GRAB3D_EVALUATION.md). Бесплатный CC0-ассет Grab3D удалось скачать и открыть в Blender; подтверждены 7 контрольных рендеров, но обнаружен неполный 24-костный rig **без костей пальцев**, один материал на тело/одежду и отсутствие спортивной обуви. **Статус: T0 REJECTED**, эта модель не становится мастер-тренером. Поиск более качественного источника продолжается, упражнения не разрабатываются.
+
 ## MASTER TRAINER v1 — новая точка разработки (18.11.2026)
 
 **[ТЗ на одного реалистичного цифрового тренера](docs/UTRO7_MASTER_TRAINER_TZ.md)** · **[Чек-лист приёмки](docs/TRAINER_MASTER_ACCEPTANCE_CHECKLIST.md)** · **[Задача #6](https://github.com/Dmitriy-Bondarev/utro7/issues/6)** · [Текущий статус](docs/implementation/TRAINER_MASTER_STATUS.md).

@@ -32,3 +32,6 @@ assets/motion/squat-g1/*.blend1
 assets/trainer_master/private/
 assets/trainer_master/source/
 assets/trainer_master/scenes/*.blend1
+
+# Failed T0 Grab3D trial high-resolution render intermediates (only review JPGs are shared)
+assets/trainer_master/renders/grab3d_evaluation/*.png

@@ -1,0 +1,42 @@
+name: Utro7 quality gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  content-and-motion-policy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check generated motion release registry
+        run: python3 tools/dev/build_motion_policy.py --check
+
+      - name: Validate one-trainer G1 assets and motion statuses
+        run: python3 tools/dev/validate_g1.py
+
+      - name: Check JavaScript syntax
+        run: python3 tools/dev/check_frontend_syntax.py
+
+      - name: Check all content JSON
+        run: |
+          python3 -m json.tool content/motion/registry.json > /dev/null
+          python3 -m json.tool content/exercises/EX-03-pushup.ru.json > /dev/null
+
+# Browser/mobile smoke tests run on the authorized Mac and are documented in
+# docs/implementation/STATUS.md. A CI green check does NOT approve exercise technique.

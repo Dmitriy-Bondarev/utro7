@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1828">
+<title>Утро 7 — 3D-отжимания, проверка поз G1</title>
+<style>
+*{box-sizing:border-box}
+html{background:#0b1828;color:#edf6fd;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+body{margin:0;background:radial-gradient(circle at 100% 0%,#1b3f52,transparent 36%),#0b1828;min-height:100dvh}
+main{max-width:860px;margin:0 auto;padding:calc(23px + env(safe-area-inset-top)) 16px calc(45px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:30px}
+.brand{font-weight:900;letter-spacing:.09em}.brand strong{color:#89f0d5;font-size:23px;margin-right:8px}
+a{color:#baf6eb;text-decoration:none}header a{font-size:13px;border:1px solid #416174;padding:11px 13px;border-radius:12px}
+.eyebrow{color:#8deed4;font-size:11px;letter-spacing:.13em;font-weight:900;text-transform:uppercase}
+h1{font-size:clamp(30px,6.5vw,44px);margin:9px 0 11px;letter-spacing:-.045em;line-height:1.08}
+.intro{font-size:14px;line-height:1.62;color:#b3c8d3;margin:0 0 18px}
+.state{font-size:12px;padding:9px 12px;border:1px solid #8f6b52;border-radius:999px;color:#f4d8ad;display:inline-flex;gap:8px;margin:0 0 20px;background:#44312f55;font-weight:750}
+.panel{border:1px solid #416a75;background:#1b3342;border-radius:20px;overflow:hidden;box-shadow:0 22px 50px #0006}
+.figure{width:100%;display:block;aspect-ratio:3/2;object-fit:contain;background:#e5e9ed}
+.panel-note{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 16px;color:#b6d3dd;font-size:12px}
+.meta{font-weight:850;color:#dcf9f2}
+.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:19px 0 15px}
+.controls label{font-size:12px;color:#a8c2ce}
+select{background:#172e40;color:#f1f9fc;border:1px solid #517080;border-radius:11px;padding:12px;min-height:43px;font-size:14px}
+.pose-buttons{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;margin:12px 0 18px}
+.pose-buttons button{cursor:pointer;background:#182f41;border:1px solid #3d5b6c;color:#d4e5ee;border-radius:11px;min-height:48px;font-size:13px;font-weight:800}
+.pose-buttons button[aria-pressed=true]{background:#76e9d3;color:#093346;border-color:#76e9d3}
+.desc{background:#152b3d;border:1px solid #345263;padding:16px;border-radius:15px;line-height:1.57;color:#d4e6ee;font-size:14px}
+.desc strong{display:block;margin-bottom:6px;color:white;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}
+.kpis>div{border:1px solid #335367;border-radius:13px;padding:13px 8px;background:#132b3c;text-align:center}
+.kpis b{display:block;font-size:22px;color:#89f0d5}.kpis span{font-size:11px;color:#a9bdca}
+h2{font-size:19px;letter-spacing:-.02em;margin:30px 0 11px}
+.sheet{width:100%;border-radius:12px;border:1px solid #46677a;display:block}
+.caption,.disclaimer{font-size:12px;color:#9eb3c0;line-height:1.6}
+.disclaimer{border-top:1px solid #294356;margin-top:25px;padding-top:17px}
+@media(max-width:480px){.pose-buttons{gap:4px}.pose-buttons button{min-height:40px;font-size:12px}.kpis b{font-size:17px}.controls{justify-content:space-between}}
+</style>
+</head>
+<body><main>
+<header><div class="brand"><strong>7</strong> УТРО 7</div><a href="../../">← К приложению</a></header>
+<div class="eyebrow">G1 · Проверка статических поз · 1 инструктор / 1 упражнение</div>
+<h1>Отжимания — 3D-тренер</h1>
+<p class="intro">Исправленная риггированная модель женщины. Выбери ракурс и одну из шести ключевых фаз. Это инструмент визуальной проверки, <b>не готовая учебная анимация</b>.</p>
+<div class="state">● Кандидат v3 · требуется визуальная и профессиональная приёмка</div>
+<section class="panel" aria-label="Просмотр поз 3D-тренера">
+  <img id="poseImage" class="figure" src="../../assets/motion/quality-v3/review/A_side_P0.jpg" alt="3D-модель тренера: вид сбоку, исходная позиция отжимания">
+  <div class="panel-note"><span id="poseLabel" class="meta">P0 — исходная позиция</span><span id="viewLabel">Вид сбоку</span></div>
+</section>
+<div class="controls">
+  <label for="camera">Контрольный ракурс</label>
+  <select id="camera">
+    <option value="A_side">A · Сбоку</option>
+    <option value="B_three_quarter">B · 3/4 спереди</option>
+    <option value="C_front">C · Фронтально</option>
+  </select>
+</div>
+<div class="pose-buttons" role="group" aria-label="Ключевая фаза упражнения">
+  <button type="button" data-pose="P0" aria-pressed="true">P0</button>
+  <button type="button" data-pose="P1" aria-pressed="false">P1</button>
+  <button type="button" data-pose="P2" aria-pressed="false">P2</button>
+  <button type="button" data-pose="P3" aria-pressed="false">P3</button>
+  <button type="button" data-pose="P4" aria-pressed="false">P4</button>
+  <button type="button" data-pose="P5" aria-pressed="false">P5</button>
+</div>
+<div class="desc" id="explanation" aria-live="polite"><strong>P0 — исходная позиция</strong>Руки почти прямые, ладони и носки опираются на пол. Проверяем выравнивание корпуса и плеч над кистями.</div>
+<div class="kpis">
+  <div><b>6</b><span>ключевых фаз</span></div>
+  <div><b>3</b><span>ракурса</span></div>
+  <div><b>12/12</b><span>геометрические тесты</span></div>
+</div>
+<h2>Все позы одновременно</h2>
+<a href="../../assets/motion/quality-v3/pushup-pose-sheet-v3.jpg" target="_blank" rel="noopener" aria-label="Открыть полную раскадровку">
+<img class="sheet" src="../../assets/motion/quality-v3/pushup-pose-sheet-v3.jpg" alt="Три ряда по шесть поз отжимания, вид сбоку, три четверти и фронтально">
+</a>
+<p class="caption">Первый ряд — вид сбоку, второй — 3/4, третий — фронтальный. Нажми на изображение, чтобы увеличить.</p>
+<p class="disclaimer"><b>Важно:</b> автоматические измерения показывают улучшение геометрии по сравнению с забракованной моделью, но не доказывают правильность спортивной техники. Пока оценка тренера и пользователя не получена, данная версия не включается в обычную тренировку. Старый видеоролик остаётся заблокированным.</p>
+</main>
+<script>
+(function(){
+  'use strict';
+  const camera=document.getElementById('camera');
+  const img=document.getElementById('poseImage');
+  const poseLabel=document.getElementById('poseLabel');
+  const viewLabel=document.getElementById('viewLabel');
+  const explanation=document.getElementById('explanation');
+  const descriptions={
+    P0:['Исходная позиция','Руки почти прямые, ладони и носки опираются на пол. Проверяем выравнивание корпуса и плеч над кистями.'],
+    P1:['Опускание 25%','Плечи и таз опускаются вместе; оба локтя начинают естественно сгибаться назад и немного в стороны.'],
+    P2:['Опускание 50%','Грудная клетка приближается к полу, голова продолжает линию позвоночника. Сравниваем симметрию локтей.'],
+    P3:['Нижняя позиция','Контролируемая нижняя точка: кисти на месте, локти не вывернуты, спина не провисает.'],
+    P4:['Подъём 50%','Разгибание рук по обратной траектории; корпус поднимается единым блоком.'],
+    P5:['Возврат','Исходная позиция восстановлена без резкой смены позы и без гиперразгибания локтей.']
+  };
+  const views={A_side:'Вид сбоку',B_three_quarter:'Вид 3/4',C_front:'Фронтально'};
+  let pose='P0';
+  function draw(){
+    img.src='../../assets/motion/quality-v3/review/'+camera.value+'_'+pose+'.jpg';
+    img.alt='3D-тренер: '+views[camera.value]+', '+descriptions[pose][0];
+    poseLabel.textContent=pose+' — '+descriptions[pose][0];
+    viewLabel.textContent=views[camera.value];
+    explanation.textContent='';
+    const bold=document.createElement('strong');bold.textContent=pose+' — '+descriptions[pose][0];
+    explanation.appendChild(bold);
+    explanation.appendChild(document.createTextNode(descriptions[pose][1]));
+    document.querySelectorAll('[data-pose]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.pose===pose)));
+  }
+  document.querySelectorAll('[data-pose]').forEach(b=>b.addEventListener('click',()=>{pose=b.dataset.pose;draw()}));
+  camera.addEventListener('change',draw);
+  draw();
+})();
+</script>
+</body></html>

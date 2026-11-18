@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "pushup",
+  "title": "Отжимания",
+  "locale": "ru-RU",
+  "category": "Сила",
+  "difficulty": "Средняя",
+  "targets": [
+    "грудь",
+    "трицепс",
+    "передняя дельта",
+    "стабилизация корпуса"
+  ],
+  "equipment": [
+    "нескользящая поверхность",
+    "коврик по желанию"
+  ],
+  "trainerId": "trainer_female_01",
+  "rigId": "mpfb-game-engine-53-bones",
+  "motionStatus": "rejected",
+  "acceptedVideo": null,
+  "supersededVideo": "./assets/motion/quality-v2/female-pushup.mp4",
+  "rejectionReason": "User-reviewed model has inverted arms/elbows; new rig poses must be checked before rendering.",
+  "instructions": [
+    "Поставить ладони примерно на ширине плеч, пальцы вперёд; ноги вытянуты назад на носках.",
+    "Стабилизировать плечи, пресс и ягодицы, сохраняя прямую линию головы, корпуса и ног.",
+    "Плавно согнуть локти и опустить грудь к полу, не роняя таз.",
+    "Разогнуть руки и вернуться в исходное положение с ровным корпусом."
+  ],
+  "mistakes": [
+    "Локтевой сустав выгибается в обратную сторону",
+    "Кисти сдвигаются на опоре",
+    "Таз провисает либо резко поднимается",
+    "Корпус вращается и руки перекрещиваются",
+    "Голова запрокидывается"
+  ],
+  "easierVariants": [
+    "wall_pushup",
+    "kneeling_pushup"
+  ],
+  "referenceSources": [
+    {
+      "title": "ACE Push-up Exercise Library",
+      "url": "https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/"
+    },
+    {
+      "title": "Mayo Clinic push-up guidance",
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/modified-pushup/vid-20084674"
+    }
+  ],
+  "cameras": [
+    {
+      "id": "A",
+      "role": "side",
+      "purpose": "проверка линии корпуса и амплитуды"
+    },
+    {
+      "id": "B",
+      "role": "front_three_quarter",
+      "purpose": "проверка локтей/кистей, дублирования тела"
+    },
+    {
+      "id": "C",
+      "role": "front",
+      "purpose": "симметрия рук, направление локтей"
+    }
+  ],
+  "poseSheet": [
+    {
+      "id": "P0",
+      "phase": "start",
+      "progress": 0,
+      "detail": "Упор лёжа, почти прямые локти, плечи над кистями, голова/корпус/ноги выстроены.",
+      "checks": [
+        "плечи над кистями",
+        "нет гиперэкстензии локтей",
+        "ладони и носки касаются пола"
+      ]
+    },
+    {
+      "id": "P1",
+      "phase": "lowering",
+      "progress": 0.25,
+      "detail": "Плечи и таз движутся вниз вместе, обе руки сгибаются физиологично.",
+      "checks": [
+        "локти не инвертированы",
+        "кисти не скользят",
+        "корпус жёсткий"
+      ]
+    },
+    {
+      "id": "P2",
+      "phase": "lowering",
+      "progress": 0.5,
+      "detail": "Грудь приближается к полу, таз и грудной отдел перемещаются как единая линия.",
+      "checks": [
+        "симметрия рук",
+        "нейтральная шея",
+        "локти не выворачиваются"
+      ]
+    },
+    {
+      "id": "P3",
+      "phase": "bottom",
+      "progress": 1,
+      "detail": "Грудь близко к полу, угол сгиба соответствует безопасной амплитуде.",
+      "checks": [
+        "поясница не провисает",
+        "ладони под опорой",
+        "руки не уходят в пол"
+      ]
+    },
+    {
+      "id": "P4",
+      "phase": "lifting",
+      "progress": 0.5,
+      "detail": "Контролируемый подъём от пола при разгибании локтей.",
+      "checks": [
+        "траектория обратно P2",
+        "ладони/носки фиксированы",
+        "нет вращения тела"
+      ]
+    },
+    {
+      "id": "P5",
+      "phase": "top",
+      "progress": 0,
+      "detail": "Возврат к исходной позе без скачка и без переразгибания.",
+      "checks": [
+        "P5 совпадает с P0",
+        "нет телепортации модели",
+        "линия тела сохранена"
+      ]
+    }
+  ],
+  "acceptance": {
+    "staticPosesApproved": false,
+    "technicalIKAuditPassed": false,
+    "sportsProfessionalApproved": false,
+    "userVisualApproved": false,
+    "iphoneValidated": false,
+    "assetRightsChecked": false,
+    "reviewer": null,
+    "reviewedAt": null
+  },
+  "candidate": {
+    "status": "review",
+    "rigSource": "./assets/motion/quality-v3/trainer-female-pushup-static-v3.blend",
+    "poseSheetImage": "./assets/motion/quality-v3/pushup-pose-sheet-v3.jpg",
+    "reviewPage": "./preview/pushup-v3/",
+    "motionVideo": null,
+    "techniqueApproved": false
+  }
+}

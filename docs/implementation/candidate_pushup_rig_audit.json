@@ -1,0 +1,542 @@
+{
+  "exerciseId": "pushup",
+  "trainerId": "trainer_female_01",
+  "source": "assets/motion/quality-v3/trainer-female-pushup-static-v3.blend",
+  "status": "CANDIDATE_REVIEW_REQUIRED",
+  "purpose": "Rig instrumentation of prior rejected attempt (NOT a validated exercise).",
+  "diagnosticThresholdsAreHeuristics": true,
+  "checks": [
+    {
+      "name": "wrist_IK_targets",
+      "passed": true,
+      "detail": "max wrist/target delta 0.000m; heuristic <=0.08m"
+    },
+    {
+      "name": "visible_shoulder_lowering",
+      "passed": true,
+      "detail": "shoulder drop 0.173m; heuristic >=0.09m"
+    },
+    {
+      "name": "elbow_left_right_symmetry",
+      "passed": true,
+      "detail": "max elbow angle mismatch 0.0deg; heuristic <=14deg"
+    },
+    {
+      "name": "elbow_angle_not_collapsed",
+      "passed": true,
+      "detail": "min angle 80.7deg; heuristic >=35deg"
+    },
+    {
+      "name": "elbow_bend_no_sign_flip",
+      "passed": true,
+      "detail": "bend sign sets {'l': {-1.0}, 'r': {-1.0}}"
+    },
+    {
+      "name": "hands_no_centerline_crossing",
+      "passed": true,
+      "detail": "wrist stays on shoulder side of centerline"
+    },
+    {
+      "name": "elbows_bend_toward_feet",
+      "passed": true,
+      "detail": "with face directed -Y, elbows must not fold forward toward head"
+    },
+    {
+      "name": "top_elbows_extended",
+      "passed": true,
+      "detail": "top elbow angle 157.0deg; expected >=145deg"
+    },
+    {
+      "name": "left_right_elbow_sagittal_symmetry",
+      "passed": true,
+      "detail": "elbow y offset discrepancy 0.000m; expected <=0.09m"
+    },
+    {
+      "name": "left_right_elbow_frontal_mirror",
+      "passed": true,
+      "detail": "elbow x mirror error 0.000m; expected <=0.09m"
+    },
+    {
+      "name": "feet_above_floor",
+      "passed": true,
+      "detail": "toe penetrates floor: min z 0.017m; allowed >=-0.015m"
+    },
+    {
+      "name": "toe_ground_approximate",
+      "passed": true,
+      "detail": "max abs toe-tip height 0.023m; heuristic <=0.14m"
+    }
+  ],
+  "failures": [],
+  "manualReviewRequired": true,
+  "frameSamples": [
+    {
+      "frame": 1,
+      "phase": "P0",
+      "arms": {
+        "l": {
+          "shoulder_m": [
+            0.1673,
+            -1.223,
+            0.489
+          ],
+          "elbow_m": [
+            0.2553,
+            -1.1602,
+            0.2885
+          ],
+          "wrist_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 157.01,
+          "bend_orientation_x": -0.0126,
+          "arm_crosses_centerline": false
+        },
+        "r": {
+          "shoulder_m": [
+            -0.1673,
+            -1.223,
+            0.489
+          ],
+          "elbow_m": [
+            -0.2553,
+            -1.1602,
+            0.2885
+          ],
+          "wrist_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 157.01,
+          "bend_orientation_x": -0.0126,
+          "arm_crosses_centerline": false
+        }
+      },
+      "feet": {
+        "l": {
+          "toe_height_m": 0.0233,
+          "toe_m": [
+            0.1816,
+            -0.0583,
+            0.0233
+          ]
+        },
+        "r": {
+          "toe_height_m": 0.0233,
+          "toe_m": [
+            -0.1816,
+            -0.0583,
+            0.0233
+          ]
+        }
+      },
+      "shoulder_height_m": 0.489,
+      "elbow_angle_gap_deg": 0.0
+    },
+    {
+      "frame": 6,
+      "phase": "P1",
+      "arms": {
+        "l": {
+          "shoulder_m": [
+            0.1673,
+            -1.2399,
+            0.4027
+          ],
+          "elbow_m": [
+            0.3187,
+            -1.1186,
+            0.2833
+          ],
+          "wrist_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 108.39,
+          "bend_orientation_x": -0.0314,
+          "arm_crosses_centerline": false
+        },
+        "r": {
+          "shoulder_m": [
+            -0.1673,
+            -1.2399,
+            0.4027
+          ],
+          "elbow_m": [
+            -0.3187,
+            -1.1186,
+            0.2833
+          ],
+          "wrist_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 108.39,
+          "bend_orientation_x": -0.0314,
+          "arm_crosses_centerline": false
+        }
+      },
+      "feet": {
+        "l": {
+          "toe_height_m": 0.0197,
+          "toe_m": [
+            0.1816,
+            -0.0455,
+            0.0197
+          ]
+        },
+        "r": {
+          "toe_height_m": 0.0197,
+          "toe_m": [
+            -0.1816,
+            -0.0455,
+            0.0197
+          ]
+        }
+      },
+      "shoulder_height_m": 0.4027,
+      "elbow_angle_gap_deg": 0.0
+    },
+    {
+      "frame": 9,
+      "phase": "P2",
+      "arms": {
+        "l": {
+          "shoulder_m": [
+            0.1673,
+            -1.2489,
+            0.3337
+          ],
+          "elbow_m": [
+            0.3373,
+            -1.1082,
+            0.2772
+          ],
+          "wrist_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 85.8,
+          "bend_orientation_x": -0.0336,
+          "arm_crosses_centerline": false
+        },
+        "r": {
+          "shoulder_m": [
+            -0.1673,
+            -1.2489,
+            0.3337
+          ],
+          "elbow_m": [
+            -0.3373,
+            -1.1082,
+            0.2772
+          ],
+          "wrist_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 85.8,
+          "bend_orientation_x": -0.0336,
+          "arm_crosses_centerline": false
+        }
+      },
+      "feet": {
+        "l": {
+          "toe_height_m": 0.0175,
+          "toe_m": [
+            0.1816,
+            -0.0352,
+            0.0175
+          ]
+        },
+        "r": {
+          "toe_height_m": 0.0175,
+          "toe_m": [
+            -0.1816,
+            -0.0352,
+            0.0175
+          ]
+        }
+      },
+      "shoulder_height_m": 0.3337,
+      "elbow_angle_gap_deg": 0.0
+    },
+    {
+      "frame": 11,
+      "phase": "P3",
+      "arms": {
+        "l": {
+          "shoulder_m": [
+            0.1673,
+            -1.2507,
+            0.3155
+          ],
+          "elbow_m": [
+            0.3398,
+            -1.1072,
+            0.2763
+          ],
+          "wrist_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 80.69,
+          "bend_orientation_x": -0.0334,
+          "arm_crosses_centerline": false
+        },
+        "r": {
+          "shoulder_m": [
+            -0.1673,
+            -1.2507,
+            0.3155
+          ],
+          "elbow_m": [
+            -0.3398,
+            -1.1072,
+            0.2763
+          ],
+          "wrist_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 80.69,
+          "bend_orientation_x": -0.0334,
+          "arm_crosses_centerline": false
+        }
+      },
+      "feet": {
+        "l": {
+          "toe_height_m": 0.017,
+          "toe_m": [
+            0.1816,
+            -0.0324,
+            0.017
+          ]
+        },
+        "r": {
+          "toe_height_m": 0.017,
+          "toe_m": [
+            -0.1816,
+            -0.0324,
+            0.017
+          ]
+        }
+      },
+      "shoulder_height_m": 0.3155,
+      "elbow_angle_gap_deg": 0.0
+    },
+    {
+      "frame": 16,
+      "phase": "P4",
+      "arms": {
+        "l": {
+          "shoulder_m": [
+            0.1673,
+            -1.2399,
+            0.4027
+          ],
+          "elbow_m": [
+            0.3187,
+            -1.1186,
+            0.2833
+          ],
+          "wrist_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 108.39,
+          "bend_orientation_x": -0.0314,
+          "arm_crosses_centerline": false
+        },
+        "r": {
+          "shoulder_m": [
+            -0.1673,
+            -1.2399,
+            0.4027
+          ],
+          "elbow_m": [
+            -0.3187,
+            -1.1186,
+            0.2833
+          ],
+          "wrist_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 108.39,
+          "bend_orientation_x": -0.0314,
+          "arm_crosses_centerline": false
+        }
+      },
+      "feet": {
+        "l": {
+          "toe_height_m": 0.0197,
+          "toe_m": [
+            0.1816,
+            -0.0455,
+            0.0197
+          ]
+        },
+        "r": {
+          "toe_height_m": 0.0197,
+          "toe_m": [
+            -0.1816,
+            -0.0455,
+            0.0197
+          ]
+        }
+      },
+      "shoulder_height_m": 0.4027,
+      "elbow_angle_gap_deg": 0.0
+    },
+    {
+      "frame": 21,
+      "phase": "P5",
+      "arms": {
+        "l": {
+          "shoulder_m": [
+            0.1673,
+            -1.223,
+            0.489
+          ],
+          "elbow_m": [
+            0.2553,
+            -1.1602,
+            0.2885
+          ],
+          "wrist_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 157.01,
+          "bend_orientation_x": -0.0126,
+          "arm_crosses_centerline": false
+        },
+        "r": {
+          "shoulder_m": [
+            -0.1673,
+            -1.223,
+            0.489
+          ],
+          "elbow_m": [
+            -0.2553,
+            -1.1602,
+            0.2885
+          ],
+          "wrist_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_m": [
+            -0.275,
+            -1.15,
+            0.055
+          ],
+          "wrist_target_error_m": 0.0,
+          "elbow_angle_deg": 157.01,
+          "bend_orientation_x": -0.0126,
+          "arm_crosses_centerline": false
+        }
+      },
+      "feet": {
+        "l": {
+          "toe_height_m": 0.0233,
+          "toe_m": [
+            0.1816,
+            -0.0583,
+            0.0233
+          ]
+        },
+        "r": {
+          "toe_height_m": 0.0233,
+          "toe_m": [
+            -0.1816,
+            -0.0583,
+            0.0233
+          ]
+        }
+      },
+      "shoulder_height_m": 0.489,
+      "elbow_angle_gap_deg": 0.0
+    }
+  ]
+}

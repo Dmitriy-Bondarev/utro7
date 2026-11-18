@@ -1,49 +1,56 @@
 const puppeteer = require(process.env.PUPPETEER_PATH || 'puppeteer');
 const path = require('path');
-const sleep = ms => new Promise(r=>setTimeout(r,ms));
-const appURL = process.env.UTRO7_URL || 'file://' + path.resolve(__dirname,'../index.html');
-(async()=>{
-  const browser = await puppeteer.launch({headless:true,args:['--no-sandbox','--autoplay-policy=no-user-gesture-required']});
-  const page=await browser.newPage();
+
+(async () => {
+  const browser = await puppeteer.launch({headless:true,args:['--no-sandbox']});
+  const page = await browser.newPage();
   await page.setViewport({width:390,height:844,isMobile:true,hasTouch:true,deviceScaleFactor:1});
+  page.on('dialog',d=>d.accept());
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  page.on('dialog',d=>d.accept());
-  await page.goto(appURL,{waitUntil:'domcontentloaded'});
-  await page.evaluate(()=>{localStorage.clear()});await page.reload({waitUntil:'domcontentloaded'});
+  await page.goto(process.env.UTRO7_URL || 'file://' + path.resolve(__dirname,'../index.html'),{waitUntil:'domcontentloaded'});
+  await page.evaluate(()=>localStorage.clear());
+  await page.reload({waitUntil:'domcontentloaded'});
+  const policy=await page.evaluate(()=>{
+    const p=window.Utro7MotionPolicy;
+    if(!p)return null;
+    return {
+      count:p.all().length,
+      published:p.all().filter(x=>p.getApproved(x.exerciseId,x.trainerId)).length,
+      pushupWoman:p.getStatus('pushup','trainer_female_01'),
+      pushupMan:p.getStatus('pushup','man'),
+      marchWoman:p.getStatus('march','woman')
+    };
+  });
   await page.click('#open-presets');
   await page.click('[data-detail="morning7"]');
   await page.click('[data-workout-move="2"]');
-  await page.waitForSelector('video.motion-video.ready',{timeout:8000});
-  const woman = await page.$eval('video.motion-video',v=>({src:v.currentSrc,hasAudio:v.mozHasAudio||false,muted:v.muted,loop:v.loop,inline:v.hasAttribute('playsinline'),ready:v.readyState,width:v.videoWidth,height:v.videoHeight}));
-  const wc0=await page.$eval('video.motion-video',v=>v.currentTime);await sleep(420);
-  const wc1=await page.$eval('video.motion-video',v=>v.currentTime);
-  await page.click('#guide-avatar');
-  await page.click('button[data-avatar="man"]');
-  await page.waitForSelector('video.motion-video.ready',{timeout:8000});
-  const man=await page.$eval('video.motion-video',v=>({src:v.currentSrc,ready:v.readyState}));
-  await page.click('#avatar-confirm');
-  await page.waitForSelector('video.motion-video.ready',{timeout:8000});
-  const guideVideo=await page.$eval('video.motion-video',v=>v.currentSrc);
+  const badVideoInDetail=await page.$('video.motion-video');
+  const rejection=await page.$eval('.motion-blocked',e=>({status:e.dataset.motionStatus,text:e.textContent}));
+  await page.click('#guide-next');
+  const squat=await page.evaluate(()=>({
+    name:document.querySelector('.work-title')?.textContent,
+    schematic:!!document.querySelector('svg.moving-figure'),
+    video:!!document.querySelector('video.motion-video'),
+    label:document.querySelector('.motion-badge')?.textContent
+  }));
   await page.click('#guide-home');
   await page.click('#workout-detail-start');
-  await page.waitForSelector('video.motion-video.ready',{timeout:8000});
-  const player=await page.$eval('video.motion-video',v=>v.currentSrc);
-  await page.click('#stop-play');
-  const p0=await page.$eval('video.motion-video',v=>v.currentTime);
-  await sleep(430);
-  const p1=await page.$eval('video.motion-video',v=>v.currentTime);
-  const pauseButton=await page.$eval('#stop-play',e=>e.textContent.trim());
-  await page.click('#stop-play');
-  const resumed0=await page.$eval('video.motion-video',v=>v.currentTime);await sleep(430);
-  const resumed1=await page.$eval('video.motion-video',v=>v.currentTime);
-  await page.click('#quit-secondary');
-  await page.click('#open-catalog');
-  await page.click('[data-see="shoulder"]');
-  const svgFallback=await page.evaluate(()=>({video:!!document.querySelector('.motion-video'),svg:!!document.querySelector('svg.moving-figure'),name:document.querySelector('.work-title')?.textContent}));
-  const checks={womanMP4:woman.src.endsWith('woman-pushup.mp4'),manMP4:man.src.endsWith('man-march.mp4'),manPushupGuide:guideVideo.endsWith('man-pushup.mp4'),playerMarch:player.endsWith('man-march.mp4'),videoDimensions:woman.width===560&&woman.height===560,videoMuted:woman.muted&&woman.loop&&woman.inline,videoMoves:wc1>wc0+0.1,pauses:Math.abs(p1-p0)<0.07&&pauseButton.includes('Продолжить'),resumes:resumed1>resumed0+0.1,svgFallback:svgFallback.svg&&!svgFallback.video};
-  await page.screenshot({path:'/tmp/utro7-motion-fallback.png'});
-  console.log(JSON.stringify({checks, woman,man,guideVideo,player,pauseButton,svgFallback,errors},null,2));
+  await page.evaluate(()=>{const now=Date.now.bind(Date);Date.now=()=>now()+78000;});
+  await new Promise(r=>setTimeout(r,450));
+  const player=await page.evaluate(()=>({
+    title:document.getElementById('exercise-name')?.textContent,
+    blocked:document.querySelector('.motion-blocked')?.dataset.motionStatus,
+    video:!!document.querySelector('video.motion-video')
+  }));
+  await page.screenshot({path:'/tmp/utro7-g1-blocked-instruction.png'});
+  const result={
+    policy,rejection,squat,player,badVideoInDetail:!!badVideoInDetail,errors
+  };
+  console.log(JSON.stringify(result,null,2));
   await browser.close();
-  if(errors.length||Object.values(checks).some(x=>!x))process.exitCode=1;
-})().catch(e=>{console.error('MOTION_QA_ERROR',e.stack);process.exitCode=2});
+  if(!policy||policy.count!==7||policy.published!==0||policy.pushupWoman!=='rejected'||
+     policy.marchWoman!=='prototype'||rejection.status!=='rejected'||badVideoInDetail||
+     !squat.schematic||squat.video||!squat.label.includes('не проверена')||
+     player.title!=='Отжимания'||player.blocked!=='rejected'||player.video||errors.length)process.exitCode=1;
+})().catch(err=>{console.error('QA_ERROR',err.stack);process.exitCode=2});

@@ -11,3 +11,7 @@ assets/motion/quality-v2/pushup-*.png
 assets/motion/quality-v2/*-preview.jpg
 assets/motion/quality-v2/*.blend1
 tools/blender/__pycache__/
+
+# G1 pose review intermediary PNGs and Blender backup
+assets/motion/quality-v3/_frames/
+assets/motion/quality-v3/*.blend1

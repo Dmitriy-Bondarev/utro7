@@ -12,7 +12,7 @@
   ],
   "equipment": [],
   "trainerId": "trainer_female_01",
-  "motionStatus": "review",
+  "motionStatus": "rejected",
   "acceptedVideo": null,
   "videoCandidate": "./assets/motion/squat-g1/female-squat-candidate.mp4",
   "poster": "./assets/motion/squat-g1/female-squat-poster.jpg",
@@ -71,6 +71,12 @@
     "visualAccepted": false,
     "fitnessExpertApproved": false,
     "realIphoneValidated": false,
-    "assetRightsChecked": false
+    "assetRightsChecked": false,
+    "userVisualScoreRangeOutOf100": [
+      5,
+      7
+    ],
+    "userVisualReviewDate": "2026-11-18",
+    "rejectionReason": "Avatar/animation realism rated 5–7 out of 100. Change character and motion pipeline before retrying."
   }
 }

@@ -9,12 +9,12 @@ R=Path(__file__).resolve().parents[2]
 data=json.loads((R/"content/exercises/EX-04-squat.ru.json").read_text())
 reg=json.loads((R/"content/motion/registry.json").read_text())
 audit=json.loads((R/"docs/implementation/squat_g1_geometry_audit.json").read_text())
-assert data["id"]=="squat" and data["motionStatus"]=="review"
+assert data["id"]=="squat" and data["motionStatus"]=="rejected"
 assert data["acceptedVideo"] is None
 assert not data["acceptance"]["fitnessExpertApproved"]
 assert not data["acceptance"]["visualAccepted"]
 asset=next(x for x in reg["assets"] if x.get("rigId")=="mpfb-game-engine-53-bones-squat-g1")
-assert asset["status"]=="review" and asset.get("review") is None
+assert asset["status"]=="rejected" and asset.get("review") is None
 assert len(audit["checks"])==9 and all(audit["checks"].values())
 mp4=R/"assets/motion/squat-g1/female-squat-candidate.mp4"
 assert (R/"assets/motion/squat-g1/female-squat-poster.jpg").stat().st_size>1000
@@ -34,5 +34,5 @@ assert abs(float(probe["format"]["duration"])-4.0)<0.03
 assert subprocess.run(["ffmpeg","-hide_banner","-loglevel","error","-stream_loop","2",
     "-i",str(mp4),"-f","null","-"],capture_output=True).returncode==0
 print("PASS EX-04: 9/9 geometry checks; 120 frames / 30fps / 4s / 800x800 H.264")
-print("PASS EX-04: 3 repeated silent MP4 loops decode; still REVIEW not approved")
-print("NOTE: subjective fidelity, squat technique and real iPhone Safari QA pending")
+print("PASS EX-04: 3 repeated silent MP4 loops decode; REJECTED after user visual review")
+print("NOTE: visual fidelity REJECTED (user score 5-7/100); technique and iPhone QA not completed")

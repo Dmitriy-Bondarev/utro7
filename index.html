@@ -275,11 +275,11 @@
       const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const show=()=>{
         if(video.error){video.classList.remove('ready');return;}
-        if(reduced){video.pause();video.classList.add('ready');return;}
+        if(reduced&&!video.classList.contains('pushup-real-video')){video.pause();video.classList.add('ready');return;}
         video.classList.add('ready');
         if(paused){video.pause();return;}
         const play=video.play();
-        if(play&&play.catch)play.catch(()=>{video.classList.remove('ready');});
+        if(play&&play.catch)play.catch(()=>{video.classList.add('ready');video.controls=true;video.setAttribute('aria-label','Автоматическое воспроизведение недоступно. Нажми Play на видео.');});
       };
       video.addEventListener('canplay',show,{once:true});
       video.addEventListener('error',()=>video.classList.remove('ready'));
@@ -289,7 +289,7 @@
     function figure(key){
       // User-approved visual pushup (2D). Not yet reviewed as safe instructional technique.
       // Previously rejected rigged videos remain blocked in the separate motion policy.
-      if(key==='pushup')return '<video class="motion-video pushup-real-video" autoplay muted playsinline loop preload="auto" '+
+      if(key==='pushup')return '<video class="motion-video pushup-real-video" autoplay muted playsinline webkit-playsinline loop preload="auto" '+
         'aria-label="Мужской тренер в спортивной форме показывает отжимание. Визуальный видеопрототип, пока не 3D." '+
         'poster="./assets/motion/approved-concept/male-pushup-approved-visual-poster.jpg" '+
         'src="./assets/motion/approved-concept/male-pushup-approved-visual.mp4"></video>'+

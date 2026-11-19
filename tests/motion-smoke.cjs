@@ -8,13 +8,15 @@ const path=require('node:path');
   await page.goto(process.env.UTRO7_URL||'file://'+path.resolve(__dirname,'../index.html'),{waitUntil:'domcontentloaded'});
   const registry=await page.evaluate(()=>({total:window.Utro7MotionPolicy?.all().length,rejected:window.Utro7MotionPolicy?.getStatus('pushup','trainer_female_01')}));
   assert.equal(registry.total,9);assert.equal(registry.rejected,'rejected');
-  await page.click('#start');
+  await page.evaluate(()=>document.getElementById('start').click());
   const display=await page.evaluate(()=>({title:document.querySelector('#exercise-name')?.textContent,
-   hasVideo:!!document.querySelector('video.pushup-real-video'),
+   has3d:!!document.querySelector('iframe.trainer-3d-frame'),
    hasSchematic:!!document.querySelector('svg.moving-figure'),
    label:document.querySelector('.motion-badge')?.textContent}));
-  assert.equal(display.title,'Отжимания');assert.ok(display.hasVideo);
-  assert.equal(display.hasSchematic,false);assert.match(display.label,/видеопрототип/);
+  assert.equal(display.title,'Отжимания');assert.ok(display.has3d);
+  assert.equal(display.hasSchematic,false);assert.match(display.label,/3D · спортивный прототип/);
+  await page.click('#pushup-mode');
+  assert.ok(await page.$('video.pushup-real-video'));
   assert.equal(errors.length,0,errors.join('; '));
   console.log('PASS_MOTION_PILOT',JSON.stringify({registry,display,errors}));
  }finally{await browser.close();}

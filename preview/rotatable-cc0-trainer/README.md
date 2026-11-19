@@ -1,0 +1,11 @@
+# 3D Sports Trainer — source, rights, status
+
+**Asset:** `trainer_sports_pushup.glb`, a skinned and animated 3D human with fitted sportswear-color surfaces, used in the rotatable 3D preview embedded in the workout app.
+
+**Human source:** [OpenGym3D](https://github.com/AssiamahS/opengym3d), source `https://assiamahs.github.io/opengym3d/assets/push_up.glb`. Its `assets/ASSET_LIBRARY.json` documents the MakeHuman/MPFB male body as **CC0-1.0**. **Motion:** OpenGym3D's Push-up clip, documented in the same registry as **CC0-1.0**, retargeted from Mesh2Motion / Quaternius Universal Animation Library.
+
+**Local derivation:** Blender 5.3 import (removing a malformed unused glTF morph-weight animation channel solely for Blender importer compatibility), material separation by rest-pose mesh face regions into a blue training jersey, graphite shorts, neutral skin, dark shoes and pale soles, GLB export with full original 163-bone rig and animation intact. The original CC0 GLB is retained locally in the private development workspace, not needed for runtime.
+
+**Important:** No Human Generator Trial 3D mesh, material, texture, or rig was used. The dressed OpenGym3D 3D character differs from the approved 2D video image. This is a visual and technical MVP, NOT accepted as a medically or professionally validated push-up demonstration. Review of hand/foot contacts and body mechanics remains pending.
+
+**QA:** `tests/real3d-sports-integration.cjs` checks actual WebGL frames, pointer rotation, pause/resume, and 2D video fallback using a served app URL.

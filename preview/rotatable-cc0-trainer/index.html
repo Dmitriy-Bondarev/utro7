@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Проверка 3D-поворота — Утро 7</title>
+<style>*{box-sizing:border-box}body{background:#071724;color:#eafffb;font-family:-apple-system,Arial,sans-serif;margin:0}main{max-width:1080px;margin:auto;padding:18px}h1{font-size:clamp(26px,5vw,45px);margin:14px 0}p{color:#adc2cb;line-height:1.5}#stage{height:60vh;min-height:420px;background:#dce5e6;border-radius:22px;overflow:hidden;touch-action:none}nav{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}button{background:#173a4d;border:1px solid #729393;color:white;padding:12px 17px;border-radius:10px;font-weight:700;cursor:pointer}.status{margin-top:15px;color:#96dfcf;font-size:14px}html.embedded,html.embedded body{width:100%;height:100%;overflow:hidden;margin:0}
+html.embedded main{margin:0;max-width:100%;height:100%;padding:0}
+html.embedded main>h1,html.embedded main>p{display:none}
+html.embedded #stage{height:100%;min-height:0;border-radius:0;border:0}
+html.embedded nav{position:absolute;left:5px;right:5px;bottom:6px;z-index:4;margin:0;display:flex;gap:3px;flex-wrap:nowrap;justify-content:center}
+html.embedded nav button{font-size:10px;padding:6px 5px;border-radius:8px;flex:1;white-space:nowrap;background:rgba(17,48,66,.9)}
+html.embedded #status{display:none}
+</style>
+<script type="importmap">{"imports":{"three":"../digital-human-studio/vendor/three.module.js"}}</script>
+</head><body><main><h1>3D-поворот · опытный образец</h1><p>3D-прототип в синей спортивной футболке, тёмных шортах и тренировочной обуви. Реализм и техника упражнений пока на проверке.</p>
+<div id="stage"></div><nav><button id="toggle">Пауза</button><button id="front">Спереди</button><button id="side">Сбоку</button><button id="back">Сзади</button><button id="reset">3/4</button></nav><p id="status" class="status">Загрузка настоящей 3D-модели…</p><p>Потяни мышью для вращения модели. Колёсико меняет масштаб.</p></main><script type="module" src="./viewer.js"></script></body></html>

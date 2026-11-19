@@ -25,8 +25,8 @@ const path = require('path');
   await page.click('#open-presets');
   await page.click('[data-detail="morning7"]');
   await page.click('[data-workout-move="2"]');
-  const badVideoInDetail=await page.$('video.motion-video');
-  const rejection=await page.$eval('.motion-blocked',e=>({status:e.dataset.motionStatus,text:e.textContent}));
+  const visualVideoInDetail=await page.$('video.pushup-real-video');
+  const preview=await page.$eval('video.pushup-real-video',e=>({src:e.getAttribute('src'),poster:e.poster}));
   await page.click('#guide-next');
   const squat=await page.evaluate(()=>({
     name:document.querySelector('.work-title')?.textContent,
@@ -40,17 +40,17 @@ const path = require('path');
   await new Promise(r=>setTimeout(r,450));
   const player=await page.evaluate(()=>({
     title:document.getElementById('exercise-name')?.textContent,
-    blocked:document.querySelector('.motion-blocked')?.dataset.motionStatus,
+    previewSrc:document.querySelector('video.pushup-real-video')?.getAttribute('src'),
     video:!!document.querySelector('video.motion-video')
   }));
   await page.screenshot({path:'/tmp/utro7-g1-blocked-instruction.png'});
   const result={
-    policy,rejection,squat,player,badVideoInDetail:!!badVideoInDetail,errors
+    policy,preview,squat,player,visualVideoInDetail:!!visualVideoInDetail,errors
   };
   console.log(JSON.stringify(result,null,2));
   await browser.close();
   if(!policy||policy.count!==9||policy.published!==0||policy.pushupWoman!=='rejected'||
-     policy.marchWoman!=='prototype'||rejection.status!=='rejected'||badVideoInDetail||
+     policy.marchWoman!=='prototype'||!preview.src.includes('male-pushup-approved-visual.mp4')||!visualVideoInDetail||
      !squat.schematic||squat.video||!squat.label.includes('не проверена')||
-     player.title!=='Отжимания'||player.blocked!=='rejected'||player.video||errors.length)process.exitCode=1;
+     player.title!=='Отжимания'||!player.previewSrc?.includes('male-pushup-approved-visual.mp4')||!player.video||errors.length)process.exitCode=1;
 })().catch(err=>{console.error('QA_ERROR',err.stack);process.exitCode=2});

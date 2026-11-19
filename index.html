@@ -95,6 +95,9 @@
     .figure-panel .motion-video.ready{display:block}
     .figure-panel .motion-video.ready+.moving-figure{visibility:hidden}
     .figure-panel:has(.motion-video.ready){border-color:#9cb5bf;background:#e7e9eb}
+    .figure-panel:has(.pushup-poster){border-color:#7faaa8;background:#d9dcdf}
+    .figure-panel .pushup-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#d9dcdf}
+    .figure-panel .motion-video.ready+.pushup-poster{visibility:hidden}
     @media (prefers-reduced-motion:reduce){.motion-video{animation:none}}
     .motion-blocked{position:relative;z-index:2;display:flex;flex-direction:column;gap:9px;align-items:center;justify-content:center;text-align:center;width:100%;height:100%;padding:22px;color:#dcecf4}
     .motion-blocked strong{font-size:16px;line-height:1.25;color:#fff}
@@ -257,7 +260,7 @@
     }
     function motionStatusLabel(key) {
       if(approvedMotion(key))return '3D · техника проверена';
-      return key==='pushup'?'Демонстрация на исправлении':'Схема · техника не проверена';
+      return key==='pushup'?'Мужской тренер · видеопрототип':'Схема · техника не проверена';
     }
     function motionVideo(key) {
       const asset=approvedMotion(key);
@@ -284,12 +287,13 @@
       if(paused)video.pause();
     }
     function figure(key){
-      // The old push-up material is demonstrably incorrect: do not animate it even in SVG.
-      if(key==='pushup'&&!approvedMotion(key))return '<div class="motion-blocked" role="note" data-motion-status="rejected">' +
-        '<div class="motion-blocked-symbol">!</div>' +
-        '<strong>Отжимания: демонстрация на исправлении</strong>' +
-        '<span>В прежней анимации руки двигались неправильно. Используй текстовые шаги ниже; новый 3D-тренер появится после проверки.</span>' +
-        '</div>';
+      // User-approved visual pushup (2D). Not yet reviewed as safe instructional technique.
+      // Previously rejected rigged videos remain blocked in the separate motion policy.
+      if(key==='pushup')return '<video class="motion-video pushup-real-video" autoplay muted playsinline loop preload="auto" '+
+        'aria-label="Мужской тренер в спортивной форме показывает отжимание. Визуальный видеопрототип, пока не 3D." '+
+        'poster="./assets/motion/approved-concept/male-pushup-approved-visual-poster.jpg" '+
+        'src="./assets/motion/approved-concept/male-pushup-approved-visual.mp4"></video>'+
+        '<img class="pushup-poster" alt="Мужской тренер в синей футболке и шортах: отжимание" src="./assets/motion/approved-concept/male-pushup-approved-visual-poster.jpg">';
       const label=moves.find(m=>m.pose===key)?.name||'движение';
       return `${motionVideo(key)}<svg class="figure moving-figure" data-avatar="${data.avatar}" viewBox="0 0 250 196" role="img" aria-label="Анимация движения: ${label}">
         <path class="floor" d="M16 185H234"/>
@@ -411,7 +415,7 @@
         </header>
         <div class="work-label">УПРАЖНЕНИЕ</div>
         <h1 class="work-title">${escapeHtml(m.name)}</h1>
-        <div class="figure-panel detail-figure">${figure(m.pose)}<div class="motion-badge">▶ ${motionStatusLabel(m.id)}</div></div>${m.pose==='pushup'?'<button class="preview-link" id="guide-3d-lab">3D-лаборатория: повернуть и посмотреть (тестовый персонаж)</button>':''}
+        <div class="figure-panel detail-figure">${figure(m.pose)}<div class="motion-badge">▶ ${motionStatusLabel(m.id)}</div></div>
         <section class="technique">
           <h2>Как выполнять</h2>
           <ol id="exercise-steps">${instruction.steps.map(step=>`<li>${escapeHtml(step)}</li>`).join('')}</ol>
@@ -433,7 +437,7 @@
       document.getElementById('guide-prev').addEventListener('click',()=>{if(guideIndex>0){guideIndex--;renderGuide();}});
       document.getElementById('guide-next').addEventListener('click',()=>{if(guideIndex<sequence.length-1){guideIndex++;renderGuide();}});
       document.querySelectorAll('[data-guide-index]').forEach(b=>b.addEventListener('click',()=>{guideIndex=Number(b.dataset.guideIndex);renderGuide();}));
-      document.getElementById('guide-start').addEventListener('click',()=>startWorkout(w));const lab=document.getElementById('guide-3d-lab');if(lab)lab.addEventListener('click',()=>window.open('./preview/digital-human-studio/','_blank','noopener'));
+      document.getElementById('guide-start').addEventListener('click',()=>startWorkout(w));
       startFigureAnimation(m.pose,false);
     }
     // Shared exercise library, built-in routines, and a persistent workout composer.
@@ -602,7 +606,7 @@
       document.getElementById('builder-back').addEventListener('click',()=>{view='presets';render();});
     }
 
-    function renderWorkout(){if(!session)return;const s=session,idx=s.index,m=s.sequence[idx],isExercise=s.phase==='exercise',isRest=s.phase==='rest',isPrep=s.phase==='prep';const label=isPrep?'ПОДГОТОВКА':isRest?'ПЕРЕДЫШКА':'УПРАЖНЕНИЕ';const title=isPrep?s.sequence[0].name:isRest?(s.sequence[idx+1]?.name||m.name):m.name;const tip=isPrep?'Смотри на движение и приготовься. '+s.sequence[0].tip:isRest?'Следующее движение: '+(s.sequence[idx+1]?.tip||m.tip):m.tip;const time=isPrep?PREP:isRest?s.restMs:s.workMs;const next=isPrep?s.sequence[0].name:isRest?s.sequence[idx+1]?.name:s.sequence[idx+1]?.name||'Финиш!';$root.innerHTML=`<main class="workout ${s.paused?'paused':''}"><header class="work-top"><button class="round-btn" id="quit" aria-label="Закрыть тренировку">${ic('x')}</button><div class="work-progress"><span id="progress-label">${isPrep?'Начало':`${Math.min(idx+1,s.sequence.length)} из ${s.sequence.length} упражнений`}</span><div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:${((s.totalElapsed||0)/s.totalDuration)*100}%"></div></div></div><button class="round-btn" id="workout-avatar" aria-label="Сменить инструктора">${ic('user')}</button><button class="round-btn ${data.music?'on':''}" id="music-toggle" aria-label="${data.music?'Выключить':'Включить'} музыку">${ic(data.music?'music':'musicOff')}</button></header><div class="work-label" id="phase-label">${label}</div><h1 class="work-title" id="exercise-name">${title}</h1><p class="work-desc" id="exercise-tip">${tip}</p><div class="figure-panel">${figure(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)}<div class="motion-badge">${s.paused?'Пауза · демонстрация остановлена':'▶ '+(approvedMotion(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)?'3D · техника проверена':motionStatusLabel(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose))}</div></div>${m.pose==='pushup'?'<button class="preview-link" id="workout-3d-lab">Посмотреть отжимание в 3D · экспериментальный тренер</button>':''}<div class="clock" role="timer" aria-live="off"><span class="big-time" id="clock-value">${Math.ceil((s.remainingMs??time)/1000).toString().padStart(2,'0')}</span><span class="count-caption" id="count-caption">${s.paused?'Пауза':isExercise?'секунд движения':'секунд до начала'}</span></div><div class="next"><span>Дальше</span><strong id="next-name">${next}</strong></div><div class="work-actions"><button class="act secondary" id="stop-play">${ic(s.paused?'play':'pause')} ${s.paused?'Продолжить':'Пауза'}</button><button class="act primary" id="quit-secondary">${ic('x')} Завершить</button></div><div class="prep-tip">${data.music?'♪ Оригинальная фоновая мелодия':'Музыка выключена'} · Без прыжков</div></main>`;document.getElementById('quit').addEventListener('click',quitWorkout);document.getElementById('music-toggle').addEventListener('click',toggleMusic);document.getElementById('workout-avatar').addEventListener('click',()=>openAvatar('workout'));document.getElementById('stop-play').addEventListener('click',togglePause);document.getElementById('quit-secondary').addEventListener('click',quitWorkout);const lab=document.getElementById('workout-3d-lab');if(lab)lab.addEventListener('click',()=>{if(session&&!session.paused)togglePause();window.open('./preview/digital-human-studio/','_blank','noopener');});updateTimerUI();startFigureAnimation(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose,s.paused);}
+    function renderWorkout(){if(!session)return;const s=session,idx=s.index,m=s.sequence[idx],isExercise=s.phase==='exercise',isRest=s.phase==='rest',isPrep=s.phase==='prep';const label=isPrep?'ПОДГОТОВКА':isRest?'ПЕРЕДЫШКА':'УПРАЖНЕНИЕ';const title=isPrep?s.sequence[0].name:isRest?(s.sequence[idx+1]?.name||m.name):m.name;const tip=isPrep?'Смотри на движение и приготовься. '+s.sequence[0].tip:isRest?'Следующее движение: '+(s.sequence[idx+1]?.tip||m.tip):m.tip;const time=isPrep?PREP:isRest?s.restMs:s.workMs;const next=isPrep?s.sequence[0].name:isRest?s.sequence[idx+1]?.name:s.sequence[idx+1]?.name||'Финиш!';$root.innerHTML=`<main class="workout ${s.paused?'paused':''}"><header class="work-top"><button class="round-btn" id="quit" aria-label="Закрыть тренировку">${ic('x')}</button><div class="work-progress"><span id="progress-label">${isPrep?'Начало':`${Math.min(idx+1,s.sequence.length)} из ${s.sequence.length} упражнений`}</span><div class="progress-track"><div class="progress-bar" id="progress-bar" style="width:${((s.totalElapsed||0)/s.totalDuration)*100}%"></div></div></div><button class="round-btn" id="workout-avatar" aria-label="Сменить инструктора">${ic('user')}</button><button class="round-btn ${data.music?'on':''}" id="music-toggle" aria-label="${data.music?'Выключить':'Включить'} музыку">${ic(data.music?'music':'musicOff')}</button></header><div class="work-label" id="phase-label">${label}</div><h1 class="work-title" id="exercise-name">${title}</h1><p class="work-desc" id="exercise-tip">${tip}</p><div class="figure-panel">${figure(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)}<div class="motion-badge">${s.paused?'Пауза · демонстрация остановлена':'▶ '+(approvedMotion(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose)?'3D · техника проверена':motionStatusLabel(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose))}</div></div><div class="clock" role="timer" aria-live="off"><span class="big-time" id="clock-value">${Math.ceil((s.remainingMs??time)/1000).toString().padStart(2,'0')}</span><span class="count-caption" id="count-caption">${s.paused?'Пауза':isExercise?'секунд движения':'секунд до начала'}</span></div><div class="next"><span>Дальше</span><strong id="next-name">${next}</strong></div><div class="work-actions"><button class="act secondary" id="stop-play">${ic(s.paused?'play':'pause')} ${s.paused?'Продолжить':'Пауза'}</button><button class="act primary" id="quit-secondary">${ic('x')} Завершить</button></div><div class="prep-tip">${data.music?'♪ Оригинальная фоновая мелодия':'Музыка выключена'} · Без прыжков</div></main>`;document.getElementById('quit').addEventListener('click',quitWorkout);document.getElementById('music-toggle').addEventListener('click',toggleMusic);document.getElementById('workout-avatar').addEventListener('click',()=>openAvatar('workout'));document.getElementById('stop-play').addEventListener('click',togglePause);document.getElementById('quit-secondary').addEventListener('click',quitWorkout);updateTimerUI();startFigureAnimation(isRest?s.sequence[idx+1]?.pose||m.pose:isPrep?s.sequence[0].pose:m.pose,s.paused);}
     function updateTimerUI(){if(!session||!['prep','exercise','rest'].includes(session.phase))return;const s=session;const n=document.getElementById('clock-value'),bar=document.getElementById('progress-bar');if(n)n.textContent=String(Math.max(0,Math.ceil(s.remainingMs/1000))).padStart(2,'0');if(bar)bar.style.width=`${Math.min(100,Math.max(0,(s.totalElapsed||0)/s.totalDuration*100))}%`;}
     function startWorkout(workout){
       const picked=resolvedWorkout(workout&&Array.isArray(workout.ids)?workout:activeWorkout);

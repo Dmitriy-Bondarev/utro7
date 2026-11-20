@@ -14,7 +14,7 @@ const path=require('node:path');
    hasSchematic:!!document.querySelector('svg.moving-figure'),
    label:document.querySelector('.motion-badge')?.textContent}));
   assert.equal(display.title,'Отжимания');assert.ok(display.has3d);
-  assert.equal(display.hasSchematic,false);assert.match(display.label,/3D · мужчина · техника на проверке/);
+  assert.equal(display.hasSchematic,false);assert.match(display.label,/3D · мужской тренер · кандидат на приёмку/);
   await page.click('#pushup-mode');
   assert.ok(await page.$('video.pushup-real-video'));
   assert.equal(errors.length,0,errors.join('; '));

@@ -15,3 +15,9 @@
 The viewer accepts `trainer=male|female` and `exercise=pushup|squat` query parameters. Four GLB assets are explicitly versioned: `trainer_male_pushup.glb`, `trainer_female_pushup.glb`, `trainer_male_squat.glb`, `trainer_female_squat.glb`. Hair, eyes, eyebrows, sportswear and footwear are mesh/skin-bound components in each file, not generated 2D images. Female uses a separate native MakeHuman/MPFB CC0 character with 163 bones, retargeted to both original CC0 movement clips by rest-pose bone alignment and baked transformations.
 
 **Quality warning:** this is a visual 3D technology demonstration and not professional or medical instruction. Do not treat joint angles, hand/foot contacts, body geometry or realistic hair/cloth as fully validated. The source Human Generator commercial trial remains excluded.
+
+## MALE-MASTER-CANDIDATE-001 (20 November 2026)
+
+`trainer_male_pushup.glb` replaced with real garment meshes: male polo short-sleeve top, separate shorts, shoes, short messy hair, eyes and eyebrows. OpenGym3D motion retained with local-pose animation transfer, 163 bones. License: CC0 MakeHuman community source assets (Shirts 01, Pants 01, Hair 01 and system assets). Assets were sourced from official MakeHuman CC0 packs; no Human Generator trial content included.
+
+SHA-256 (GLB): `0414f0ed7982d3ae3344392cfa87a5e34841c27769176341701d1477b240f924`. User visual approval pending; motion technique professional review also pending. Not frozen.

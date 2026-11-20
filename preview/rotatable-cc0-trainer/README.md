@@ -9,3 +9,9 @@
 **Important:** No Human Generator Trial 3D mesh, material, texture, or rig was used. The dressed OpenGym3D 3D character differs from the approved 2D video image. This is a visual and technical MVP, NOT accepted as a medically or professionally validated push-up demonstration. Review of hand/foot contacts and body mechanics remains pending.
 
 **QA:** `tests/real3d-sports-integration.cjs` checks actual WebGL frames, pointer rotation, pause/resume, and 2D video fallback using a served app URL.
+
+## November 20 extension — two trainers, two exercises
+
+The viewer accepts `trainer=male|female` and `exercise=pushup|squat` query parameters. Four GLB assets are explicitly versioned: `trainer_male_pushup.glb`, `trainer_female_pushup.glb`, `trainer_male_squat.glb`, `trainer_female_squat.glb`. Hair, eyes, eyebrows, sportswear and footwear are mesh/skin-bound components in each file, not generated 2D images. Female uses a separate native MakeHuman/MPFB CC0 character with 163 bones, retargeted to both original CC0 movement clips by rest-pose bone alignment and baked transformations.
+
+**Quality warning:** this is a visual 3D technology demonstration and not professional or medical instruction. Do not treat joint angles, hand/foot contacts, body geometry or realistic hair/cloth as fully validated. The source Human Generator commercial trial remains excluded.

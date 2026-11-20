@@ -4,6 +4,9 @@ import {GLTFLoader} from '../digital-human-studio/vendor/loaders/GLTFLoader.js';
 const stage=document.getElementById('stage'),status=document.getElementById('status'),btn=document.getElementById('toggle');
 const params=new URLSearchParams(location.search);
 const embedded=params.get('embed')==='1';
+const trainer=params.get('trainer')==='female'?'female':'male';
+const exercise=params.get('exercise')==='squat'?'squat':'pushup';
+const source='./trainer_'+trainer+'_'+exercise+'.glb';
 if(embedded)document.documentElement.classList.add('embedded');
 const scene=new THREE.Scene();scene.background=new THREE.Color('#dce5e6');
 const camera=new THREE.PerspectiveCamera(40,1,.05,100);
@@ -14,14 +17,15 @@ const light=new THREE.DirectionalLight('#ffffff',3);light.position.set(3,7,5);sc
 const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.1;
 const grid=new THREE.GridHelper(8,20,'#a5bac5','#c7d5da');scene.add(grid);
 let mixer=null, playing=params.get('paused')!=='1';btn.textContent=playing?'Пауза':'Продолжить';
-new GLTFLoader().load('./trainer_sports_pushup.glb',g=>{
+new GLTFLoader().load(source,g=>{
   const model=g.scene;scene.add(model);model.updateMatrixWorld(true);
   const box=new THREE.Box3().setFromObject(model),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());
-  status.textContent='Загружено: '+size.toArray().map(v=>v.toFixed(2)).join(' × ')+' м. Анимаций: '+g.animations.length+'.';
+  status.textContent=(trainer==='female'?'Женский тренер':'Мужской тренер')+' · '+(exercise==='squat'?'Приседания':'Отжимания')+' · '+ 'Загружено: '+size.toArray().map(v=>v.toFixed(2)).join(' × ')+' м. Анимаций: '+g.animations.length+'.';
   model.position.sub(center);model.position.y+=size.y/2;
   const radius=Math.max(size.length()/2,1) * (embedded?.85:1);
-  camera.position.set(radius*1.55,radius*.85,radius*1.9);camera.lookAt(0,.40,0);
-  controls.target.set(0,.40,0);controls.minDistance=.6;controls.maxDistance=radius*8;controls.update();
+  const lookY=exercise==='squat'?size.y*.47:.40;
+  camera.position.set(radius*1.55,lookY+radius*.65,radius*1.9);camera.lookAt(0,lookY,0);
+  controls.target.set(0,lookY,0);controls.minDistance=.6;controls.maxDistance=radius*8;controls.update();
   if(g.animations.length){mixer=new THREE.AnimationMixer(model);mixer.clipAction(g.animations[0]).play();}
 },null,e=>{status.textContent='Ошибка загрузки: '+String(e)});
 function fit(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
@@ -38,4 +42,4 @@ for(const [id,xyz] of [['front',[0,1,3]],['side',[3,1,0]],['back',[0,1,-3]],['re
 }
 let prev=performance.now();
 function tick(now){const dt=Math.min((now-prev)/1000,.1);prev=now;if(mixer&&playing)mixer.update(dt);controls.update();renderer.render(scene,camera);requestAnimationFrame(tick);}requestAnimationFrame(tick);
-window.__utro7Real3D={get loaded(){return !!mixer},get playing(){return playing},get camera(){return camera},get modelType(){return 'cc0-sportswear-not-approved'}};
+window.__utro7Real3D={get loaded(){return !!mixer},get playing(){return playing},get camera(){return camera},get modelType(){return 'cc0-sportswear-not-approved'},get trainer(){return trainer},get exercise(){return exercise}};

@@ -21,3 +21,7 @@ The viewer accepts `trainer=male|female` and `exercise=pushup|squat` query param
 `trainer_male_pushup.glb` replaced with real garment meshes: male polo short-sleeve top, separate shorts, shoes, short messy hair, eyes and eyebrows. OpenGym3D motion retained with local-pose animation transfer, 163 bones. License: CC0 MakeHuman community source assets (Shirts 01, Pants 01, Hair 01 and system assets). Assets were sourced from official MakeHuman CC0 packs; no Human Generator trial content included.
 
 SHA-256 (GLB): `0414f0ed7982d3ae3344392cfa87a5e34841c27769176341701d1477b240f924`. User visual approval pending; motion technique professional review also pending. Not frozen.
+
+## MALE-MASTER-CANDIDATE-002 — 20 November 2026
+
+This supersedes male visual candidate 001 (not accepted). Male push-up GLB now includes smoothed genuine skinned jersey/shorts, geometry thickened and weight-projected to original MakeHuman body, embedded CC0 photographic male skin and short-hair UV texture, and facial irises. Camera has bounded zoom and a deterministic reset to the 3/4 view. Main app remains male push-up only. Assets: official MakeHuman Community CC0 packs Shirts 01, Pants 01, Hair 01, Skins 02, and built-in CC0 shoes, eyes, eyebrows. User acceptance is still pending. No Human Generator Trial content. Exercise technique is not professionally validated.
